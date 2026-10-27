@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Jude Andrade — Research, Service Design &amp; Strategy</title>
+<meta name="description" content="Jude Andrade is a researcher and service designer working inside local government. Selected work: digital government services, taxi regulation, flood-mitigation funding, municipal fees, and product UX.">
+<meta name="theme-color" content="#ECECE6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121310" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jude Andrade — Research, Service Design &amp; Strategy">
+<meta property="og:description" content="I work in the gap between what residents need and what institutions deliver. Four civic cases and one product study.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23161714%27/%3E%3Crect width=%2716%27 height=%2732%27 fill=%27%238B2B22%27/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wdth,wght@75..112.5,300..700&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
+<style>
+/* Concept: a typewriter platen with a two-color ribbon. Red = a human need. Black = an institutional response.
+   Layout: one reading column with a left label rail. */
+:root{
+  color-scheme:light;
+  --paper:#ECECE6;
+  --platen:#E2E2DB;
+  --ink:#161714;
+  --graphite:#5A5D57;   /* secondary text; 5:1+ on paper */
+  --rule:#C4C5BC;
+  --ribbon:#8B2B22;
+  --display:"Martian Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --type:"IBM Plex Mono", ui-monospace, "Courier New", monospace;
+  --body:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --paper:#121310; --platen:#1A1B18; --ink:#E6E6E0; --graphite:#9A9D95; --rule:#2E302B; --ribbon:#DB7465;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#121310; --platen:#1A1B18; --ink:#E6E6E0; --graphite:#9A9D95; --rule:#2E302B; --ribbon:#DB7465;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,p,ul,ol,dl,dd,figure{margin:0;padding:0}
+img{max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--ribbon);outline-offset:3px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(24px, env(safe-area-inset-left,0px));padding-right:max(24px, env(safe-area-inset-right,0px))}
+.label{font-family:var(--type);font-size:11.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--graphite)}
+
+/* nav */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--paper);border-bottom:1px solid var(--rule)}
+.nav-in{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:16px}
+.mark{font-family:var(--display);font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+.nav-links{display:flex;gap:24px;flex-wrap:wrap}
+.nav-links a{font-family:var(--type);font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding-bottom:2px;border-bottom:1px solid transparent}
+.nav-links a:hover{border-color:currentColor}
+
+/* hero */
+.hero{padding-block:72px 68px}
+.hero-head{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.hero-control{font:500 11px/1.3 var(--type);letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--rule);padding:8px 10px;background:transparent;color:var(--ink);cursor:pointer}
+.hero-control:hover:not(:disabled){border-color:var(--ink)}
+.hero-control:disabled{cursor:default;color:var(--graphite)}
+.platen{position:relative;overflow:hidden;font-family:var(--type);font-size:clamp(15px,1.85vw,19px);line-height:1.5;background:var(--platen);border-block:1px solid var(--rule);padding:26px 24px;margin-block:18px 12px;display:grid;gap:12px;max-width:900px;min-height:174px}
+.platen:before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:linear-gradient(to bottom,var(--ribbon) 0 50%,var(--ink) 50%)}
+.line{display:grid;grid-template-columns:84px minmax(0,1fr);gap:16px;align-items:baseline;min-height:3em}
+.who{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--graphite)}
+.res .say{color:var(--ribbon)}
+.platen .say{overflow-wrap:anywhere}
+.caret{display:inline-block;width:.55em;height:1.05em;background:currentColor;vertical-align:-.15em;margin-left:2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.type-note{font:11px/1.6 var(--type);letter-spacing:.02em;color:var(--graphite);max-width:800px;margin-bottom:36px}
+.hero h1{font-family:var(--display);font-weight:500;font-size:clamp(30px,5.2vw,62px);line-height:1.07;letter-spacing:-.025em;max-width:18ch;text-wrap:balance}
+.lede{max-width:60ch;margin-top:24px;font-size:17.5px}
+.independent-line{font:500 12px/1.7 var(--type);margin-top:18px;padding-left:13px;border-left:2px solid var(--ribbon);color:var(--graphite);max-width:74ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px 26px;margin-top:26px}
+.hero-cta a{font:500 12px/1.5 var(--type);letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:3px}
+.hero-cta a:hover{color:var(--ribbon);border-color:var(--ribbon)}
+.smallrule{width:32px;height:1px;background:var(--ribbon);margin-top:29px}
+.key{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:26px}
+.key span{display:inline-flex;align-items:center;gap:8px}
+.swatch{width:10px;height:10px;display:inline-block}
+
+/* sections */
+section,article{border-top:1px solid var(--rule)}
+.sec{padding-block:76px}
+.sec-title{font-family:var(--display);font-weight:500;font-size:clamp(24px,3vw,34px);letter-spacing:-.02em;margin-top:12px;text-wrap:balance}
+.mode-tip{font-size:14px;color:var(--graphite);margin-top:10px;max-width:70ch}
+
+/* work index */
+.idx{margin-top:36px}
+.idx-head,.row a{display:grid;grid-template-columns:minmax(0,1fr) 210px 100px;gap:20px}
+.idx-head{padding-bottom:12px;border-bottom:1px solid var(--ink)}
+.rows{list-style:none;margin:0;padding:0}
+.row a{align-items:center;padding-block:22px;border-bottom:1px solid var(--rule);transition:padding-left .2s}
+.row a:hover{padding-left:8px}
+.r-main{min-width:0}
+.r-title{display:block;font-family:var(--display);font-weight:500;font-size:clamp(16.5px,1.9vw,20px);letter-spacing:-.015em;line-height:1.3;transition:color .2s}
+.row a:hover .r-title{color:var(--ribbon)}
+.r-sum{display:block;color:var(--graphite);font-size:14.5px;margin-top:6px;max-width:65ch}
+.r-tags{font:11.5px/1.5 var(--type);letter-spacing:.04em;color:var(--graphite)}
+.r-go{text-align:right}
+
+/* case studies */
+.case{padding-block:76px}
+.case-head{display:flex;justify-content:space-between;gap:16px;align-items:center}
+.case-back{font:11px var(--type);letter-spacing:.08em;text-transform:uppercase;color:var(--graphite);border-bottom:1px solid var(--rule);white-space:nowrap}
+.case-back:hover{color:var(--ribbon)}
+.case h2{font-family:var(--display);font-weight:500;font-size:clamp(26px,3.8vw,44px);line-height:1.12;letter-spacing:-.025em;max-width:24ch;margin-top:16px;text-wrap:balance}
+.dek{max-width:66ch;margin-top:20px;font-size:17.5px}
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-block:1px solid var(--rule);margin-block:28px 24px}
+.facts div{padding:14px 15px 16px 0;min-width:0}
+.facts dd{font-size:14.5px;line-height:1.4;margin-top:4px}
+
+.outcome{border-left:3px solid var(--ink);background:var(--platen);padding:18px 23px;margin-bottom:40px;display:grid;grid-template-columns:190px minmax(0,1fr);gap:16px}
+.outcome .label{color:var(--ink)}
+.outcome h3{font:500 clamp(19px,2.2vw,25px)/1.25 var(--display);letter-spacing:-.015em}
+.outcome p{color:var(--graphite);font-size:14.5px;margin-top:8px;line-height:1.55}
+
+/* evidence exhibits */
+.proof-module{margin:0 0 44px;padding:25px;border:1px solid var(--rule);background:var(--platen)}
+.proof-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.proof-heading h3{font:600 14px/1.35 var(--display)}
+.proof-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.proof-step{padding:16px;min-width:0;border:1px solid var(--rule);background:var(--paper)}
+.proof-kicker{font:500 11px var(--type);letter-spacing:.1em;text-transform:uppercase;color:var(--graphite)}
+.proof-step strong{display:block;font:600 18px/1.2 var(--display);margin-top:8px;letter-spacing:-.01em}
+.proof-step p{font-size:13.5px;margin-top:8px;line-height:1.55}
+.proof-below{font-size:12.5px;line-height:1.55;color:var(--graphite);margin-top:13px}
+.proof-strip{display:grid;grid-template-columns:minmax(0,1fr) 42px minmax(0,1fr);align-items:center;gap:10px}
+.proof-strip .proof-step strong{font-size:25px}
+.proof-arrow{font:500 22px var(--display);text-align:center;color:var(--ribbon)}
+.proof-badge{display:inline-block;font:500 11px/1.5 var(--type);letter-spacing:.07em;text-transform:uppercase;color:var(--ribbon);border:1px solid currentColor;padding:3px 6px;margin-top:9px}
+
+/* four-frame story */
+.storyboard{margin:0 0 44px}
+.storyboard-header{display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+.storyboard-header h3,.case-deeper h3{font:500 clamp(17px,2vw,22px)/1.35 var(--display);letter-spacing:-.015em}
+.storyboard-header .label{color:var(--ribbon)}
+.scene-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.scene{background:var(--paper);padding:20px 22px 20px;min-width:0}
+.scene-final{background:var(--platen)}
+.scene-top{display:flex;align-items:center;gap:12px;margin-bottom:13px}
+.scene-num{width:30px;height:30px;display:inline-grid;place-items:center;flex:none;background:var(--platen);border:1px solid var(--rule);font:500 11px var(--type)}
+.scene-final .scene-num{background:var(--paper)}
+.scene-act{font:500 11px/1.4 var(--type);letter-spacing:.12em;text-transform:uppercase;color:var(--graphite)}
+.scene h4{font:500 15.5px/1.45 var(--display);letter-spacing:-.012em;margin:0 0 9px;max-width:32ch}
+.scene p{font-size:14.5px;line-height:1.6;max-width:58ch}
+.scene .judgment{margin-top:14px;padding-top:11px;border-top:1px solid var(--rule);font-size:13.5px;color:var(--graphite)}
+.j-label{display:block;font:500 11px/1.4 var(--type);letter-spacing:.1em;text-transform:uppercase;color:var(--ribbon);margin-bottom:3px}
+
+/* real-world screenshots */
+.shots{margin:0 0 44px}
+.shot-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.shot{margin:0;min-width:0}
+.shot img{display:block;width:100%;height:auto;border:1px solid var(--rule);background:var(--platen)}
+.shot figcaption{font-size:12.5px;line-height:1.55;color:var(--graphite);margin-top:9px}
+.shot figcaption strong{color:var(--ink);font-weight:600}
+.shots-note{font-size:12.5px;line-height:1.55;color:var(--graphite);margin-top:12px;max-width:80ch}
+
+/* accountability chain diagram */
+.chain{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 34px;counter-reset:n}
+.chain>li{position:relative;border:1px solid var(--rule);background:var(--paper);padding:14px 15px 16px;min-width:0}
+.chain>li:not(:last-child):after{content:"→";position:absolute;right:-29px;top:50%;transform:translateY(-50%);font:500 20px var(--display);color:var(--ribbon)}
+.chain .tag{display:block;font:500 10.5px/1.4 var(--type);letter-spacing:.1em;text-transform:uppercase;color:var(--graphite);margin-bottom:8px}
+.chain strong{display:block;font:600 17px/1.2 var(--display);letter-spacing:-.01em}
+.chain p{font-size:13.5px;line-height:1.55;margin-top:8px}
+.chain>li.control{border-top:3px solid var(--ribbon)}
+.chain>li.control .tag{color:var(--ribbon)}
+.chain>li.records{border-top:3px solid var(--ink);background:var(--platen)}
+.chain-link{font:500 12px/1.5 var(--type);margin-top:12px;padding:10px 13px;border:1px dashed var(--graphite);color:var(--ink)}
+@media (max-width:760px){
+  .shot-grid{grid-template-columns:1fr}
+  .chain{grid-template-columns:1fr;gap:30px 0}
+  .chain>li:not(:last-child):after{content:"↓";right:auto;left:50%;top:auto;bottom:-27px;transform:translateX(-50%)}
+}
+
+/* fee excerpt table */
+.fee-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--rule);background:var(--paper)}
+.fee-table{border-collapse:collapse;width:100%;min-width:640px;font-size:13.5px;line-height:1.5}
+.fee-table th,.fee-table td{text-align:left;vertical-align:top;padding:11px 13px;border-bottom:1px solid var(--rule)}
+.fee-table thead th{font:500 11px/1.4 var(--type);letter-spacing:.08em;text-transform:uppercase;color:var(--graphite);border-bottom:1px solid var(--ink)}
+.fee-table tbody th{font:600 13px/1.4 var(--display);width:19%}
+.fee-table tbody tr:last-child>*{border-bottom:0}
+.fee-table .was{color:var(--graphite)}
+.fee-table .now{font-weight:500}
+.fee-wrap:focus-visible{outline:2px solid var(--ribbon);outline-offset:2px}
+
+/* before / now / next process diagram */
+.flow{margin:0 0 44px;padding:25px;border:1px solid var(--rule);background:var(--platen)}
+.flow-row{padding:16px 0;border-top:1px solid var(--rule)}
+.flow-row:first-of-type{border-top:0;padding-top:4px}
+.flow-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 16px;margin-bottom:12px}
+.flow-head h4{font:600 14px/1.35 var(--display)}
+.flow-head .note{font:11.5px/1.5 var(--type);color:var(--graphite)}
+.flow-steps{list-style:none;display:flex;flex-wrap:wrap;gap:10px 30px;counter-reset:s}
+.flow-steps>li{position:relative;flex:1 1 140px;min-width:0;max-width:210px;border:1px solid var(--rule);background:var(--paper);padding:11px 12px 12px;font-size:13.5px;line-height:1.45}
+.flow-steps>li:before{counter-increment:s;content:counter(s);display:block;font:500 11px var(--type);color:var(--graphite);margin-bottom:4px}
+.flow-steps>li:not(:last-child):after{content:"→";position:absolute;right:-24px;top:50%;transform:translateY(-50%);font:500 18px var(--display);color:var(--ribbon)}
+.flow-steps>li.clerk{border-top:3px solid var(--ink)}
+.flow-steps>li.resident{border-top:3px solid var(--ribbon)}
+.flow-row.next .flow-steps>li{border-style:dashed}
+.flow-row.next .flow-head h4{color:var(--graphite)}
+.flow-badge{display:inline-block;font:500 11px/1.5 var(--type);letter-spacing:.07em;text-transform:uppercase;color:var(--ribbon);border:1px solid currentColor;padding:2px 6px}
+.flow-key{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:6px}
+.flow-key span{display:inline-flex;align-items:center;gap:7px}
+@media (max-width:760px){
+  .flow{padding:16px}
+  .flow-steps{flex-direction:column;gap:26px}
+  .flow-steps>li{max-width:none;flex:none}
+  .flow-steps>li:not(:last-child):after{content:"↓";right:auto;left:50%;top:auto;bottom:-24px;transform:translateX(-50%)}
+}
+
+/* KOALA before/after bars */
+.bars{margin:28px 0 0;padding:20px 22px;border:1px solid var(--rule);background:var(--paper);max-width:640px}
+.bar-row{display:grid;grid-template-columns:64px minmax(0,1fr) 48px;align-items:center;gap:12px;margin-top:12px}
+.bar-label{font:500 11.5px var(--type);letter-spacing:.08em;text-transform:uppercase;color:var(--graphite)}
+.bar-track{height:22px;background:var(--platen);border:1px solid var(--rule)}
+.bar{height:100%;background:var(--graphite)}
+.bar.now{background:var(--ink)}
+.bar-val{font:600 16px var(--display);text-align:right}
+.bars figcaption{font-size:12.5px;color:var(--graphite);margin-top:12px}
+
+/* ownership / reframe / limits */
+.split{display:grid;grid-template-columns:170px minmax(0,1fr);gap:0 40px;margin-bottom:12px}
+.split>h3{padding-top:4px}
+.split>div{max-width:68ch;margin-bottom:28px;min-width:0}
+.split p{font-size:16px}
+.split p+p{margin-top:14px}
+.pull{font-family:var(--display);font-weight:400;font-size:clamp(17px,2vw,21px);line-height:1.45;letter-spacing:-.015em;border-left:2px solid var(--ribbon);padding-left:20px;max-width:40ch}
+
+/* decisions + long read */
+.case-deeper{border-top:1px solid var(--rule);margin-top:20px;padding-top:28px;margin-bottom:30px}
+.tradeoffs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px}
+.tradeoff{border:1px solid var(--rule);padding:15px 17px}
+.tradeoff dt{font:500 12.5px/1.45 var(--display);margin-bottom:7px}
+.tradeoff dd{font-size:13.5px;line-height:1.55;color:var(--graphite);margin:0}
+.tradeoff strong{color:var(--ink);font-weight:600}
+.long-read{border:1px solid var(--rule);margin-top:20px}
+.long-read>summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;cursor:pointer;list-style:none;font:500 13px/1.4 var(--type)}
+.long-read>summary::-webkit-details-marker{display:none}
+.long-read>summary:after{content:'+';font:20px/1 var(--type);color:var(--ribbon)}
+.long-read[open]>summary:after{content:'−'}
+.long-read>summary:hover{background:var(--platen)}
+.long-copy{padding:4px 20px 24px;max-width:74ch}
+.long-copy h4{font:500 16px/1.35 var(--display);margin:23px 0 9px;letter-spacing:-.015em}
+.long-copy h4:first-child{margin-top:3px}
+.long-copy p{font-size:15.5px;line-height:1.75;margin:0 0 14px}
+
+.methods{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.methods span{font:11.5px/1.3 var(--type);color:var(--graphite);border:1px solid var(--rule);padding:6px 7px}
+
+.evidence{margin-top:18px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:14px 0}
+.evidence summary{font:500 12px/1.4 var(--type);text-transform:uppercase;letter-spacing:.1em;cursor:pointer;list-style-position:inside}
+.evidence summary:hover{color:var(--ribbon)}
+.evidence-inner{padding:19px 0 10px;max-width:75ch;color:var(--graphite);font-size:14px}
+.evidence-inner p+p{margin-top:11px}
+.evidence-inner a{text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px}
+.evidence-inner a:hover{color:var(--ribbon)}
+.evidence-inner strong{color:var(--ink)}
+
+/* KOALA short case */
+.koala-case{background:var(--platen)}
+.koala-three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--rule);margin-top:32px}
+.koala-three>div{padding:20px;border-right:1px solid var(--rule)}
+.koala-three>div:last-child{border-right:0}
+.koala-three h3{font:500 16px/1.4 var(--display);margin:12px 0 8px}
+.koala-three p{font-size:14.5px;line-height:1.55}
+.koala-foot{font-size:13px;color:var(--graphite);margin-top:24px;max-width:78ch}
+
+/* working theory */
+.theory{background:var(--platen)}
+.theory .lede{max-width:75ch;font-size:17px}
+.theory-note{color:var(--graphite);font-size:14px;margin-top:14px;max-width:72ch}
+.dims{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:36px}
+.dim{background:var(--platen);padding:20px 20px 22px}
+.dim h3{font-family:var(--type);font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase}
+.dim p{font-size:14.5px;color:var(--graphite);margin-top:6px}
+.theory-anchors{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.theory-anchors a{font:11.5px var(--type);padding:8px 10px;border:1px solid var(--rule)}
+.theory-anchors a:hover{border-color:var(--ribbon);color:var(--ribbon)}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:200px minmax(0,1fr);gap:0 48px}
+.about-body{font-size:17px;max-width:70ch}
+.about-body p+p{margin-top:14px}
+.portrait-note{float:right;width:min(40%,245px);margin:0 0 24px 28px}
+.portrait-note img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border:1px solid var(--rule);background:var(--platen)}
+.portrait-note figcaption{margin-top:9px;letter-spacing:.03em;text-transform:none;font-size:11.5px;line-height:1.5}
+.about-body:after{content:"";display:block;clear:both}
+.update-box{border:1px solid var(--rule);margin-top:24px;padding:16px 19px;max-width:740px}
+.update-box p{font-size:14px;color:var(--graphite)}
+
+/* contact */
+footer{padding-block:80px 88px;border-top:1px solid var(--rule)}
+.contact{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;margin-top:22px}
+.email{font-family:var(--display);font-size:clamp(17px,2.4vw,22px);letter-spacing:-.01em;user-select:all;overflow-wrap:anywhere}
+.btn{font:500 11.5px/1 var(--type);letter-spacing:.12em;text-transform:uppercase;color:var(--ink);background:none;border:1px solid var(--ink);padding:10px 12px;cursor:pointer}
+.btn:hover{background:var(--ink);color:var(--paper)}
+.footer-actions{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:23px}
+.footer-actions a{font:500 12px/1.5 var(--type);border-bottom:1px solid var(--ink);padding-bottom:3px}
+.footer-actions a:hover{color:var(--ribbon);border-color:var(--ribbon)}
+.footer-edit{font:12px/1.5 var(--type);color:var(--graphite);margin-top:14px}
+.colophon{margin-top:56px}
+
+@media (max-width:760px){
+  .hero{padding-block:48px 56px}
+  .platen{padding:20px 17px;min-height:193px}
+  .line{grid-template-columns:minmax(0,1fr);gap:4px;min-height:4.5em}
+  .idx-head{grid-template-columns:minmax(0,1fr)}
+  .idx-head .h-tags{display:none}
+  .row a{grid-template-columns:minmax(0,1fr);gap:6px}
+  .r-go{text-align:left}
+  .case{padding-block:60px}
+  .case-head{align-items:flex-start}
+  .case-back{font-size:10.5px}
+  .case .dek{font-size:16.5px}
+  .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .outcome{grid-template-columns:1fr;gap:7px;padding:16px 17px}
+  .proof-module{padding:16px;margin-bottom:34px}
+  .proof-grid,.proof-strip{grid-template-columns:1fr}
+  .proof-arrow{transform:rotate(90deg)}
+  .proof-step strong,.proof-strip .proof-step strong{font-size:17px}
+  .scene-list{grid-template-columns:1fr}
+  .scene{padding:17px 16px}
+  .split{grid-template-columns:minmax(0,1fr)}
+  .split>h3{margin-bottom:8px}
+  .tradeoffs{grid-template-columns:1fr}
+  .long-copy{padding:1px 17px 21px}
+  .long-read>summary{padding:16px 17px}
+  .koala-three{grid-template-columns:1fr}
+  .koala-three>div{border-right:0;border-bottom:1px solid var(--rule)}
+  .koala-three>div:last-child{border-bottom:0}
+  .dims{grid-template-columns:minmax(0,1fr)}
+  .about-grid{grid-template-columns:minmax(0,1fr)}
+  .about-grid>h2{margin-bottom:10px}
+  .nav-in{display:grid;grid-template-columns:1fr;gap:6px;padding-block:11px}
+  .nav-links{justify-content:space-between;gap:8px;flex-wrap:nowrap}
+  .mark{white-space:nowrap}
+  html{scroll-padding-top:112px}
+}
+@media (max-width:580px){.portrait-note{float:none;width:min(72%,300px);margin:0 0 24px}}
+@media (max-width:370px){.nav-links{gap:13px}.nav-links a{font-size:10px}.mark{font-size:11px}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none !important;transition:none !important}
+}
+@media print{
+  nav,.hero-control,.btn,.case-back{display:none}
+  body{background:#fff;color:#000}
+  details>*{display:block}
+}
+/* Verified public-site evidence: archived snapshots paired with current public pages */
+.site-evolution{margin:0 0 46px}
+.site-evolution .mode-tip{margin-bottom:20px}
+.evolution-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.evolution-card{border:1px solid var(--rule);background:var(--platen);padding:19px 20px}
+.evolution-id{font:500 11px/1.5 var(--type);letter-spacing:.09em;text-transform:uppercase;color:var(--ribbon)}
+.evolution-card h4{font:500 19px/1.3 var(--display);margin:5px 0 9px}
+.evolution-card p{font-size:14px;line-height:1.5;color:var(--graphite)}
+.evolution-links{display:grid;gap:0;margin-top:18px;border-top:1px solid var(--rule)}
+.evolution-links a{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--rule);font:500 12px/1.5 var(--type)}
+.evolution-links a:hover{color:var(--ribbon)}
+.evolution-links a span{color:var(--graphite);font-weight:400}
+.archive-more{border-top:1px solid var(--rule);padding:14px 0;margin-top:15px}
+.archive-more summary{cursor:pointer;font:500 12px/1.5 var(--type);color:var(--ink)}
+.archive-more .source-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 20px;margin-top:14px}
+.archive-more a{font:12.5px/1.5 var(--type);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px}
+.archive-more a:hover{color:var(--ribbon)}
+.evolution-disclosure{font:12px/1.6 var(--type);color:var(--graphite);margin-top:13px}
+/* Two portraits, one identity: photographed in the foreground, illustrated as an annotation. */
+.portrait-note.portrait-pair{position:relative;width:min(43%,270px);margin:0 0 24px 34px;padding-bottom:0}
+.portrait-visual{position:relative;margin-bottom:46px}
+.portrait-pair .portrait-photograph{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;filter:none}
+.portrait-pair .portrait-illustration{position:absolute;right:-8px;bottom:-33px;width:40%;height:auto;aspect-ratio:1;object-fit:cover;border:5px solid var(--paper);box-shadow:0 0 0 1px var(--rule)}
+.portrait-note.portrait-pair figcaption{margin-top:16px;padding-top:2px;font:11px/1.55 var(--type);color:var(--graphite)}
+@media(max-width:760px){.evolution-grid{grid-template-columns:1fr}.evolution-card{padding:17px}.archive-more .source-list{grid-template-columns:1fr}}
+@media(max-width:580px){.portrait-note.portrait-pair{float:none;width:min(85%,290px);margin:0 0 24px;padding-bottom:0}.portrait-pair .portrait-illustration{bottom:-33px}}
+
+
+</style>
+</head>
+<body>
+
+<nav aria-label="Main"><div class="wrap nav-in"><a class="mark" href="#top">Jude Andrade</a><div class="nav-links"><a href="#work">Work</a><a href="#theory">Thinking</a><a href="#about">About</a><a href="resume.pdf" rel="noopener" target="_blank">Résumé ↗</a><a href="#contact">Contact</a></div></div></nav>
+
+<header class="hero wrap" id="top">
+  <div class="hero-head"><p class="label">Service design · Research · Working across systems</p><button class="hero-control" id="replay" type="button">Replay the exchange ↻</button></div>
+  <p class="sr-only">Illustrative exchange. Resident: “The park keeps flooding. Who fixes it?” Institution: “Responsibility requires review.”</p>
+  <div aria-hidden="true" class="platen"><div class="line res"><span class="who">Resident</span><span class="say"><span class="txt" id="t-res">The park keeps flooding. Who fixes it?</span></span></div><div class="line inst"><span class="who">Institution</span><span class="say"><span class="txt" id="t-inst">Responsibility requires review.</span><span class="caret" id="caret"></span></span></div></div>
+  <p class="type-note">Illustrative exchanges based on project situations, not verbatim resident quotes. <span id="type-step">01 / 04</span></p>
+  <h1>I work in the gap between those two sentences.</h1>
+  <p class="lede">I investigate why systems get stuck, then design a path forward. Working independently inside local government, I followed evidence across residents, staff, policy, software, and budgets, and turned it into decisions that could move.</p>
+  <p class="independent-line">Independent project lead across four civic cases · Open to service design, research, civic technology, and strategy roles</p>
+  <p class="hero-cta"><a href="#work">See the work ↓</a><a href="resume.pdf" rel="noopener" target="_blank">Résumé ↗</a><a href="#contact">Get in touch</a></p>
+  <div class="smallrule"></div>
+  <p class="key label"><span><i class="swatch" style="background:var(--ribbon)"></i>Red ribbon: a human need</span><span><i class="swatch" style="background:var(--ink)"></i>Black ribbon: an institutional response</span></p>
+</header>
+
+<section class="sec" id="work" aria-labelledby="h-work"><div class="wrap">
+  <p class="label">Selected work / 2026</p>
+  <h2 class="sec-title" id="h-work">Four civic cases. One earlier product study.</h2>
+  <p class="mode-tip">Each row leads with what changed. Open a case for a four-frame story, the decisions behind it, and what the evidence does and doesn’t show.</p>
+  <div class="idx">
+    <div class="idx-head"><span class="label h-proj">Project and outcome</span><span class="label h-tags">Kind of work</span><span class="sr-only">Link</span></div>
+    <ul class="rows">
+      <li class="row"><a href="#public-services"><span class="r-main"><span class="r-title">The form wasn’t the whole service.</span><span class="r-sum">Forms Index live; a seven-resource booking workflow configured and tested from request to confirmation to cancellation.</span></span><span class="r-tags">Service design · Systems · Build</span><span class="label r-go">Full case →</span></a></li>
+      <li class="row"><a href="#cab-rules"><span class="r-main"><span class="r-title">Who actually controlled the ride?</span><span class="r-sum">Chapter 239 drafts that hold taxi operators, dispatch networks, and fleets accountable for control, not appearance.</span></span><span class="r-tags">Policy · Research · Systems</span><span class="label r-go">Full case →</span></a></li>
+      <li class="row"><a href="#memorial-park"><span class="r-main"><span class="r-title">A flood, a paper trail, and several jurisdictions.</span><span class="r-sum">DEC eligibility pathway confirmed and a County support letter obtained for a flood-mitigation grant application.</span></span><span class="r-tags">Research · Policy · Funding · Systems</span><span class="label r-go">Full case →</span></a></li>
+      <li class="row"><a href="#fees"><span class="r-main"><span class="r-title">Yesterday’s fees. Today’s administrative work.</span><span class="r-sum">Revised fee schedule voted by the Village Board, with tiers and escrow tied to the work each application requires.</span></span><span class="r-tags">Research · Policy · Systems</span><span class="label r-go">Full case →</span></a></li>
+      <li class="row"><a href="#koala"><span class="r-main"><span class="r-title">Why owners abandoned their listings.</span><span class="r-sum">KOALA · Earlier product UX research on a timeshare listing flow; first-page conversion rose from 33% to 45%.</span></span><span class="r-tags">Product UX · Research</span><span class="label r-go">Short case →</span></a></li>
+    </ul>
+  </div>
+</div></section>
+
+<!-- 01 -->
+<article aria-labelledby="h-public-services" class="case" id="public-services">
+<div class="wrap">
+  <div class="case-head"><p class="label">01 / Service design · Systems · Build</p><a class="case-back" href="#work">↑ All projects</a></div>
+  <h2 id="h-public-services">A form is not a finished service.</h2>
+  <p class="dek">A resident comes to the Village website to do something, not to learn the organization chart. Finding a form, requesting a facility, paying a fee, and getting approval should feel like one understandable service.</p>
+  <dl class="facts">
+    <div><dt class="label">Status</dt><dd>Forms Index published · Booking flow tested</dd></div>
+    <div><dt class="label">My role</dt><dd>Sole in-house UX and service-design lead: content audit, forms index, flow design, EvoGov configuration and testing.</dd></div>
+    <div><dt class="label">When</dt><dd>2026</dd></div>
+    <div><dt class="label">Worked with</dt><dd>Clerk and departments (requirements); EvoGov vendor (platform limits).</dd></div>
+  </dl>
+  <div class="outcome"><div><span class="label">What changed</span></div>
+    <div><h3>One public index. Seven resources set up for requests.</h3><p>A central Forms Index is live. The EvoGov facility workflow is configured for seven resources (Louis Kurtz Center, Darden Center, Memorial Park soccer field, Memorial Park basketball courts, Kennedy Park, Gould Park, and the portable stage) and was tested on controlled requests from new request to confirmed to cancelled, with the public calendar reserving and releasing the slot. Online payment and finer-grained staff permissions are not in place yet.</p></div>
+  </div>
+
+  <figure aria-labelledby="flow-head-1" class="flow">
+    <div class="proof-heading"><h3 id="flow-head-1">Exhibit / How a facility request moves</h3><span class="label">Before · Now · Designed next</span></div>
+    <div class="flow-row">
+      <div class="flow-head"><h4>Before: in person only</h4><span class="note">No online request existed. Two visits to Village Hall.</span></div>
+      <ol class="flow-steps" aria-label="Before: in-person process">
+        <li class="resident">Go to Village Hall</li>
+        <li class="resident">Pick up a paper application</li>
+        <li class="resident">Fill it out</li>
+        <li class="resident">Come back with everything</li>
+        <li class="resident">Pay at the Clerk’s office</li>
+      </ol>
+    </div>
+    <div class="flow-row">
+      <div class="flow-head"><h4>Now: online request</h4><span class="note">Live as of Oct 2026. The page states a request isn’t approved until confirmed.</span></div>
+      <ol class="flow-steps" aria-label="Now: online request process">
+        <li class="resident">Log in or create an account</li>
+        <li class="resident">Choose facility, date and time, and event details</li>
+        <li class="resident">Submit request</li>
+        <li class="clerk">Clerk reviews and confirms</li>
+        <li class="clerk">Clerk sends payment and insurance instructions</li>
+      </ol>
+    </div>
+    <div class="flow-row next">
+      <div class="flow-head"><h4>Designed next</h4><span class="flow-badge">Blueprint · deploying early Nov 2026</span></div>
+      <ol class="flow-steps" aria-label="Designed next: approval before payment">
+        <li class="resident">Submit request, no account needed</li>
+        <li class="clerk">Clerk approves</li>
+        <li class="resident">Pay online after approval</li>
+        <li class="clerk">One reference number tracks it to completion</li>
+      </ol>
+    </div>
+    <p class="proof-below flow-key"><span><i class="swatch" style="background:var(--ribbon)"></i>Resident acts</span><span><i class="swatch" style="background:var(--ink)"></i>Village staff acts</span></p>
+    <figcaption class="proof-below">“Before” is the in-person process as it worked. “Now” is from the live booking page. “Designed next” is from my October 2026 user-flow blueprint, scheduled to deploy in early November 2026. As of Oct 26, 2026, payment integration and the no-account flow are not live.</figcaption>
+  </figure>
+
+  <section aria-labelledby="shots-1" class="shots">
+    <div class="proof-heading"><h3 id="shots-1">Exhibit / The live pages</h3><span class="label">Captured Oct 26, 2026</span></div>
+    <div class="shot-grid">
+      <figure class="shot"><img alt="The Village’s Facilities and Stage Requests page. It states the four-step flow, says a request is not approved until confirmed by the Village, links to three facility applications, and begins with an account login step." decoding="async" height="511" loading="lazy" src="booking-request-flow.webp" width="1050"><figcaption><strong>Request, not booking.</strong> The page says plainly that a request isn’t approved until the Village confirms it, then walks through four steps.</figcaption></figure>
+      <figure class="shot"><img alt="The Village Forms Index, grouped by department, with the Village Clerk’s applications listed first, including the Kurtz Center, Memorial Park, and Stage Rental applications." decoding="async" height="549" loading="lazy" src="forms-index.webp" width="1050"><figcaption><strong>One index, ownership intact.</strong> Forms are gathered in a single place and still grouped under the department that owns them.</figcaption></figure>
+    </div>
+    <p class="shots-note">Both are public pages. The public page lists three facility applications. The booking portal itself requires an account, so the seven-resource configuration and the test requests aren’t visible here.</p>
+  </section>
+
+  <section class="site-evolution" aria-labelledby="site-evolution-title">
+    <div class="storyboard-header"><h3 id="site-evolution-title">The public website as evidence</h3><span class="label">Dated records · Live pages</span></div>
+    <p class="mode-tip">A public trail across the Village's website. The archived versions are point-in-time reference pages; the current links let you inspect the live task pathways and content structure. These four areas illustrate the broader service-design scope.</p>
+    <div class="evolution-grid"><div class="evolution-card"><span class="evolution-id">01 / Resident entry point</span><h4>Homepage</h4><p>Task-based routes to report problems, find forms, make payments, and locate Village services.</p>
+<div class="evolution-links"><a href="https://web.archive.org/web/20250916194049/https://www.villagespringvalley.org/" target="_blank" rel="noopener noreferrer"><span>Dated snapshot · Sep 16, 2025</span>Explore archived page ↗</a>
+<a href="https://www.villagespringvalley.org/" target="_blank" rel="noopener noreferrer"><span>Live public page</span>See the current page ↗</a></div></div><div class="evolution-card"><span class="evolution-id">02 / Records and applications</span><h4>Village Clerk</h4><p>Public notices, meeting records, Clerk forms, and a connection to the central forms index.</p>
+<div class="evolution-links"><a href="https://web.archive.org/web/20250213194626/https://www.villagespringvalley.org/departments/clerk" target="_blank" rel="noopener noreferrer"><span>Dated snapshot · Feb 13, 2025</span>Explore archived page ↗</a>
+<a href="https://www.villagespringvalley.org/departments/clerk" target="_blank" rel="noopener noreferrer"><span>Live public page</span>See the current page ↗</a></div></div><div class="evolution-card"><span class="evolution-id">03 / Property information</span><h4>Assessor</h4><p>Direct pathways to property lookup, exemption forms, assessment rolls, and review information.</p>
+<div class="evolution-links"><a href="https://web.archive.org/web/20251028113147mp_/https://www.villagespringvalley.org/departments/AssessorsOffice" target="_blank" rel="noopener noreferrer"><span>Dated snapshot · Oct 28, 2025</span>Explore archived page ↗</a>
+<a href="https://www.villagespringvalley.org/departments/AssessorsOffice" target="_blank" rel="noopener noreferrer"><span>Live public page</span>See the current page ↗</a></div></div><div class="evolution-card"><span class="evolution-id">04 / Community information</span><h4>Community Development</h4><p>Team profiles, featured event flyers, newsletter bulletin, and local support links.</p>
+<div class="evolution-links"><a href="https://web.archive.org/web/20260312140905/https://www.villagespringvalley.org/departments/CommunityDevelopment" target="_blank" rel="noopener noreferrer"><span>Dated snapshot · Mar 12, 2026</span>Explore archived page ↗</a>
+<a href="https://www.villagespringvalley.org/departments/CommunityDevelopment" target="_blank" rel="noopener noreferrer"><span>Live public page</span>See the current page ↗</a></div></div></div>
+    <details class="archive-more"><summary>More historical reference pages (Building, meetings, taxes, Section 8, Mayor’s Office) +</summary><div class="source-list"><a href="https://web.archive.org/web/20251011002945mp_/https://www.villagespringvalley.org/departments/Building" target="_blank" rel="noopener noreferrer">Building · Oct 11, 2025 ↗</a><a href="https://web.archive.org/web/20251210152204mp_/https://www.villagespringvalley.org/meetingdashboard" target="_blank" rel="noopener noreferrer">Meetings · Dec 10, 2025 ↗</a><a href="https://web.archive.org/web/20251030113732mp_/https://www.villagespringvalley.org/Treasury/taxpaymentandinfo" target="_blank" rel="noopener noreferrer">Tax information · Oct 30, 2025 ↗</a><a href="https://web.archive.org/web/20251030113059mp_/https://www.villagespringvalley.org/departments/Section8" target="_blank" rel="noopener noreferrer">Section 8 · Oct 30, 2025 ↗</a><a href="https://web.archive.org/web/20250213180913/https://www.villagespringvalley.org/departments/MayorsOffice" target="_blank" rel="noopener noreferrer">Mayor’s Office · Feb 13, 2025 ↗</a></div></details>
+    <p class="evolution-disclosure">Some dated snapshots are intermediate project states rather than pre-project baselines. Comparison links document site evolution; they do not by themselves prove authorship, increased task completion, or a completed end-to-end payment system.</p>
+  </section>
+
+  <section aria-labelledby="sb-1" class="storyboard">
+    <div class="storyboard-header"><h3 id="sb-1">The story in four frames</h3><span class="label">30-second read</span></div>
+    <div class="scene-list">
+      <div class="scene"><div class="scene-top"><span class="scene-num">01</span><span class="scene-act">The problem</span></div>
+        <h4>Residents have tasks, not departments</h4>
+        <p>Someone looking for a permit or a facility shouldn’t need the Village org chart first. Forms, payments, and instructions lived on separate departmental pages, and for facilities there was nothing online at all: pick up a paper application at Village Hall, fill it out, come back with everything, and pay at the Clerk’s office.</p>
+        <p class="judgment"><span class="j-label">Judgment call</span>Treat findability as one stage of the service, not the finish line.</p></div>
+      <div class="scene"><div class="scene-top"><span class="scene-num">02</span><span class="scene-act">The investigation</span></div>
+        <h4>I mapped both sides of the counter</h4>
+        <p>I inventoried forms and links, reviewed navigation and homepage hierarchy, then followed facility requests through staff approval, rental rules, availability, and payment.</p>
+        <p class="judgment"><span class="j-label">Judgment call</span>Understand the backstage work before promising a frictionless front end.</p></div>
+      <div class="scene"><div class="scene-top"><span class="scene-num">03</span><span class="scene-act">The turn</span></div>
+        <h4>A request is not a booking</h4>
+        <p>Residents can choose a facility and request a date, but staff review comes before approval, so the flow says so: request, review, confirmed. EvoGov also couldn’t natively support every custom field, permission, or seasonal cutoff I wanted.</p>
+        <p class="judgment"><span class="j-label">Judgment call</span>Choose reliable native behavior staff can maintain over an elegant feature they can’t.</p></div>
+      <div class="scene scene-final"><div class="scene-top"><span class="scene-num">04</span><span class="scene-act">The result and its limits</span></div>
+        <h4>I tested what would actually happen</h4>
+        <p>The Forms Index is live. Seven resources were configured, and controlled test requests moved from new to confirmed to cancelled while the public calendar reserved and released the slot.</p>
+        <p class="judgment"><span class="j-label">Judgment call</span>Report what was published and tested. Label payment integration and the no-account flow as the next release, not the running system.</p></div>
+    </div>
+  </section>
+
+  <div class="split">
+    <h3 class="label">What I owned</h3>
+    <div><p>I organized forms into a central index, reviewed task navigation and homepage hierarchy, and translated paper facility rules into a native request workflow. I mapped the resident and Clerk steps, including a future approval-before-payment model, then tested calendar states and holidays and documented what still needs staff or vendor support.</p></div>
+    <h3 class="label">The reframe</h3>
+    <div><p class="pull">It isn’t enough for a resident to find the right form. The institution has to know what happens after they submit it.</p></div>
+    <h3 class="label">What this doesn’t show</h3>
+    <div><p>The native portal still requires an account. PayIt approval-to-payment integration, granular staff permissions, and several paper-form validations are not implemented. The single-reference-number, no-account flow in my October 2026 blueprint is the next release, scheduled for early November 2026, not the running system as of this writing. There is no usage or completion data yet.</p></div>
+  </div>
+
+  <section aria-labelledby="cd-1" class="case-deeper">
+    <h3 id="cd-1">Decisions and tradeoffs</h3>
+    <dl class="tradeoffs">
+      <div class="tradeoff"><dt>Organize by department or by task?</dt><dd><strong>Chose:</strong> a common Forms Index, with official departmental ownership retained.</dd></div>
+      <div class="tradeoff"><dt>Let residents “book,” or request approval?</dt><dd><strong>Chose:</strong> explicit request and confirmed states, so the page never promises instant approval.</dd></div>
+      <div class="tradeoff"><dt>Force custom functionality, or use native CMS features?</dt><dd><strong>Chose:</strong> a tested, maintainable native flow, with the limitations recorded.</dd></div>
+      <div class="tradeoff"><dt>Payment at request or after review?</dt><dd><strong>Designed, next release:</strong> charge after approval. PayIt integration is unverified.</dd></div>
+    </dl>
+    <details class="long-read"><summary>Read the full write-up (about five minutes)</summary><div class="long-copy">
+      <h4>A resident comes with a task</h4>
+      <p>A resident looking for a permit shouldn’t need to know which department handles it before they can begin. But municipal websites often reflect how government is organized internally rather than how residents experience a need. In Spring Valley, forms, payments, department pages, and service instructions lived in different places. The challenge wasn’t only visual inconsistency. A resident could find a document and still have no clear idea how to finish the task.</p>
+      <h4>I followed the path beyond the link</h4>
+      <p>I reviewed the website’s navigation, organized a public Forms Index, and worked on homepage hierarchy and access to common services. Facility requests became a useful test of the whole system, because the process had no online path at all. A resident needed to select a facility, choose a date, explain the event, and wait for staff approval. Behind the scenes, someone had to check availability, insurance, fees, and scheduling rules.</p>
+      <h4>What I had to give up</h4>
+      <p>My ideal experience was simple: pick the place, request the time, understand exactly what happens next. EvoGov’s native tools imposed real limits. The portal required login, permissions were too broad for some intended viewers, not every paper-form rule could be enforced automatically, and seasonal sunset cutoffs weren’t supported as requested. I worked within the controls we could validate instead of inventing an interface staff couldn’t operate.</p>
+      <h4>The observable result</h4>
+      <p>The Forms Index went live. Seven facility and stage resources were configured for public requests. Two controlled test records exercised confirmation and cancellation, and the public calendar reflected those status changes. That is a usable foundation, not a finished payment-and-permit service. The October 2026 flow map describes the next release, scheduled for early November 2026, with one reference number and approval before payment; it is not the operating system yet.</p>
+      <h4>What stayed with me</h4>
+      <p>The visible page was only half the problem. A simpler resident experience holds up only when staff can receive the work, interpret its status, and carry it to completion.</p>
+    </div></details>
+  </section>
+
+  <div aria-label="Methods used" class="methods"><span>Content audit</span><span>Information architecture</span><span>Service blueprint</span><span>CMS configuration</span><span>State testing</span></div>
+  <details class="evidence"><summary>Sources and claim boundaries</summary>
+    <div class="evidence-inner">
+      <p><strong>Sources:</strong> the published Forms Index; the September 30, 2026 EvoGov facility setup and test record (test requests #1000 and #1001, plus holiday and year-end availability checks); <em>Bookings and Forms User Flows</em> (October 20, 2026).</p>
+      <p><strong>See it live:</strong> <a href="https://www.villagespringvalley.org/booking" rel="noopener" target="_blank">Village facility booking page ↗</a>. This is the current public entry point. It does not include the future-state features described above.</p>
+    </div>
+  </details>
+</div>
+</article>
+
+<!-- 02 -->
+<article aria-labelledby="h-cab-rules" class="case" id="cab-rules">
+<div class="wrap">
+  <div class="case-head"><p class="label">02 / Policy · Research · Systems</p><a class="case-back" href="#work">↑ All projects</a></div>
+  <h2 id="h-cab-rules">The driver was visible. Who controlled the ride?</h2>
+  <p class="dek">Protecting passengers was the stated goal. But punishing only the person behind the wheel could miss the dispatcher or fleet setting the terms, and burden legitimate small operators.</p>
+  <dl class="facts">
+    <div><dt class="label">Status</dt><dd>Chapter 239 revisions drafted</dd></div>
+    <div><dt class="label">My role</dt><dd>Sole in-house researcher and drafter: operator conversations, code comparison, definitions, accountability rules.</dd></div>
+    <div><dt class="label">When</dt><dd>2026</dd></div>
+    <div><dt class="label">Worked with</dt><dd>Operators, counsel, enforcement stakeholders, and elected officials (input and approval).</dd></div>
+  </dl>
+  <div class="outcome"><div><span class="label">What changed</span></div>
+    <div><h3>Accountability redesigned around control, not appearance.</h3><p>The proposed revisions define operator affiliation by dispatch, payment, fleet control, and trip coordination, and link operator, vehicle, driver, and trip records. They are drafts: the adopted text and any enforcement effects are not shown here.</p></div>
+  </div>
+
+  <figure aria-labelledby="taxi-proof-head" class="proof-module">
+    <div class="proof-heading"><h3 id="taxi-proof-head">Exhibit / Making accountability traceable</h3><span class="label">Reconstructed from Chapter 239 drafts</span></div>
+    <ol aria-label="Accountability chain from driver to records" class="chain">
+      <li><span class="tag">Visible at the curb</span><strong>Driver</strong><p>The person the passenger sees. Legal status is not the same as operational control.</p></li>
+      <li class="control"><span class="tag">Where control sits</span><strong>Dispatch</strong><p>Assigns and routes the trip, and may collect fees through a shared payment system.</p></li>
+      <li class="control"><span class="tag">Where control sits</span><strong>Fleet</strong><p>Controls vehicle access and operating conditions. The drafts add checks against splitting one operation into paper entities.</p></li>
+      <li class="records"><span class="tag">Proposed mechanism</span><strong>Records</strong><p>Rosters, trip records, licensing, and audits that tie each trip back to an operator.</p></li>
+    </ol>
+    <p class="chain-link">Draft goal: link operator ↔ vehicle ↔ driver ↔ trip, so a violation can be traced to whoever controlled it.</p>
+    <figcaption class="proof-below">Case-study interpretation of the proposed Chapter 239 language, not a reproduction of adopted law. Source: Chapter 239 revised working drafts.</figcaption>
+  </figure>
+
+  <section aria-labelledby="sb-2" class="storyboard">
+    <div class="storyboard-header"><h3 id="sb-2">The story in four frames</h3><span class="label">30-second read</span></div>
+    <div class="scene-list">
+      <div class="scene"><div class="scene-top"><span class="scene-num">01</span><span class="scene-act">The problem</span></div>
+        <h4>A driver was not the whole business</h4>
+        <p>Spring Valley depends on taxis, but unlicensed activity, passenger safety, and vehicle saturation made reform urgent. Conversations with smaller operators raised the real question: when a driver works through a dispatch or fleet arrangement, who controls access to the trip?</p>
+        <p class="judgment"><span class="j-label">Judgment call</span>Look upstream from the visible violation to whoever sets the terms.</p></div>
+      <div class="scene"><div class="scene-top"><span class="scene-num">02</span><span class="scene-act">The investigation</span></div>
+        <h4>The loophole lived in the definitions</h4>
+        <p>Existing Chapter 239 categories struggled to describe dispatch through intermediaries, shared payments, and networks that don’t own vehicles. A crackdown built on vehicle counts and flat fees would also fall hardest on compliant owner-operators.</p>
+        <p class="judgment"><span class="j-label">Judgment call</span>Classify by actual behavior and control, not by branding or contract labels.</p></div>
+      <div class="scene"><div class="scene-top"><span class="scene-num">03</span><span class="scene-act">The turn</span></div>
+        <h4>Make accountability follow the trip</h4>
+        <p>The drafts link operator, vehicle, and driver through rosters, trip records, and audits, with tiered fees and differentiated oversight for larger networks. Stronger oversight pulled against privacy, due process, and compliance cost.</p>
+        <p class="judgment"><span class="j-label">Judgment call</span>Build the enforcement information first, then escalate penalties. Flag privacy and due-process questions instead of hiding them.</p></div>
+      <div class="scene scene-final"><div class="scene-top"><span class="scene-num">04</span><span class="scene-act">The result and its limits</span></div>
+        <h4>A more traceable framework took shape</h4>
+        <p>The revised drafts make responsibility explicit for networks and fleets and move toward appearance-neutral affiliation standards. They are working drafts, not certified law, so no safety or congestion effects are claimed.</p>
+        <p class="judgment"><span class="j-label">Judgment call</span>Keep a drafted mechanism, an adopted law, and measured public impact separate.</p></div>
+    </div>
+  </section>
+
+  <div class="split">
+    <h3 class="label">What I owned</h3>
+    <div><p>I reviewed the existing code and drafted revisions for fleet and transportation-network definitions, affiliation, trip records, audits, and licensing. I worked through the difference between a driver’s legal status and the operational control a larger network can exercise, and tested the drafts against smaller operators’ circumstances.</p></div>
+    <h3 class="label">The reframe</h3>
+    <div><p class="pull">Classify a business by what it actually does, not the label it uses or how its vehicles look.</p></div>
+    <h3 class="label">What this doesn’t show</h3>
+    <div><p>The reviewed documents are working and final-labelled drafts, not a certified ordinance. I don’t claim fewer accidents, fewer illegal taxis, or reduced congestion without implementation evidence.</p></div>
+  </div>
+
+  <section aria-labelledby="cd-2" class="case-deeper">
+    <h3 id="cd-2">Decisions and tradeoffs</h3>
+    <dl class="tradeoffs">
+      <div class="tradeoff"><dt>Vehicle cap versus network accountability</dt><dd><strong>Explored:</strong> capacity controls, but didn’t treat a cap as a substitute for identifying operators.</dd></div>
+      <div class="tradeoff"><dt>Driver penalty versus operator responsibility</dt><dd><strong>Proposed:</strong> requirements that reach the entities controlling dispatch and vehicle access.</dd></div>
+      <div class="tradeoff"><dt>Uniform fees versus tiered fees</dt><dd><strong>Proposed:</strong> fees that reflect operational scale while protecting smaller compliant businesses.</dd></div>
+      <div class="tradeoff"><dt>Visual branding versus evidence of control</dt><dd><strong>Drafted:</strong> affiliation determined by conduct and coordination; some versions explicitly avoid appearance-based presumptions.</dd></div>
+    </dl>
+    <details class="long-read"><summary>Read the full write-up (about five minutes)</summary><div class="long-copy">
+      <h4>The crowded street was not the whole problem</h4>
+      <p>Spring Valley had a transportation problem: safety concerns, traffic saturation, and disputes about unlicensed activity. But taxis were essential for residents and a livelihood for drivers, including operators who had already spent money following the rules. The obvious solution was to reduce the number of cabs and increase enforcement. As I dug into the system, I realized that might miss the structure underneath the problem.</p>
+      <h4>The person driving was not always the person controlling</h4>
+      <p>I reviewed Chapter 239 and spoke with smaller transportation businesses. I heard about drivers gaining access to customers through larger operators and informal dispatch arrangements. A driver could be the visible person taking the passenger while another entity arranged trips, collected fees, or set operating conditions. I began asking whether the regulations would recognize that relationship and where responsibility would land when things went wrong.</p>
+      <h4>The definition became a design decision</h4>
+      <p>The earlier law already regulated taxis, vehicles for hire, and licensing. What it didn’t consistently account for was the variety of ways trips could be coordinated without a conventional employer or vehicle owner. I worked on language that classified businesses by dispatching, routing, fee collection, shared systems, and actual control, not simply the label on an agreement. The proposed chain linked operator, vehicle, and driver and added rosters and trip records that could support investigation.</p>
+      <h4>Fairness changed the draft</h4>
+      <p>The more rules we proposed, the more the distribution of burden mattered. I didn’t want to penalize compliant owner-operators for the practices of larger coordinated networks. We considered tiered fees, fleet oversight, and checks against splitting a large operation into smaller paper entities to avoid regulation. Each measure has its own tradeoffs: record privacy, compliance cost, legal review, and the risk of overly punitive enforcement.</p>
+      <h4>Where I draw the outcome line</h4>
+      <p>The rewrite produced detailed proposals for operator-level accountability, explicit affiliation rules, and auditability. It is a drafted framework, not a measured result. I’d want comparative evidence before attributing lower congestion or fewer incidents to it.</p>
+      <h4>What stayed with me</h4>
+      <p>If regulation only sees what is visible at the curb, it can miss the system organizing the ride. A fairer rule has to identify the party capable of changing the behavior, not merely the easiest person to cite.</p>
+    </div></details>
+  </section>
+
+  <div aria-label="Methods used" class="methods"><span>Code review</span><span>Stakeholder synthesis</span><span>Regulatory mapping</span><span>Tradeoff analysis</span></div>
+  <details class="evidence"><summary>Sources and claim boundaries</summary>
+    <div class="evidence-inner">
+      <p><strong>Sources:</strong> Chapter 239 original and revised working drafts, and the February 10, 2026 policy synopsis. Operator conversations are summarized, not quoted.</p>
+      <p><strong>Boundary:</strong> This page describes proposed language. It does not establish which provisions were adopted or how they have been enforced.</p>
+    </div>
+  </details>
+</div>
+</article>
+
+<!-- 03 -->
+<article aria-labelledby="h-memorial-park" class="case" id="memorial-park">
+<div class="wrap">
+  <div class="case-head"><p class="label">03 / Research · Policy · Funding · Systems</p><a class="case-back" href="#work">↑ All projects</a></div>
+  <h2 id="h-memorial-park">The flooding was visible. Responsibility wasn’t.</h2>
+  <p class="dek">Memorial Park kept flooding. Technical reports existed, agencies controlled different pieces, old financial obligations complicated the relationships, and the Village still needed a viable way to act.</p>
+  <dl class="facts">
+    <div><dt class="label">Status</dt><dd>DEC pathway clarified · County support letter obtained</dd></div>
+    <div><dt class="label">My role</dt><dd>Sole in-house investigator and strategy lead: records requests, research synthesis, agency follow-up, grant scoping, interagency coordination.</dd></div>
+    <div><dt class="label">When</dt><dd>Mar–Jun 2026</dd></div>
+    <div><dt class="label">Worked with</dt><dd>Engineers, NYS DEC, Rockland County Drainage Agency, and grant consultants.</dd></div>
+  </dl>
+  <div class="outcome"><div><span class="label">What changed</span></div>
+    <div><h3>A qualifying study pathway and a County support letter.</h3><p>DEC confirmed that the Hackensack Resilient NY report could serve as the qualifying study, with Pascack Brook material as a supplement. The Rockland County Drainage Agency provided a support letter for application-stage site control. A grant award or reduced flooding is not established.</p></div>
+  </div>
+
+  <section aria-labelledby="shots-3" class="shots">
+    <div class="proof-heading"><h3 id="shots-3">Exhibit / The problem, on the ground</h3><span class="label">Memorial Park, 2026</span></div>
+    <div class="shot-grid">
+      <figure class="shot"><img alt="Heavy rain falls on a flooded lot at Memorial Park. A dark SUV sits in water up to its wheel wells beside a tree, with an orange-and-white barricade and a concrete block in the foreground." decoding="async" height="788" loading="lazy" src="memorial-park-flood-1.webp" width="1400"><figcaption>Floodwater across the Memorial Park lot, with a barricade standing in the water. Photo: Village of Spring Valley.</figcaption></figure>
+      <figure class="shot"><img alt="A gray sedan stands in floodwater at Memorial Park, with a Drug-Free Zone sign, a black drum, and park fencing and signs behind it. The license plate is blurred." decoding="async" height="788" loading="lazy" src="memorial-park-flood-2.webp" width="1400"><figcaption>The same lot from another angle. The park’s fence, signs, and play area sit just behind the water. Photo: Village of Spring Valley.</figcaption></figure>
+    </div>
+  </section>
+
+  <section aria-labelledby="sb-3" class="storyboard">
+    <div class="storyboard-header"><h3 id="sb-3">The story in four frames</h3><span class="label">30-second read</span></div>
+    <div class="scene-list">
+      <div class="scene"><div class="scene-top"><span class="scene-num">01</span><span class="scene-act">The problem</span></div>
+        <h4>The water crossed government boundaries</h4>
+        <p>Memorial Park is a central community space and it kept flooding, but the Village couldn’t fund a large intervention itself. The causes sat in the brook, channel restrictions, and infrastructure beyond Village property, so authority was fragmented.</p>
+        <p class="judgment"><span class="j-label">Judgment call</span>Find where control actually sits before assigning ownership or cost.</p></div>
+      <div class="scene"><div class="scene-top"><span class="scene-num">02</span><span class="scene-act">The investigation</span></div>
+        <h4>The work had been studied before</h4>
+        <p>I pursued engineering records, redacted hazard-mitigation material, and the status of old financial obligations through FOIL requests rather than assuming the public file was complete.</p>
+        <p class="judgment"><span class="j-label">Judgment call</span>Recover what already exists before commissioning duplicate work or assigning blame.</p></div>
+      <div class="scene"><div class="scene-top"><span class="scene-num">03</span><span class="scene-act">The turn</span></div>
+        <h4>Two gates: eligibility, then permission</h4>
+        <p>DEC ruled out parts of the broad scope, so I narrowed it to weir removal and related restoration and secured written confirmation that an existing regional report could qualify. That settled whether a new study was required by June 5. Even then, working in the controlled corridor needed County support.</p>
+        <p class="judgment"><span class="j-label">Judgment call</span>Separate mandatory eligibility evidence from optional strengthening, and seek a workable approval without implying it settles historical liability or easements.</p></div>
+      <div class="scene scene-final"><div class="scene-top"><span class="scene-num">04</span><span class="scene-act">The result and its limits</span></div>
+        <h4>A proposal could finally move</h4>
+        <p>The team had a qualifying-study route, coordinated engineering inputs, and County support documentation. What changed is application readiness. Grant awards and physical repairs remain unverified.</p>
+        <p class="judgment"><span class="j-label">Judgment call</span>Name the progress precisely: application readiness, not flood-risk reduction.</p></div>
+    </div>
+  </section>
+
+  <div class="split">
+    <h3 class="label">What I owned</h3>
+    <div><p>I traced earlier research through FOIL requests and agency inquiries, sought written DEC guidance, and recommended weir and appurtenant-structure removal with related restoration as the grant scope. I also coordinated the engineering inputs and pursued County support for site control.</p></div>
+    <h3 class="label">The reframe</h3>
+    <div><p class="pull">Before commissioning new work, find out what has already been studied and what the funding authority actually requires.</p></div>
+    <h3 class="label">What this doesn’t show</h3>
+    <div><p>The full response to the FOIL requests, the status of historic financial obligations, long-term easements, any grant award, and physical flood mitigation are not established here. Historical inaction is documented as a stalled project, not as evidence of wrongdoing.</p></div>
+  </div>
+
+  <section aria-labelledby="cd-3" class="case-deeper">
+    <h3 id="cd-3">Decisions and tradeoffs</h3>
+    <dl class="tradeoffs">
+      <div class="tradeoff"><dt>Park drainage or watershed intervention?</dt><dd><strong>Chose:</strong> follow the hydraulic evidence and scope a brook-system project.</dd></div>
+      <div class="tradeoff"><dt>Commission a new study or verify an existing pathway?</dt><dd><strong>Chose:</strong> obtain written DEC guidance and request targeted engineering support.</dd></div>
+      <div class="tradeoff"><dt>Blame agencies or preserve cooperation?</dt><dd><strong>Chose:</strong> document control and obligations while seeking workable site authorization.</dd></div>
+      <div class="tradeoff"><dt>Take on full ownership or document limited support?</dt><dd><strong>Used:</strong> a County letter for application-stage site control; longer-term terms still open.</dd></div>
+    </dl>
+    <details class="long-read"><summary>Read the full write-up (about five minutes)</summary><div class="long-copy">
+      <h4>The problem was not new</h4>
+      <p>Every time Pascack Brook flooded around Memorial Park, Spring Valley faced the consequences of a long-running problem. The park is one of the Village’s central recreational spaces, and nearby properties and infrastructure were also at risk. The Village had financial constraints and needed a viable funding path. I thought the hardest part might be discovering the engineering answer. I was wrong about where the real difficulty sat.</p>
+      <h4>Following the paper trail</h4>
+      <p>I looked for previous flood studies and found that the County and other agencies had already commissioned relevant work. Some hazard-mitigation sections were redacted or difficult to access. I submitted County FOIL requests for engineering records, consultant work, and the basis and status of a possible historical Village contribution. I wanted to know what had already been studied, who controlled the affected corridor, and what commitments were documented before anybody spent money or assigned blame.</p>
+      <h4>Why the politics mattered</h4>
+      <p>The Village was seeking County cooperation while also trying to untangle old financial obligations from earlier administrations. The work touched County-controlled stream areas and rail infrastructure. I couldn’t approach the problem as though the Village owned everything, and I couldn’t afford to damage working relationships by making claims the documents didn’t yet establish. The difference between acknowledging responsibility and granting a practical approval became essential.</p>
+      <h4>The first turning point: study eligibility</h4>
+      <p>The broad engineering solution wasn’t automatically suitable for the Resilient Watersheds Grant. DEC flagged gaps in the site-specific study’s future-flow analysis, and some interventions were outside the grant’s eligible scope. I wrote to DEC proposing a narrower project: weir or appurtenant-structure removal with directly related stream restoration. DEC confirmed that the Hackensack River Resilient NY report could serve as the qualifying report, with Pascack Brook material as a supplement.</p>
+      <h4>The deadline question</h4>
+      <p>Engineers raised legitimate concerns about completing more technical work by June 5, but those concerns had become tied to an assumption that a new qualifying study was mandatory. I circulated DEC’s written guidance and clarified that a limited support memo could address competitiveness. The grant consultant then confirmed that June 5 was not a required comparable-study deadline for the chosen pathway.</p>
+      <h4>The second turning point: permission</h4>
+      <p>Eligibility didn’t give the Village permission to build on County-controlled land. I worked on the site-control questions and pushed for documentation of RCDA support. The team obtained an RCDA letter for the application, while the grant consultant noted that easement and long-term site-control requirements could remain. I also specified six technical inputs for the engineering handoff: estimates, schedule, permits, mapping, maintenance, and construction assumptions.</p>
+      <h4>What changed, and what did not</h4>
+      <p>The effort moved from scattered studies and competing interpretations toward a defined project and application package with State eligibility guidance, engineering inputs, and County support documentation. I can’t claim a grant award, completed construction, or reduced flooding from this record. What it changed for me was how I understand research: sometimes the discovery isn’t a new answer, but why existing answers haven’t produced action.</p>
+    </div></details>
+  </section>
+
+  <div aria-label="Methods used" class="methods"><span>Records research</span><span>Eligibility analysis</span><span>Systems mapping</span><span>Cross-agency strategy</span></div>
+  <details class="evidence"><summary>Sources and claim boundaries</summary>
+    <div class="evidence-inner">
+      <p><strong>Sources:</strong> FOIL acknowledgments (March 30 and April 2); May 11 scope-strategy memo; DEC responses (May 12 and May 27); grant-team confirmation (June 8); deliverables request (June 16); County support-letter correspondence. Correspondence is summarized, and identifying details are omitted.</p>
+      <p><strong>Boundary:</strong> Ownership of the rail structure in the corridor would require title verification and is not asserted here.</p>
+    </div>
+  </details>
+</div>
+</article>
+
+<!-- 04 -->
+<article aria-labelledby="h-fees" class="case" id="fees">
+<div class="wrap">
+  <div class="case-head"><p class="label">04 / Research · Policy · Systems</p><a class="case-back" href="#work">↑ All projects</a></div>
+  <h2 id="h-fees">The price was published. The real work was hidden.</h2>
+  <p class="dek">A municipal fee can look like a simple number, even when issuing the permit means inspections, legal review, staff coordination, repeat visits, and cost to the public.</p>
+  <dl class="facts">
+    <div><dt class="label">Status</dt><dd>Voted by the Village Board · Collections not yet measured</dd></div>
+    <div><dt class="label">My role</dt><dd>Sole in-house researcher and fee-schedule architect: department inquiry, prior-code analysis, tiers, financial scenarios, legislative materials.</dd></div>
+    <div><dt class="label">When</dt><dd>2026</dd></div>
+    <div><dt class="label">Worked with</dt><dd>Departments (service input); leadership and Village Board (decision).</dd></div>
+  </dl>
+  <div class="outcome"><div><span class="label">What changed</span></div>
+    <div><h3>The Board voted to revise the fee schedule.</h3><p>The revised schedule introduced clearer tiers, separate professional-review escrows, and fees tied to repeat work. Some amounts were adopted below what I recommended. Modeled revenue is a projection, not collected revenue.</p></div>
+  </div>
+
+  <figure aria-labelledby="fees-proof-head" class="proof-module">
+    <div class="proof-heading"><h3 id="fees-proof-head">Exhibit / From a flat charge to a service-cost model</h3><span class="label">Selected rows · 2026 review</span></div>
+    <div class="proof-strip">
+      <div class="proof-step"><span class="proof-kicker">Earlier fee / zoning text amendment</span><strong>$375</strong><p>Flat amount cited in the fee financial overview.</p></div>
+      <span aria-hidden="true" class="proof-arrow">→</span>
+      <div class="proof-step"><span class="proof-kicker">Revised schedule (recommended)</span><strong>$2,500</strong><p>A separate replenishable review escrow ($35,000) is also specified in the draft schedule.</p><span class="proof-badge">Proposal, not receipts</span></div>
+    </div>
+    <div aria-label="Excerpt of the earlier and revised fee schedules; scrolls sideways on small screens" class="fee-wrap" role="region" tabindex="0" style="margin-top:9px">
+      <table class="fee-table">
+        <caption class="sr-only">Selected rows from the earlier Chapter 118 fees and the revised fee schedule</caption>
+        <thead><tr><th scope="col">Application</th><th scope="col">Earlier schedule (Ch. 118)</th><th scope="col">Revised: Village fee</th><th scope="col">Revised: applicant escrow</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Zoning text amendment</th><td class="was">$375, plus publication cost and the fees required in § 118-5</td><td class="now">$2,500</td><td class="now">$35,000</td></tr>
+          <tr><th scope="row">Zoning map amendment</th><td class="was">$375 as above, plus $150 for a map petition</td><td class="now">$3,500 + $1,000 per tax lot affected</td><td class="now">$50,000</td></tr>
+          <tr><th scope="row">Variance</th><td class="was">$375 (one- and two-family, houses of worship); $750 (all other matters); plus publication cost</td><td class="now">Area $750 · Commercial area $1,000 · Use $1,500</td><td class="now">$3,500 · $5,000 · $5,000</td></tr>
+          <tr><th scope="row">Site plan approval</th><td class="was">$375 plus $112.50 per acre, lot, or dwelling (original approval)</td><td class="now">Minor $1,750 · Standard $2,500 · Major $3,500 · Large/complex $5,000</td><td class="now">$15,000 · $30,000 · $50,000 · $75,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <figcaption class="proof-below">Selected rows, figures as written in the earlier Chapter 118 and in the final revised-schedule draft. The Board adopted some amounts below the recommended levels shown here, so this is a comparison of structure, not the currently effective rates or realized revenue. Read adopted rates from the certified schedule.</figcaption>
+  </figure>
+
+  <section aria-labelledby="sb-4" class="storyboard">
+    <div class="storyboard-header"><h3 id="sb-4">The story in four frames</h3><span class="label">30-second read</span></div>
+    <div class="scene-list">
+      <div class="scene"><div class="scene-top"><span class="scene-num">01</span><span class="scene-act">The problem</span></div>
+        <h4>The price was not the cost</h4>
+        <p>The Village charged for permits and applications, but older flat amounts didn’t measure the staff, inspection, legal, and consultant effort behind them. A zoning text amendment, for example, carried a $375 base fee.</p>
+        <p class="judgment"><span class="j-label">Judgment call</span>Don’t assume a published price measures the cost of delivering the service.</p></div>
+      <div class="scene"><div class="scene-top"><span class="scene-num">02</span><span class="scene-act">The investigation</span></div>
+        <h4>I followed the work behind each fee</h4>
+        <p>I spoke with departments about application steps, repeat visits, inspections, professional review, and overhead. A small residential application and a large development place very different burdens on the Village, yet legacy categories blurred them.</p>
+        <p class="judgment"><span class="j-label">Judgment call</span>Ask what the service demands before setting a rate.</p></div>
+      <div class="scene"><div class="scene-top"><span class="scene-num">03</span><span class="scene-act">The turn</span></div>
+        <h4>The rules changed, not just the numbers</h4>
+        <p>I structured tiers by application complexity, separated Village fees from replenishable applicant-funded review escrow, and added categories for repeat processing. Revenue wasn’t the only constraint: fees also had to be intelligible, lawful, and workable for staff, and escrow can’t be counted as revenue.</p>
+        <p class="judgment"><span class="j-label">Judgment call</span>Turn an inconsistent price list into a coherent service-cost framework.</p></div>
+      <div class="scene scene-final"><div class="scene-top"><span class="scene-num">04</span><span class="scene-act">The result and its limits</span></div>
+        <h4>The Board voted the revision in</h4>
+        <p>The Board adopted the revised schedule, with some amounts below my recommendation. My models project added revenue under explicit assumptions. Actual collections still need tracking.</p>
+        <p class="judgment"><span class="j-label">Judgment call</span>A vote is a concrete outcome. Projected recovery is not collected revenue.</p></div>
+    </div>
+  </section>
+
+  <div class="split">
+    <h3 class="label">What I owned</h3>
+    <div><p>I reviewed the prior schedule, gathered operational context across departments, proposed tiers by application size and complexity, distinguished municipal fees from replenishable consultant escrows, and modeled revenue scenarios to support Board decisions.</p></div>
+    <h3 class="label">The reframe</h3>
+    <div><p class="pull">A fee schedule is also a service map: it shows the work that happens after an application is submitted.</p></div>
+    <h3 class="label">What this doesn’t show</h3>
+    <div><p>Two separate models estimate $98,250 a year in added fees for one illustrative activity mix and about $40,000 for a land-use-only scenario. They overlap and are not additive, and neither is cash collected. Actual collections and cost savings are not measured yet. Escrow deposits are never counted as fee revenue.</p></div>
+  </div>
+
+  <section aria-labelledby="cd-4" class="case-deeper">
+    <h3 id="cd-4">Decisions and tradeoffs</h3>
+    <dl class="tradeoffs">
+      <div class="tradeoff"><dt>Flat fee versus intensity-based tiers</dt><dd><strong>Chose:</strong> more specific application thresholds where complexity materially differs.</dd></div>
+      <div class="tradeoff"><dt>Escrow versus municipal revenue</dt><dd><strong>Separated:</strong> professional-cost deposits from fee income and refundable deposits.</dd></div>
+      <div class="tradeoff"><dt>Maximum revenue versus political feasibility</dt><dd><strong>Accepted:</strong> Board judgment on amounts, while preserving the structured fee logic.</dd></div>
+      <div class="tradeoff"><dt>Projection versus collections</dt><dd><strong>Reported:</strong> modeled scenarios explicitly, without implying the money was already collected.</dd></div>
+    </dl>
+    <details class="long-read"><summary>Read the full write-up (about five minutes)</summary><div class="long-copy">
+      <h4>Yesterday’s prices, today’s work</h4>
+      <p>The Village was operating under financial pressure while some service fees still reflected an older way of working. A zoning text amendment carried a $375 base fee in the older schedule, but processing modern applications could involve staff reviews, inspections, consultants, public hearings, and follow-up. I was asked to review the fee schedule, and at first it sounded like a pricing exercise. I couldn’t justify the prices without understanding the work.</p>
+      <h4>I went to the people doing the work</h4>
+      <p>I spoke with staff across departments and examined the existing code. I asked what happened after applications arrived, when repeat inspections were needed, how many staff hours went into processing, and which tasks drew in outside planners, engineers, or legal counsel. Not every applicant consumed the same resources, yet the schedule didn’t consistently distinguish those demands.</p>
+      <h4>The reframe</h4>
+      <p>I stopped treating the schedule as a list of amounts to increase and started treating it as a description of municipal work. The revised model distinguished Village revenue fees from replenishable applicant-funded professional-review escrows, added more specific tiers based on the application’s characteristics, and addressed repeated processing or public-resource use where appropriate. A large multifamily project shouldn’t automatically be priced like a small homeowner’s request.</p>
+      <h4>The politics of adoption</h4>
+      <p>The recommendation still had to survive the real decision process. I wanted to recover more costs, but the Board had to weigh community effects, legal authority, and political acceptability. Not all amounts were adopted at the levels I recommended. The revised fee schedule nevertheless went to a vote and was adopted.</p>
+      <h4>What the numbers actually mean</h4>
+      <p>I prepared models showing the possible revenue effect under explicit activity assumptions: one broader scenario estimated $98,250 in additional annual fees, and a narrower land-use scenario estimated $40,000. They overlap, are not additive, and are not receipts.</p>
+      <h4>What stayed with me</h4>
+      <p>The most important deliverable wasn’t a better-looking table. It was a way to connect what the government charges to what delivering the service actually requires, and a proposal that moved through the Board rather than stopping as analysis.</p>
+    </div></details>
+  </section>
+
+  <div aria-label="Methods used" class="methods"><span>Department inquiry</span><span>Fee classification</span><span>Financial scenarios</span><span>Policy drafting</span></div>
+  <details class="evidence"><summary>Sources and claim boundaries</summary>
+    <div class="evidence-inner">
+      <p><strong>Sources:</strong> the earlier eCode Chapter 118; the 2026 amended fee schedule; <em>Basic Financial Overview</em>; <em>Fee Update Justification &amp; Revenue Projection</em>.</p>
+      <p><strong>Boundary:</strong> The $98,250 and $40,000 figures are scenario estimates, not cash collected or a promise of surplus. Adopted rates should be read from the certified schedule, not from this page.</p>
+    </div>
+  </details>
+</div>
+</article>
+
+<!-- 05 -->
+<article aria-labelledby="h-koala" class="case koala-case" id="koala">
+<div class="wrap">
+  <div class="case-head"><p class="label">05 / Earlier product UX · Research · Build</p><a class="case-back" href="#work">↑ All projects</a></div>
+  <h2 id="h-koala">People were leaving before they could list.</h2>
+  <p class="dek">KOALA, an early-stage timeshare marketplace, brought our small team in for a two-month project. The first page of its listing process was losing users, and the question was why, not just which button to move.</p>
+  <dl class="facts">
+    <div><dt class="label">Conversion, first listing page</dt><dd>33% → 45% (+12 percentage points) after save-progress and optional fields</dd></div>
+    <div><dt class="label">My role</dt><dd>Lead user research, behavior synthesis, UX recommendations, and prototyping</dd></div>
+    <div><dt class="label">When</dt><dd>Nov–Dec 2020</dd></div>
+    <div><dt class="label">Worked with</dt><dd>Two UX designers</dd></div>
+  </dl>
+  <div class="outcome"><div><span class="label">What changed</span></div>
+    <div><h3>First-page conversion rose from 33% to 45%.</h3><p>The first page of the listing flow wouldn’t let people continue without a reservation number many owners don’t have, couldn’t be saved, and restarted if you went back a step. Letting people save progress and making some fields optional raised conversion on that page. The figures come from the original KOALA case study; the test design isn’t documented here.</p></div>
+  </div>
+  <figure aria-labelledby="bars-h" class="bars">
+    <p class="label" id="bars-h">Success rate on the first listing page</p>
+    <div class="bar-row"><span class="bar-label">Before</span><div class="bar-track"><div class="bar" style="width:33%"></div></div><span class="bar-val">33%</span></div>
+    <div class="bar-row"><span class="bar-label">After</span><div class="bar-track"><div class="bar now" style="width:45%"></div></div><span class="bar-val">45%</span></div>
+    <figcaption>Scale runs 0–100%. Before the change, 75% of users left within this first page.</figcaption>
+  </figure>
+  <div class="koala-three">
+    <div><span class="label">01 / The symptom</span><h3>People left on page one.</h3><p>KOALA saw 75% of users leave within the first page of the listing process, and had done little research on why.</p></div>
+    <div><span class="label">02 / The finding</span><h3>The flow demanded paperwork users didn’t have.</h3><p>It wouldn’t let you proceed without a reservation number, which deeded and floating-week owners rarely use. You couldn’t save progress, going back restarted the listing, and nothing said up front what details you’d need.</p></div>
+    <div><span class="label">03 / The response</span><h3>Make progress recoverable.</h3><p>Save progress, make some fields optional, and say up front what’s needed. Conversion on that page rose from 33% to 45%.</p></div>
+  </div>
+  <p class="koala-foot">Earlier work, deliberately kept brief. Methods: exploratory interviews, a belief/behavior matrix, affinity mapping, user-flow analysis, and comparative market analysis. Figures come from the original KOALA case study; the test design isn’t documented here.</p>
+</div>
+</article>
+
+<section class="theory sec" id="theory" aria-labelledby="h-theory"><div class="wrap">
+  <p class="label">Working framework / The Translation Gap</p>
+  <h2 class="sec-title" id="h-theory">Nine places a public service can lose someone.</h2>
+  <p class="lede">The need a resident expresses and the response a public institution delivers are not always the same thing. I use these nine dimensions to ask <em>where</em> the translation breaks down, rather than assuming the problem is a bad form or an unhelpful employee.</p>
+  <p class="theory-note">This is my developing diagnostic framework, not a validated measurement instrument. It guides questions to test with staff, residents, and service data.</p>
+  <div class="dims">
+    <div class="dim"><h3>Resident effort</h3><p>How many calls, trips, documents, and retries are needed?</p></div>
+    <div class="dim"><h3>Fragmentation</h3><p>How many teams must coordinate for one request?</p></div>
+    <div class="dim"><h3>Discoverability</h3><p>Can a person find the right service without knowing its department?</p></div>
+    <div class="dim"><h3>Resolution rate</h3><p>Does a need get resolved, or only acknowledged?</p></div>
+    <div class="dim"><h3>Socioeconomic burden</h3><p>Who pays more in time, money, and uncertainty?</p></div>
+    <div class="dim"><h3>Government capacity</h3><p>Do staff have the authority, tools, and budget to act?</p></div>
+    <div class="dim"><h3>Trust</h3><p>Will the person expect a credible answer and follow-through?</p></div>
+    <div class="dim"><h3>Political voice</h3><p>Whose needs reach decision-makers, and whose do not?</p></div>
+    <div class="dim"><h3>Downstream cost</h3><p>What does an unresolved problem cost later?</p></div>
+  </div>
+  <div class="theory-anchors"><a href="#public-services">Discoverability → Forms</a><a href="#cab-rules">Accountability → Taxi</a><a href="#memorial-park">Authority → Flooding</a><a href="#fees">Downstream cost → Fees</a></div>
+</div></section>
+
+<section class="sec" id="about" aria-labelledby="h-about"><div class="wrap about-grid">
+  <h2 class="label" id="h-about">About</h2>
+  <div class="about-body">
+    <figure class="portrait-note portrait-pair">
+  <div class="portrait-visual"><img class="portrait-photograph" src="headshot.jpg" loading="lazy" decoding="async" width="880" height="880" alt="Jude smiling in a dark knit sweater over a white collared shirt" />
+  <img class="portrait-illustration" src="illustration.webp" loading="lazy" decoding="async" width="560" height="560" alt="Playful illustrated version of Jude in a yellow hat, next to a pink mug" /></div>
+  <figcaption>Two versions of me. Same curiosity.</figcaption>
+</figure>
+    <p>I’m a researcher and service designer working from inside local government. In Spring Valley I ran a one-person research and service-design practice: I investigated problems, shaped the proposed solutions, drafted the language and workflows, and pushed the work toward decisions. I brought in engineers, counsel, grant consultants, and staff when their specialized knowledge was needed, but there was no separate UX or research team behind me.</p>
+    <p>My projects cross websites, regulation, public finance, and infrastructure, not because I’m collecting disciplines but because public problems don’t respect department boundaries.</p>
+    <p>I care about the unglamorous part of good design: who owns the next step, what the rules allow, what the system can actually deliver, and how we know it worked.</p>
+    <p>I’m interested in service design, research, civic technology, and strategy roles where those skills belong together.</p>
+    <div class="update-box"><p class="label">A service improvement / 311 reporting</p><p>I improved the existing 311-style issue-reporting process so Department of Public Works staff receive new reports as phone notifications. A broader unified intake and tracking experience remains a future concept, not a launched replacement 311 platform.</p></div>
+  </div>
+</div></section>
+
+<footer id="contact"><div class="wrap">
+  <p class="label">Contact</p>
+  <h2 class="sec-title">Have a complicated system?</h2>
+  <div class="contact"><span class="email" id="email">judeandrade013@gmail.com</span><button class="btn" id="copy" type="button">Copy email</button></div>
+  <p class="footer-actions"><a href="resume.pdf" rel="noopener" target="_blank">View résumé (PDF) ↗</a> <a href="https://www.linkedin.com/in/jude13/" rel="noopener" target="_blank">LinkedIn ↗</a> <a href="mailto:judeandrade013@gmail.com">Email ↗</a></p>
+  <p class="footer-edit">Selected work in service design, UX research, and public-sector strategy.</p>
+  <p class="label colophon">Made with HTML, CSS, JavaScript, and an unreasonable respect for the next step. · 2026</p>
+</div></footer>
+
+<script>
+(function(){
+ 'use strict';
+ var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ var pairs = [
+  ['The park keeps flooding. Who fixes it?', 'Responsibility requires review.'],
+  ['I need to book a Village facility.', 'Your request is not yet approved.'],
+  ['Who is responsible for this cab ride?', 'Please see the licensing requirements.'],
+  ['Where do I find the right form?', 'Select the appropriate department.']
+ ];
+ var tRes=document.getElementById('t-res'),tInst=document.getElementById('t-inst'),caret=document.getElementById('caret'),step=document.getElementById('type-step'),replay=document.getElementById('replay');
+ var runToken=0;
+ function sleep(ms){return new Promise(function(r){setTimeout(r,ms)})}
+ function caretTo(el){el.parentNode.appendChild(caret)}
+ async function setLine(el,s,token){caretTo(el);el.textContent='';for(var i=0;i<s.length;i++){if(token!==runToken)return;el.textContent+=s[i];await sleep(12);}}
+ async function play(){
+  var token=++runToken; replay.disabled=true;
+  for(var i=0;i<pairs.length;i++){
+   if(token!==runToken) return;
+   if(i>0){await sleep(420);if(token!==runToken)return;}
+   step.textContent=String(i+1).padStart(2,'0')+' / 04';
+   await setLine(tRes,pairs[i][0],token);if(token!==runToken)return;
+   await sleep(260);if(token!==runToken)return;
+   await setLine(tInst,pairs[i][1],token);if(token!==runToken)return;
+   await sleep(850);if(token!==runToken)return;
+  }
+  replay.disabled=false;caret.style.opacity='0';
+ }
+ if(reduce){
+  runToken++;tRes.textContent=pairs[0][0];tInst.textContent=pairs[0][1];step.textContent='01 / 04';caret.style.opacity='0';
+  replay.textContent='Illustrative exchange';replay.disabled=true;
+ }else{
+  replay.addEventListener('click',function(){runToken++;caret.style.opacity='';play();});
+  play();
+ }
+ var email=document.getElementById('email'),copy=document.getElementById('copy');
+ copy.addEventListener('click',async function(){
+  try{await navigator.clipboard.writeText(email.textContent.trim());copy.textContent='Copied';setTimeout(function(){copy.textContent='Copy email'},1800)}
+  catch(e){copy.textContent='Select address to copy'}
+ });
+})();
+</script>
+</body>
+</html>
