@@ -1,18 +1,19 @@
-# Jude Andrade | Research, Service Design & Strategy
+# Jude Andrade — Research, Service Design & Strategy
 
-This is the latest ready-to-upload GitHub Pages site package. `resume.pdf` is the user's October 27, 2026 final resume upload, formatted into two clean pages.
+A personal portfolio about the gap between what people need and what institutions deliver.
 
-## GitHub Pages setup
+**Live portfolio:** https://judeandrade013.github.io/
 
-1. Create a repository named `<your-github-username>.github.io`, or use your existing Pages repository.
-2. Upload all files from this folder to the repository root (`index.html` must be in the root). Do not upload the ZIP itself.
-3. Settings > Pages > Deploy from a branch > main > /(root) > Save.
-4. Once the site is live, confirm its exact URL.
+## Selected work
 
-## One required finishing detail
+- Public digital services and seven-resource facility booking workflows
+- Taxi and vehicle-for-hire regulatory redesign (Chapter 239)
+- Memorial Park flood-mitigation study and grant eligibility
+- Village fee schedule modernization and Board adoption
+- KOALA product UX research and measurable listing-flow improvement
 
-The resume has **not** been given an unverified portfolio URL. Once you know your live GitHub Pages URL, add it to the resume contact line and regenerate `resume.pdf` before the final public launch. Never publish a guessed URL.
+The civic projects were independently driven in-house, with input from municipal staff, engineers, counsel and specialist vendors when relevant. Case studies distinguish shipped services, tested systems, adopted decisions and future work.
 
-For social sharing, once the URL is confirmed, add the site's actual absolute OG image URL in `index.html`.
+## About the site
 
-Note: `resume.pdf` contains a personal phone number and will be publicly accessible.
+Hand-built static HTML, CSS and JavaScript. The homepage is `index.html`; assets and résumé live alongside it. Hosted on GitHub Pages.
