@@ -10,7 +10,7 @@
 <meta content="#121310" media="(prefers-color-scheme: dark)" name="theme-color"/>
 <meta content="website" property="og:type"/>
 <meta content="Jude Andrade — Research, Service Design &amp; Strategy" property="og:title"/>
-<meta content="I work in the gap between what residents need and what institutions deliver. Four civic cases and one product study." property="og:description"/>
+<meta content="Research and service design through actual municipal decisions: digital services, taxi regulation, fees, flooding, and product UX." property="og:description"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <link href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23161714%27/%3E%3Crect width=%2716%27 height=%2732%27 fill=%27%238B2B22%27/%3E%3C/svg%3E" rel="icon"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -426,19 +426,42 @@ footer{padding-block:80px 88px;border-top:1px solid var(--rule)}
 .about-body .portrait-note{width:min(36%,220px);margin-left:32px}
 @media (max-width:760px){.storyboard-overline{flex-wrap:wrap;gap:5px}.storyboard-overline span:last-child{text-align:left}.scene{padding:21px 19px}.scene-list{gap:10px}.about-body .portrait-note{width:min(72%,300px);margin-left:0}}
 @media (prefers-reduced-motion:reduce){.scene{transition:none}}
+
+/* October 2026: visual placement and clear chapter hierarchy */
+.hero-intro-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(150px,195px);gap:clamp(25px,4vw,52px);align-items:center;margin-top:15px}
+.hero-intro-copy{min-width:0}
+.hero-intro-copy h1{max-width:17ch;margin-top:0}
+.hero-intro-copy .lede{max-width:64ch}
+.hero-doodle{justify-self:end;align-self:center;max-width:195px;width:100%;margin:0;transform:rotate(2deg)}
+.hero-doodle img{display:block;width:100%;height:auto;border:1px solid var(--rule);box-shadow:8px 8px 0 var(--platen);background:#ddd8ab}
+.hero-doodle figcaption{font:500 10px/1.6 var(--type);letter-spacing:.055em;margin-top:15px;text-align:center;color:var(--graphite)}
+.portrait-note.portrait-single{float:right;position:relative;width:min(42%,270px);margin:0 0 24px 34px}
+.portrait-single img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border:1px solid var(--rule);background:var(--platen)}
+.portrait-single figcaption{font:11px/1.6 var(--type);color:var(--graphite);margin-top:11px}
+.storyboard .storyboard-overline{border-top:1px solid var(--ink);border-bottom:1px solid var(--rule);padding:13px 0 11px;margin-bottom:17px}
+.storyboard .storyboard-overline span:last-child{font-size:9.5px;letter-spacing:.05em}
+.storyboard .storyboard-header h3{max-width:25ch;font:500 clamp(22px,2.7vw,32px)/1.14 var(--type);letter-spacing:-.02em;margin:0 0 7px}
+.storyboard .storyboard-intro{max-width:72ch;margin:0 0 21px}
+.storyboard .scene{position:relative;border-top:3px solid transparent;padding-top:19px}
+.storyboard .scene[data-stage="1"]{border-top-color:var(--ribbon)}
+.storyboard .scene[data-stage="2"]{border-top-color:var(--graphite)}
+.storyboard .scene[data-stage="3"]{border-top-color:var(--ink)}
+.storyboard .scene[data-stage="4"]{border-top-color:var(--ribbon)}
+.storyboard .scene-num{width:auto;height:auto;min-width:34px;background:transparent;border:0;font:500 22px/1 var(--type);color:var(--ribbon);place-items:start}
+.storyboard .scene-final .scene-num{background:transparent}
+@media(max-width:760px){.hero-intro-layout{grid-template-columns:minmax(0,1fr) 120px;gap:18px}.hero-doodle figcaption{font-size:9px}.hero-intro-copy h1{max-width:none}}
+@media(max-width:580px){.hero-intro-layout{grid-template-columns:1fr;gap:10px}.hero-doodle{order:-1;width:110px;justify-self:end;margin:0 5px 0 0;transform:rotate(3deg)}.hero-doodle figcaption{font-size:8.5px;margin-top:11px}.portrait-note.portrait-single{width:min(100%,260px);float:none;margin:0 0 25px}.storyboard .storyboard-overline span:last-child{display:none}.storyboard .storyboard-header h3{max-width:100%}}
 </style>
 <meta content="https://judeandrade013.github.io/" property="og:url"/><meta content="https://judeandrade013.github.io/og-card.jpg" property="og:image"/><link href="https://judeandrade013.github.io/" rel="canonical"/></head>
 <body>
-<nav aria-label="Main"><div class="wrap nav-in"><a class="mark" href="#top">Jude Andrade</a><div class="nav-links"><a href="#work">Work</a><a href="#theory">Thinking</a><a href="#about">About</a><a href="resume.pdf" rel="noopener" target="_blank">Résumé ↗</a><a href="#contact">Contact</a></div></div></nav>
+<nav aria-label="Main"><div class="wrap nav-in"><a class="mark" href="#top">Jude Andrade</a><div class="nav-links"><a href="#work">Work</a><a href="#theory">Thinking</a><a href="#about">About</a><a href="resume.pdf?v=20261027-final" rel="noopener" target="_blank">Résumé ↗</a><a href="#contact">Contact</a></div></div></nav>
 <header class="hero wrap" id="top">
 <div class="hero-head"><p class="label">Service design · Research · Working across systems</p><button class="hero-control" id="replay" type="button">Replay the exchange ↻</button></div>
 <p class="sr-only">Illustrative exchange. Resident: “The park keeps flooding. Who fixes it?” Institution: “Responsibility requires review.”</p>
 <div aria-hidden="true" class="platen"><div class="line res"><span class="who">Resident</span><span class="say"><span class="txt" id="t-res">The park keeps flooding. Who fixes it?</span></span></div><div class="line inst"><span class="who">Institution</span><span class="say"><span class="txt" id="t-inst">Responsibility requires review.</span><span class="caret" id="caret"></span></span></div></div>
 <p class="type-note">Illustrative exchanges based on project situations, not verbatim resident quotes. <span id="type-step">01 / 04</span></p>
-<h1>I work in the gap between those two sentences.</h1>
-<p class="lede">I investigate why systems get stuck, then design a path forward. Working independently inside local government, I followed evidence across residents, staff, policy, software, and budgets, and turned it into decisions that could move.</p>
-<p class="independent-line">Independent project lead across four civic cases · Open to service design, research, civic technology, and strategy roles</p>
-<p class="hero-cta"><a href="#work">See the work ↓</a><a href="resume.pdf" rel="noopener" target="_blank">Résumé ↗</a><a href="#contact">Get in touch</a></p>
+<div class="hero-intro-layout"><div class="hero-intro-copy"><h1>I work in the gap between those two sentences.</h1><p class="lede">I investigate why systems get stuck, then design a path forward. Working independently inside local government, I followed evidence across residents, staff, policy, software, and budgets, and turned it into decisions that could move.</p><p class="independent-line">Independent project lead across four civic cases · Open to service design, research, civic technology, and strategy roles</p></div><figure class="hero-doodle"><img alt="Illustration of Jude wearing a yellow knit hat and holding a tea bag over a pink mug" decoding="async" fetchpriority="high" height="540" loading="eager" src="illustration.webp" width="540"/><figcaption>A LITTLE BIT OF ME, IN INK.</figcaption></figure></div>
+<p class="hero-cta"><a href="#work">See the work ↓</a><a href="resume.pdf?v=20261027-final" rel="noopener" target="_blank">Résumé ↗</a><a href="#contact">Get in touch</a></p>
 <div class="smallrule"></div>
 <p class="key label"><span><i class="swatch" style="background:var(--ribbon)"></i>Red ribbon: a human need</span><span><i class="swatch" style="background:var(--ink)"></i>Black ribbon: an institutional response</span></p>
 </header>
@@ -530,7 +553,7 @@ footer{padding-block:80px 88px;border-top:1px solid var(--rule)}
 <p class="evolution-disclosure">Some dated snapshots are intermediate project states rather than pre-project baselines. Comparison links document site evolution; they do not by themselves prove authorship, increased task completion, or a completed end-to-end payment system.</p>
 </section>
 <section aria-labelledby="sb-1" class="storyboard">
-<div class="storyboard-overline"><span>THE CASE / 01</span><span>WHAT I SAW → WHAT I CHANGED</span></div><div class="storyboard-header"><h3 id="sb-1">The story in four frames.</h3></div><p class="storyboard-intro">From a paper form to a service with an actual next step.</p>
+<div class="storyboard-overline"><span>CASE STUDY / 01</span><span>THE PROBLEM  →  THE TURN  →  THE RESPONSE  →  WHAT CHANGED</span></div><div class="storyboard-header"><h3 id="sb-1">The form was never the whole service.</h3></div><p class="storyboard-intro">From a paper form to a service with an actual next step.</p>
 <div class="scene-list">
 <div class="scene" data-stage="1"><div class="scene-top"><span class="scene-num">01</span><span class="scene-act">THE FRICTION</span></div>
 <h4>A simple rental required a trip to Village Hall.</h4>
@@ -565,7 +588,6 @@ footer{padding-block:80px 88px;border-top:1px solid var(--rule)}
 <div class="tradeoff"><dt>Force custom functionality, or use native CMS features?</dt><dd><strong>Chose:</strong> a tested, maintainable native flow, with the limitations recorded.</dd></div>
 <div class="tradeoff"><dt>Payment at request or after review?</dt><dd><strong>Designed, next release:</strong> charge after approval. PayIt integration is unverified.</dd></div>
 </dl></details>
-
 <details class="long-read"><summary>Read the full write-up (about five minutes)</summary><div class="long-copy">
 <h4>A resident comes with a task</h4>
 <p>A resident looking for a permit shouldn’t need to know which department handles it before they can begin. But municipal websites often reflect how government is organized internally rather than how residents experience a need. In Spring Valley, forms, payments, department pages, and service instructions lived in different places. The challenge wasn’t only visual inconsistency. A resident could find a document and still have no clear idea how to finish the task.</p>
@@ -580,7 +602,6 @@ footer{padding-block:80px 88px;border-top:1px solid var(--rule)}
 </div></details>
 </section>
 <div aria-label="Methods used" class="methods"><span>Content audit</span><span>Information architecture</span><span>Service blueprint</span><span>CMS configuration</span><span>State testing</span></div><p class="case-live-link"><a href="https://www.villagespringvalley.org/booking" rel="noopener" target="_blank">View the public booking entry point ↗</a></p>
-
 </div>
 </article>
 <!-- 02 -->
@@ -610,7 +631,7 @@ footer{padding-block:80px 88px;border-top:1px solid var(--rule)}
 <figcaption class="proof-below">My visualization of the responsibility chain developed during the Chapter 239 reform; the Board adopted resulting local laws.</figcaption>
 </figure><p class="case-live-link"><a href="https://www.nyc.gov/site/tlc/businesses/for-hire-vehicle-bases.page" rel="noopener" target="_blank">Context: how NYC regulates dispatch bases ↗</a></p>
 <section aria-labelledby="sb-2" class="storyboard">
-<div class="storyboard-overline"><span>THE CASE / 02</span><span>WHAT I SAW → WHAT I CHANGED</span></div><div class="storyboard-header"><h3 id="sb-2">The story in four frames.</h3></div><p class="storyboard-intro">I didn’t start with a new restriction. I started by asking why the existing law couldn’t see the real operator.</p>
+<div class="storyboard-overline"><span>CASE STUDY / 02</span><span>THE PROBLEM  →  THE TURN  →  THE RESPONSE  →  WHAT CHANGED</span></div><div class="storyboard-header"><h3 id="sb-2">The law was looking at the wrong operator.</h3></div><p class="storyboard-intro">I didn’t start with a new restriction. I started by asking why the existing law couldn’t see the real operator.</p>
 <div class="scene-list">
 <div class="scene" data-stage="1"><div class="scene-top"><span class="scene-num">01</span><span class="scene-act">THE CONFLICT</span></div>
 <h4>The street was crowded. The easiest target was the driver.</h4>
@@ -645,7 +666,6 @@ footer{padding-block:80px 88px;border-top:1px solid var(--rule)}
 <div class="tradeoff"><dt>Uniform fees versus tiered fees</dt><dd><strong>Proposed:</strong> fees that reflect operational scale while protecting smaller compliant businesses.</dd></div>
 <div class="tradeoff"><dt>Visual branding versus evidence of control</dt><dd><strong>Drafted:</strong> affiliation determined by conduct and coordination; some versions explicitly avoid appearance-based presumptions.</dd></div>
 </dl></details>
-
 <details class="long-read"><summary>Read the full write-up (about five minutes)</summary><div class="long-copy">
 <h4>The crowded street was not the whole problem</h4>
 <p>Spring Valley had a transportation problem: congestion, passenger-safety concerns and disputes about unlicensed rides. But taxis were also indispensable to residents and a livelihood for people living paycheck to paycheck. Some had already invested in licenses and compliance. The easy answer—fewer cabs and harder penalties—risked squeezing those people while leaving larger coordinated operations intact. I couldn’t solve one problem by creating another.</p>
@@ -662,7 +682,6 @@ footer{padding-block:80px 88px;border-top:1px solid var(--rule)}
 </div></details>
 </section>
 <div aria-label="Methods used" class="methods"><span>Code review</span><span>Stakeholder synthesis</span><span>Regulatory mapping</span><span>Tradeoff analysis</span></div>
-
 </div>
 </article>
 <!-- 03 -->
@@ -688,7 +707,7 @@ footer{padding-block:80px 88px;border-top:1px solid var(--rule)}
 </div>
 </section>
 <section aria-labelledby="sb-3" class="storyboard">
-<div class="storyboard-overline"><span>THE CASE / 03</span><span>WHAT I SAW → WHAT I CHANGED</span></div><div class="storyboard-header"><h3 id="sb-3">The story in four frames.</h3></div><p class="storyboard-intro">The breakthrough was not a new engineering diagnosis. It was finding a way to use the work already paid for.</p>
+<div class="storyboard-overline"><span>CASE STUDY / 03</span><span>THE PROBLEM  →  THE TURN  →  THE RESPONSE  →  WHAT CHANGED</span></div><div class="storyboard-header"><h3 id="sb-3">The answer was already in the evidence.</h3></div><p class="storyboard-intro">The breakthrough was not a new engineering diagnosis. It was finding a way to use the work already paid for.</p>
 <div class="scene-list">
 <div class="scene" data-stage="1"><div class="scene-top"><span class="scene-num">01</span><span class="scene-act">THE STAKES</span></div>
 <h4>The park flooded. The Village was already in deficit.</h4>
@@ -723,7 +742,6 @@ footer{padding-block:80px 88px;border-top:1px solid var(--rule)}
 <div class="tradeoff"><dt>Blame agencies or preserve cooperation?</dt><dd><strong>Chose:</strong> document control and obligations while seeking workable site authorization.</dd></div>
 <div class="tradeoff"><dt>Take on full ownership or document limited support?</dt><dd><strong>Used:</strong> a County letter for application-stage site control; longer-term terms still open.</dd></div>
 </dl></details>
-
 <details class="long-read"><summary>Read the full write-up (about five minutes)</summary><div class="long-copy">
 <h4>The problem was not new</h4>
 <p>Every time Pascack Brook flooded around Memorial Park, Spring Valley faced the consequences of a long-running problem. The park is one of the Village’s central recreational spaces, and nearby properties and infrastructure were also at risk. The Village was in deficit. Commissioning a fresh qualifying study would have made a funding application harder to pursue. I thought the hardest part might be discovering the engineering answer. I was wrong about where the real difficulty sat.</p>
@@ -742,7 +760,6 @@ footer{padding-block:80px 88px;border-top:1px solid var(--rule)}
 </div></details>
 </section>
 <div aria-label="Methods used" class="methods"><span>Records research</span><span>Eligibility analysis</span><span>Systems mapping</span><span>Cross-agency strategy</span></div>
-
 </div>
 </article>
 <!-- 04 -->
@@ -782,7 +799,7 @@ footer{padding-block:80px 88px;border-top:1px solid var(--rule)}
 <figcaption class="proof-below">Selected changes from my 2026 reform. Escrow funds outside reviews; it is not municipal fee revenue.</figcaption>
 </figure>
 <section aria-labelledby="sb-4" class="storyboard">
-<div class="storyboard-overline"><span>THE CASE / 04</span><span>WHAT I SAW → WHAT I CHANGED</span></div><div class="storyboard-header"><h3 id="sb-4">The story in four frames.</h3></div><p class="storyboard-intro">The assignment sounded like raising fees. The actual problem was understanding the cost of doing the work.</p>
+<div class="storyboard-overline"><span>CASE STUDY / 04</span><span>THE PROBLEM  →  THE TURN  →  THE RESPONSE  →  WHAT CHANGED</span></div><div class="storyboard-header"><h3 id="sb-4">The real cost was hiding behind old fees.</h3></div><p class="storyboard-intro">The assignment sounded like raising fees. The actual problem was understanding the cost of doing the work.</p>
 <div class="scene-list">
 <div class="scene" data-stage="1"><div class="scene-top"><span class="scene-num">01</span><span class="scene-act">THE MISMATCH</span></div>
 <h4>$375 on paper. Much more work behind the counter.</h4>
@@ -817,7 +834,6 @@ footer{padding-block:80px 88px;border-top:1px solid var(--rule)}
 <div class="tradeoff"><dt>Technical rigor versus a schedule people can use</dt><dd><strong>Resolved:</strong> made the cost logic legible for staff, applicants and Board review.</dd></div>
 <div class="tradeoff"><dt>Projection versus collections</dt><dd><strong>Reported:</strong> modeled scenarios explicitly, without implying the money was already collected.</dd></div>
 </dl></details>
-
 <details class="long-read"><summary>Read the full write-up (about five minutes)</summary><div class="long-copy">
 <h4>Yesterday’s prices, today’s work</h4>
 <p>The Village was operating under financial pressure while some service fees still reflected an older way of working. A zoning text amendment carried a $375 base fee in the older schedule, but processing modern applications could involve staff reviews, inspections, consultants, public hearings, and follow-up. I was asked to review the fee schedule, and at first it sounded like a pricing exercise. I couldn’t justify the prices without understanding the work.</p>
@@ -834,7 +850,6 @@ footer{padding-block:80px 88px;border-top:1px solid var(--rule)}
 </div></details>
 </section>
 <div aria-label="Methods used" class="methods"><span>Department inquiry</span><span>Fee classification</span><span>Financial scenarios</span><span>Policy drafting</span></div>
-
 </div>
 </article>
 <!-- 05 -->
@@ -886,17 +901,13 @@ footer{padding-block:80px 88px;border-top:1px solid var(--rule)}
 </div></section>
 <section aria-labelledby="h-about" class="sec" id="about"><div class="wrap about-grid">
 <h2 class="label" id="h-about">About</h2>
-<div class="about-body"><figure class="portrait-note portrait-pair">
-<div class="portrait-visual"><img alt="Jude smiling in a dark knit sweater over a white collared shirt" class="portrait-photograph" decoding="async" height="880" loading="lazy" src="headshot.jpg" width="880">
-<img alt="Playful illustrated version of Jude in a yellow hat, next to a pink mug" class="portrait-illustration" decoding="async" height="560" loading="lazy" src="illustration.webp" width="560"/></div>
-<figcaption>The person and the doodle. Both me.</figcaption>
-</figure><p>My career path has been anything but straight. I’ve designed interior plantscapes for corporate clients, grown medical cannabis for a dispensary, worked in hospitality, and organized flowers for weddings. The titles have nothing in common, but the work does.</p><p>In corporate interior design, clients often knew a design felt wrong but couldn’t say why, so I learned to read their reactions and work out what they meant. In hospitality, I learned how to talk to people who were hungry, tired, and out of patience, and still leave them feeling taken care of. In every job I had to understand the limits (light, budget, time, regulation), be honest about what was possible, and make the experience feel a little more human than it had to be.</p><p>Now I do that for the Village of Spring Valley, where I went to high school and once lived. Civil service wasn’t the plan, but I wanted to help a community I have a stake in. Many residents here work multiple jobs and don’t have time to sit through meetings or find out what help exists, so I try to make the village easier to use and easier to trust.</p><h3 class="about-mini-head">My approach</h3><p>Listen first, including to what people can’t quite say. Name the constraints early, and don’t promise what I can’t deliver. The small details are what people actually run into, so I sweat them.</p><h3 class="about-mini-head">Beyond work</h3><p>NYT puzzles, wrestling my oversized dog, anything on wheels or a board, and a good trail.</p></div>
+<div class="about-body"><figure class="portrait-note portrait-single"><img alt="Photograph of Jude smiling in a dark knit sweater over a white collared shirt" decoding="async" height="880" loading="eager" src="headshot.jpg" width="880"/><figcaption>Jude, off the clock (mostly).</figcaption></figure><p>My career path has been anything but straight. I’ve designed interior plantscapes for corporate clients, grown medical cannabis for a dispensary, worked in hospitality, and organized flowers for weddings. The titles have nothing in common, but the work does.</p><p>In corporate interior design, clients often knew a design felt wrong but couldn’t say why, so I learned to read their reactions and work out what they meant. In hospitality, I learned how to talk to people who were hungry, tired, and out of patience, and still leave them feeling taken care of. In every job I had to understand the limits (light, budget, time, regulation), be honest about what was possible, and make the experience feel a little more human than it had to be.</p><p>Now I do that for the Village of Spring Valley, where I went to high school and once lived. Civil service wasn’t the plan, but I wanted to help a community I have a stake in. Many residents here work multiple jobs and don’t have time to sit through meetings or find out what help exists, so I try to make the village easier to use and easier to trust.</p><h3 class="about-mini-head">My approach</h3><p>Listen first, including to what people can’t quite say. Name the constraints early, and don’t promise what I can’t deliver. The small details are what people actually run into, so I sweat them.</p><h3 class="about-mini-head">Beyond work</h3><p>NYT puzzles, wrestling my oversized dog, anything on wheels or a board, and a good trail.</p></div>
 </div></section>
 <footer id="contact"><div class="wrap">
 <p class="label">Contact</p>
 <h2 class="sec-title">Have a complicated system?</h2>
 <div class="contact"><span class="email" id="email">judeandrade013@gmail.com</span><button class="btn" id="copy" type="button">Copy email</button></div>
-<p class="footer-actions"><a href="resume.pdf" rel="noopener" target="_blank">View résumé (PDF) ↗</a> <a href="https://www.linkedin.com/in/jude13/" rel="noopener" target="_blank">LinkedIn ↗</a> <a href="mailto:judeandrade013@gmail.com">Email ↗</a></p>
+<p class="footer-actions"><a href="resume.pdf?v=20261027-final" rel="noopener" target="_blank">View résumé (PDF) ↗</a> <a href="https://www.linkedin.com/in/jude13/" rel="noopener" target="_blank">LinkedIn ↗</a> <a href="mailto:judeandrade013@gmail.com">Email ↗</a></p>
 <p class="footer-edit">Selected work in service design, UX research, and public-sector strategy.</p>
 <p class="label colophon">Made with HTML, CSS, 2 tension headaches, and unreasonable amounts of caffeine. · 2026</p>
 </div></footer>
