@@ -12,7 +12,7 @@
 <meta content="Jude Andrade — Research, Service Design &amp; Strategy" property="og:title"/>
 <meta content="Research and service design through actual municipal decisions: digital services, taxi regulation, fees, flooding, and product UX." property="og:description"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<link rel="icon" type="image/svg+xml" href="favicon.svg?v=20261027-ja"/>
+<link href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23161714%27/%3E%3Crect width=%2716%27 height=%2732%27 fill=%27%238B2B22%27/%3E%3C/svg%3E" rel="icon"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wdth,wght@75..112.5,300..700&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/>
@@ -450,32 +450,135 @@ footer{padding-block:80px 88px;border-top:1px solid var(--rule)}
 .storyboard .scene-final .scene-num{background:transparent}
 @media(max-width:760px){.hero-intro-layout{grid-template-columns:minmax(0,1fr) 120px;gap:18px}.hero-doodle figcaption{font-size:9px}.hero-intro-copy h1{max-width:none}}
 @media(max-width:580px){.hero-intro-layout{grid-template-columns:1fr;gap:10px}.hero-doodle{order:-1;width:110px;justify-self:end;margin:0 5px 0 0;transform:rotate(3deg)}.hero-doodle figcaption{font-size:8.5px;margin-top:11px}.portrait-note.portrait-single{width:min(100%,260px);float:none;margin:0 0 25px}.storyboard .storyboard-overline span:last-child{display:none}.storyboard .storyboard-header h3{max-width:100%}}
+
+/* October 28, 2026: calm portfolio pass */
+:root,
+:root[data-theme="dark"]{
+  color-scheme:light;
+  --paper:#F5F2EA;
+  --platen:#EBE7DC;
+  --ink:#21302A;
+  --graphite:#65706B;
+  --rule:#D6D0C2;
+  --ribbon:#527466;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){color-scheme:light;--paper:#F5F2EA;--platen:#EBE7DC;--ink:#21302A;--graphite:#65706B;--rule:#D6D0C2;--ribbon:#527466}
+}
+body{background:var(--paper);color:var(--ink)}
+nav{background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(10px)}
+.hero{padding-block:58px 66px}
+.hero-head{justify-content:flex-end}
+.platen{border:1px solid var(--rule);border-radius:16px;background:#ECE9E0;max-width:none;margin-top:14px;box-shadow:0 14px 38px rgba(33,48,42,.05)}
+.platen:before{width:5px;background:linear-gradient(to bottom,#8D5E50 0 50%,#527466 50%)}
+.res .say{color:#8D5E50}
+.type-note{margin-bottom:26px}
+.hero-intro-layout{grid-template-columns:minmax(0,1fr) minmax(190px,250px);gap:clamp(32px,6vw,72px);align-items:center;margin-top:0}
+.hero-doodle{max-width:250px;transform:none;display:grid;gap:12px}
+.hero-doodle .identity-kicker{font:500 11px/1.65 var(--type);letter-spacing:.12em;text-transform:uppercase;color:var(--ink);max-width:21ch}
+.hero-doodle img{border:0;border-radius:18px;box-shadow:12px 12px 0 #DFE5DE;background:#DED9AE}
+.hero-doodle figcaption{text-align:left;margin-top:2px}
+.key{display:none}
+.hero-intro-copy h1{max-width:18ch}
+
+/* A numbered, unmistakably clickable case-study index. */
+.work-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,380px);align-items:end;gap:32px}
+.work-intro .mode-tip{margin:0 0 3px}
+.case-grid{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:38px}
+.case-card{min-width:0;display:flex}
+.case-card:first-child{grid-column:1 / -1}
+.case-card a{position:relative;display:grid;grid-template-columns:120px minmax(0,1fr);gap:24px;align-items:start;width:100%;height:100%;min-height:240px;padding:30px;border:1px solid color-mix(in srgb,var(--card) 70%,var(--rule));border-radius:18px;background:var(--card);overflow:hidden;transition:transform .2s ease,box-shadow .2s ease}
+.case-card a:after{content:'Read case study  \2192';position:absolute;right:28px;bottom:24px;font:500 11px/1 var(--type);letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid currentColor;padding-bottom:4px}
+.case-card a:hover{transform:translateY(-3px);box-shadow:0 16px 35px rgba(33,48,42,.08)}
+.case-card a:focus-visible{outline-offset:5px}
+.case-no{font:500 clamp(54px,7vw,88px)/.88 var(--display);letter-spacing:-.08em;color:color-mix(in srgb,var(--ink) 80%,var(--card));font-variant-numeric:tabular-nums}
+.case-copy{padding-bottom:42px}
+.case-copy h3{font:500 clamp(20px,2.5vw,30px)/1.18 var(--display);letter-spacing:-.03em;max-width:23ch}
+.case-copy p{font-size:15px;line-height:1.55;color:var(--graphite);margin-top:12px;max-width:54ch}
+.case-proof{display:block;font:500 13px/1.4 var(--type);letter-spacing:.04em;color:var(--ink);margin-top:22px}
+.case-card:nth-child(1){--card:#E1E9E2}
+.case-card:nth-child(2){--card:#ECE5DB}
+.case-card:nth-child(3){--card:#E3E9EC}
+.case-card:nth-child(4){--card:#EEE3DE}
+.case-card:nth-child(5){--card:#E9E5EE}
+
+/* A separate, low-copy museum for public pages. */
+.museum{padding-block:82px;background:#ECE8DE}
+.museum-head{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:34px}
+.museum-note{font:500 11px/1.6 var(--type);letter-spacing:.1em;text-transform:uppercase;color:var(--graphite)}
+.gallery-wall{display:grid;grid-template-columns:1.03fr .97fr;gap:18px;align-items:start}
+.gallery-piece{margin:0;padding:12px;background:#F9F7F1;border:1px solid var(--rule);box-shadow:0 18px 30px rgba(33,48,42,.06)}
+.gallery-piece:nth-child(2){margin-top:54px}
+.gallery-piece img{display:block;width:100%;height:auto;filter:saturate(.82) contrast(.97)}
+.gallery-piece figcaption{display:flex;justify-content:space-between;gap:12px;padding:13px 3px 2px;font:500 11px/1.4 var(--type);letter-spacing:.08em;text-transform:uppercase}
+.gallery-piece figcaption span:last-child{color:var(--graphite)}
+.gallery-rooms{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:48px}
+.gallery-room{border-top:1px solid var(--ink);padding-top:14px}
+.gallery-room h3{font:500 15px/1.35 var(--display)}
+.gallery-room nav{position:static;background:none;border:0;backdrop-filter:none;display:flex;gap:12px;margin-top:12px}
+.gallery-room a{font:500 10.5px/1.4 var(--type);letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--rule);padding-bottom:3px}
+.gallery-room a:hover{border-color:var(--ink)}
+
+/* Calm the case-study storyboard; hierarchy comes from spacing, not warning colors. */
+.storyboard{padding:30px;border-radius:18px;background:#EAE7DE}
+.storyboard .storyboard-overline{border:0;padding:0;margin-bottom:20px;color:var(--graphite)}
+.storyboard .storyboard-header h3{font-family:var(--display);max-width:28ch}
+.storyboard .scene-list{gap:12px;background:transparent;border:0}
+.storyboard .scene{border:1px solid var(--rule);border-top:0!important;border-radius:14px;background:#F7F4EC;padding:22px}
+.storyboard .scene:nth-child(2){background:#E5EBE7}
+.storyboard .scene:nth-child(3){background:#E4E9EB}
+.storyboard .scene:nth-child(4){background:#ECE5DE}
+.storyboard .scene-num{color:var(--ink);opacity:.72}
+.scene-act,.j-label{color:var(--graphite)}
+.scene .judgment{border-color:color-mix(in srgb,var(--rule) 75%,transparent)}
+
+@media(max-width:800px){
+  .work-intro{grid-template-columns:1fr}.work-intro .mode-tip{margin-top:0}
+  .case-grid{grid-template-columns:1fr}.case-card:first-child{grid-column:auto}
+  .case-card a{grid-template-columns:88px minmax(0,1fr);min-height:220px;padding:24px}
+  .gallery-rooms{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:580px){
+  .hero-head{justify-content:flex-start}.hero-intro-layout{grid-template-columns:1fr;gap:26px}.hero-doodle{order:-1;width:152px;justify-self:start;margin:0}.hero-doodle .identity-kicker{font-size:10px}.hero-doodle figcaption{display:none}
+  .case-card a{grid-template-columns:1fr;gap:15px;min-height:0;padding:22px 22px 70px}.case-no{font-size:56px}.case-copy{padding:0}.case-card a:after{left:22px;right:auto;bottom:22px}
+  .gallery-wall{grid-template-columns:1fr}.gallery-piece:nth-child(2){margin-top:0}.gallery-rooms{grid-template-columns:1fr 1fr}.museum-head{align-items:start;flex-direction:column;gap:8px}
+  .storyboard{padding:18px}
+}
 </style>
-<meta content="https://judeandrade013.github.io/" property="og:url"/><meta content="https://judeandrade013.github.io/og-card.jpg" property="og:image"/><link href="https://judeandrade013.github.io/" rel="canonical"/></head>
+<meta content="https://judeandrade013.github.io/" property="og:url"/><meta content="https://judeandrade013.github.io/og-card.jpg" property="og:image"/><link href="https://judeandrade013.github.io/" rel="canonical"/><link href="favicon.svg" rel="icon" type="image/svg+xml"/></head>
 <body>
-<nav aria-label="Main"><div class="wrap nav-in"><a class="mark" href="#top">Jude Andrade</a><div class="nav-links"><a href="#work">Work</a><a href="#theory">Thinking</a><a href="#about">About</a><a href="resume.pdf?v=20261027-final" rel="noopener" target="_blank">Résumé ↗</a><a href="#contact">Contact</a></div></div></nav>
+<nav aria-label="Main"><div class="wrap nav-in"><a class="mark" href="#top">Jude Andrade</a><div class="nav-links"><a href="#work">Work</a><a href="#gallery">Gallery</a><a href="#theory">Thinking</a><a href="#about">About</a><a href="resume.pdf?v=20261027-final" rel="noopener" target="_blank">Résumé ↗</a><a href="#contact">Contact</a></div></div></nav>
 <header class="hero wrap" id="top">
-<div class="hero-head"><p class="label">Service design · Research · Working across systems</p><button class="hero-control" id="replay" type="button">Replay the exchange ↻</button></div>
+<div class="hero-head"><button class="hero-control" id="replay" type="button">Replay the exchange ↻</button></div>
 <p class="sr-only">Illustrative exchange. Resident: “The park keeps flooding. Who fixes it?” Institution: “Responsibility requires review.”</p>
 <div aria-hidden="true" class="platen"><div class="line res"><span class="who">Resident</span><span class="say"><span class="txt" id="t-res">The park keeps flooding. Who fixes it?</span></span></div><div class="line inst"><span class="who">Institution</span><span class="say"><span class="txt" id="t-inst">Responsibility requires review.</span><span class="caret" id="caret"></span></span></div></div>
 <p class="type-note">Illustrative exchanges based on project situations, not verbatim resident quotes. <span id="type-step">01 / 04</span></p>
-<div class="hero-intro-layout"><div class="hero-intro-copy"><h1>I work in the gap between those two sentences.</h1><p class="lede">I investigate why systems get stuck, then design a path forward. Working independently inside local government, I followed evidence across residents, staff, policy, software, and budgets, and turned it into decisions that could move.</p><p class="independent-line">Independent project lead across four civic cases · Open to service design, research, civic technology, and strategy roles</p></div><figure class="hero-doodle"><img alt="Illustration of Jude wearing a yellow knit hat and holding a tea bag over a pink mug" decoding="async" fetchpriority="high" height="540" loading="eager" src="illustration.webp" width="540"/><figcaption>A LITTLE BIT OF ME, IN INK.</figcaption></figure></div>
+<div class="hero-intro-layout"><div class="hero-intro-copy"><h1>I work in the gap between those two sentences.</h1><p class="lede">I investigate why systems get stuck, then design a path forward. Working independently inside local government, I followed evidence across residents, staff, policy, software, and budgets, and turned it into decisions that could move.</p><p class="independent-line">Independent project lead · Open to service design, research, civic technology, and strategy roles</p></div><figure class="hero-doodle"><p class="identity-kicker">Service design.<br/>Research.<br/>Working across systems.</p><img alt="Illustration of Jude wearing a yellow knit hat and holding a tea bag over a pink mug" decoding="async" fetchpriority="high" height="540" loading="eager" src="illustration.webp" width="540"/><figcaption>A little bit of me, in ink.</figcaption></figure></div>
 <p class="hero-cta"><a href="#work">See the work ↓</a><a href="resume.pdf?v=20261027-final" rel="noopener" target="_blank">Résumé ↗</a><a href="#contact">Get in touch</a></p>
 <p class="key label"><span><i class="swatch" style="background:var(--ribbon)"></i>Red ribbon: a human need</span><span><i class="swatch" style="background:var(--ink)"></i>Black ribbon: an institutional response</span></p>
 </header>
 <section aria-labelledby="h-work" class="sec" id="work"><div class="wrap">
-<p class="label">Selected work / 2026</p>
-<h2 class="sec-title" id="h-work">Four civic cases. One earlier product study.</h2>
-<p class="mode-tip">Five projects. Each story begins with the problem, the clue I found, the decision I made, and the difference it created. Go deeper only if you want to.</p>
-<div class="idx">
-<div class="idx-head"><span class="label h-proj">Project and outcome</span><span class="label h-tags">Kind of work</span><span class="sr-only">Link</span></div>
-<ul class="rows">
-<li class="row"><a href="#public-services"><span class="r-main"><span class="r-title">The form wasn’t the whole service.</span><span class="r-sum">Forms Index live; a seven-resource booking workflow configured and tested from request to confirmation to cancellation.</span></span><span class="r-tags">Service design · Systems · Build</span><span class="label r-go">Full case →</span></a></li>
-<li class="row"><a href="#cab-rules"><span class="r-main"><span class="r-title">Who actually controlled the ride?</span><span class="r-sum">Connected Spring Valley’s taxi problem to NYC’s platform model, then redesigned operator definitions to protect drivers and reach large networks.</span></span><span class="r-tags">Policy · Research · Systems</span><span class="label r-go">Full case →</span></a></li>
-<li class="row"><a href="#memorial-park"><span class="r-main"><span class="r-title">A flood, a paper trail, and several jurisdictions.</span><span class="r-sum">Found a way to qualify for flood-mitigation grant funding using an existing study—without commissioning another expensive diagnosis.</span></span><span class="r-tags">Research · Policy · Funding · Systems</span><span class="label r-go">Full case →</span></a></li>
-<li class="row"><a href="#fees"><span class="r-main"><span class="r-title">Yesterday’s fees. Today’s administrative work.</span><span class="r-sum">My revised Village fee schedule was adopted, with clearer workload-based tiers and separate professional-review escrows.</span></span><span class="r-tags">Research · Policy · Systems</span><span class="label r-go">Full case →</span></a></li>
-<li class="row"><a href="#koala"><span class="r-main"><span class="r-title">Why owners abandoned their listings.</span><span class="r-sum">KOALA · Improved first-page listing success from 33% to 46% by addressing missing information and unrecoverable progress.</span></span><span class="r-tags">Product UX · Research</span><span class="label r-go">Short case →</span></a></li>
+<div class="work-intro"><div><p class="label">Case studies</p><h2 class="sec-title" id="h-work">Start with the question that pulls you in.</h2></div><p class="mode-tip">Each case opens with the problem, the turn, the decision, and what changed. The deeper evidence is there when you want it.</p></div>
+<ul class="case-grid">
+<li class="case-card"><a href="#public-services"><span class="case-no">01</span><span class="case-copy"><h3>The form wasn’t the whole service.</h3><p>I followed a resident request beyond the PDF and into the staff workflow that had to finish it.</p><span class="case-proof">7 resources configured and tested</span></span></a></li>
+<li class="case-card"><a href="#cab-rules"><span class="case-no">02</span><span class="case-copy"><h3>Who actually controlled the ride?</h3><p>The driver was visible. The network organizing the trip was not.</p><span class="case-proof">Chapter 239, reframed around control</span></span></a></li>
+<li class="case-card"><a href="#memorial-park"><span class="case-no">03</span><span class="case-copy"><h3>A flood, a paper trail, and several jurisdictions.</h3><p>The breakthrough was not another study. It was finding the path through the studies that already existed.</p><span class="case-proof">1 existing study unlocked the grant route</span></span></a></li>
+<li class="case-card"><a href="#fees"><span class="case-no">04</span><span class="case-copy"><h3>Yesterday’s fees. Today’s administrative work.</h3><p>I connected what the Village charged to what delivering the service actually required.</p><span class="case-proof">Revised schedule adopted</span></span></a></li>
+<li class="case-card"><a href="#koala"><span class="case-no">05</span><span class="case-copy"><h3>Why owners abandoned their listings.</h3><p>A small product-flow study with a measurable result.</p><span class="case-proof">33% → 46% first-page success</span></span></a></li>
 </ul>
+</div></section>
+
+<section aria-labelledby="gallery-title" class="museum" id="gallery"><div class="wrap">
+<div class="museum-head"><div><p class="label">Field gallery</p><h2 class="sec-title" id="gallery-title">Live pages</h2></div><p class="museum-note">Two public artifacts · captured Oct 26, 2026</p></div>
+<div class="gallery-wall">
+<figure class="gallery-piece"><img alt="Facilities and Stage Requests page" decoding="async" height="511" loading="lazy" src="booking-request-flow.webp" width="1050"/><figcaption><span>Facilities + requests</span><span>01</span></figcaption></figure>
+<figure class="gallery-piece"><img alt="Village Forms Index" decoding="async" height="549" loading="lazy" src="forms-index.webp" width="1050"/><figcaption><span>Forms index</span><span>02</span></figcaption></figure>
+</div>
+<div class="gallery-rooms" aria-label="More public pages">
+<article class="gallery-room"><h3>Homepage</h3><nav aria-label="Homepage versions"><a href="https://web.archive.org/web/20250916194049/https://www.villagespringvalley.org/" rel="noopener noreferrer" target="_blank">Then ↗</a><a href="https://www.villagespringvalley.org/" rel="noopener noreferrer" target="_blank">Now ↗</a></nav></article>
+<article class="gallery-room"><h3>Village Clerk</h3><nav aria-label="Village Clerk versions"><a href="https://web.archive.org/web/20250213194626/https://www.villagespringvalley.org/departments/clerk" rel="noopener noreferrer" target="_blank">Then ↗</a><a href="https://www.villagespringvalley.org/departments/clerk" rel="noopener noreferrer" target="_blank">Now ↗</a></nav></article>
+<article class="gallery-room"><h3>Assessor</h3><nav aria-label="Assessor versions"><a href="https://web.archive.org/web/20251028113147mp_/https://www.villagespringvalley.org/departments/AssessorsOffice" rel="noopener noreferrer" target="_blank">Then ↗</a><a href="https://www.villagespringvalley.org/departments/AssessorsOffice" rel="noopener noreferrer" target="_blank">Now ↗</a></nav></article>
+<article class="gallery-room"><h3>Community</h3><nav aria-label="Community Development versions"><a href="https://web.archive.org/web/20260312140905/https://www.villagespringvalley.org/departments/CommunityDevelopment" rel="noopener noreferrer" target="_blank">Then ↗</a><a href="https://www.villagespringvalley.org/departments/CommunityDevelopment" rel="noopener noreferrer" target="_blank">Now ↗</a></nav></article>
 </div>
 </div></section>
 <!-- 01 -->
@@ -527,7 +630,7 @@ footer{padding-block:80px 88px;border-top:1px solid var(--rule)}
 <p class="proof-below flow-key"><span><i class="swatch" style="background:var(--ribbon)"></i>Resident acts</span><span><i class="swatch" style="background:var(--ink)"></i>Village staff acts</span></p>
 <figcaption class="proof-below">“Before” is the in-person process as it worked. “Now” is from the live booking page. “Designed next” is from my October 2026 user-flow blueprint, scheduled to deploy in early November 2026. As of Oct 26, 2026, payment integration and the no-account flow are not live.</figcaption>
 </figure>
-<section aria-labelledby="shots-1" class="shots">
+<section aria-labelledby="shots-1" class="shots" hidden>
 <div class="proof-heading"><h3 id="shots-1">Exhibit / The live pages</h3><span class="label">Captured Oct 26, 2026</span></div>
 <div class="shot-grid">
 <figure class="shot"><img alt="The Village’s Facilities and Stage Requests page. It states the four-step flow, says a request is not approved until confirmed by the Village, links to three facility applications, and begins with an account login step." decoding="async" height="511" loading="lazy" src="booking-request-flow.webp" width="1050"/><figcaption><strong>Request, not booking.</strong> The page says plainly that a request isn’t approved until the Village confirms it, then walks through four steps.</figcaption></figure>
@@ -535,7 +638,7 @@ footer{padding-block:80px 88px;border-top:1px solid var(--rule)}
 </div>
 <p class="shots-note">Both are public pages. The public page lists three facility applications. The booking portal itself requires an account, so the seven-resource configuration and the test requests aren’t visible here.</p>
 </section>
-<section aria-labelledby="site-evolution-title" class="site-evolution">
+<section aria-labelledby="site-evolution-title" class="site-evolution" hidden>
 <div class="storyboard-header"><h3 id="site-evolution-title">The public website as evidence</h3><span class="label">Dated records · Live pages</span></div>
 <p class="mode-tip">A public trail across the Village's website. The archived versions are point-in-time reference pages; the current links let you inspect the live task pathways and content structure. These four areas illustrate the broader service-design scope.</p>
 <div class="evolution-grid"><div class="evolution-card"><span class="evolution-id">01 / Resident entry point</span><h4>Homepage</h4><p>Task-based routes to report problems, find forms, make payments, and locate Village services.</p>
@@ -899,7 +1002,7 @@ footer{padding-block:80px 88px;border-top:1px solid var(--rule)}
 </div></section>
 <section aria-labelledby="h-about" class="sec" id="about"><div class="wrap about-grid">
 <h2 class="label" id="h-about">About</h2>
-<div class="about-body"><figure class="portrait-note portrait-single"><img alt="Jude in a dark sweater and white collared shirt against a soft blue-green background" decoding="async" height="1100" loading="lazy" src="about-jude-2026.jpg" width="1100"/><figcaption>Jude, off the clock (mostly).</figcaption></figure><p>My career path has been anything but straight. I’ve designed interior plantscapes for corporate clients, grown medical cannabis for a dispensary, worked in hospitality, and organized flowers for weddings. The titles have nothing in common, but the work does.</p><p>In corporate interior design, clients often knew a design felt wrong but couldn’t say why, so I learned to read their reactions and work out what they meant. In hospitality, I learned how to talk to people who were hungry, tired, and out of patience, and still leave them feeling taken care of. In every job I had to understand the limits (light, budget, time, regulation), be honest about what was possible, and make the experience feel a little more human than it had to be.</p><p>Now I do that for the Village of Spring Valley, where I went to high school and once lived. Civil service wasn’t the plan, but I wanted to help a community I have a stake in. Many residents here work multiple jobs and don’t have time to sit through meetings or find out what help exists, so I try to make the village easier to use and easier to trust.</p><h3 class="about-mini-head">My approach</h3><p>Listen first, including to what people can’t quite say. Name the constraints early, and don’t promise what I can’t deliver. The small details are what people actually run into, so I sweat them.</p><h3 class="about-mini-head">Beyond work</h3><p>NYT puzzles, wrestling my oversized dog, anything on wheels or a board, and a good trail.</p></div>
+<div class="about-body"><figure class="portrait-note portrait-single"><img alt="Photograph of Jude smiling in a dark knit sweater over a white collared shirt" decoding="async" height="1100" loading="lazy" src="about-jude-2026.jpg" width="1100"/><figcaption>Jude, off the clock (mostly).</figcaption></figure><p>My career path has been anything but straight. I’ve designed interior plantscapes for corporate clients, grown medical cannabis for a dispensary, worked in hospitality, and organized flowers for weddings. The titles have nothing in common, but the work does.</p><p>In corporate interior design, clients often knew a design felt wrong but couldn’t say why, so I learned to read their reactions and work out what they meant. In hospitality, I learned how to talk to people who were hungry, tired, and out of patience, and still leave them feeling taken care of. In every job I had to understand the limits (light, budget, time, regulation), be honest about what was possible, and make the experience feel a little more human than it had to be.</p><p>Now I do that for the Village of Spring Valley, where I went to high school and once lived. Civil service wasn’t the plan, but I wanted to help a community I have a stake in. Many residents here work multiple jobs and don’t have time to sit through meetings or find out what help exists, so I try to make the village easier to use and easier to trust.</p><h3 class="about-mini-head">My approach</h3><p>Listen first, including to what people can’t quite say. Name the constraints early, and don’t promise what I can’t deliver. The small details are what people actually run into, so I sweat them.</p><h3 class="about-mini-head">Beyond work</h3><p>NYT puzzles, wrestling my oversized dog, anything on wheels or a board, and a good trail.</p></div>
 </div></section>
 <footer id="contact"><div class="wrap">
 <p class="label">Contact</p>
