@@ -6,27 +6,26 @@
 <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
 <title>Jude Andrade — Research, Service Design &amp; Strategy</title>
 <meta content="Jude Andrade is a researcher and service designer working inside local government. Selected work: digital government services, taxi regulation, flood-mitigation funding, municipal fees, and product UX." name="description"/>
-<meta content="#ECECE6" media="(prefers-color-scheme: light)" name="theme-color"/>
-<meta content="#121310" media="(prefers-color-scheme: dark)" name="theme-color"/>
+<meta content="#F5F2E9" media="(prefers-color-scheme: light)" name="theme-color"/>
+<meta content="#F5F2E9" media="(prefers-color-scheme: dark)" name="theme-color"/>
 <meta content="website" property="og:type"/>
 <meta content="Jude Andrade — Research, Service Design &amp; Strategy" property="og:title"/>
 <meta content="Research and service design through actual municipal decisions: digital services, taxi regulation, fees, flooding, and product UX." property="og:description"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<link href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23161714%27/%3E%3Crect width=%2716%27 height=%2732%27 fill=%27%238B2B22%27/%3E%3C/svg%3E" rel="icon"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wdth,wght@75..112.5,300..700&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/>
 <style>
-/* Concept: a typewriter platen with a two-color ribbon. Red = a human need. Black = an institutional response.
+/* Concept: a typewriter platen with a two-color ribbon. Cobalt = a human need. Black = an institutional response.
    Layout: one reading column with a left label rail. */
 :root{
   color-scheme:light;
-  --paper:#ECECE6;
-  --platen:#E2E2DB;
-  --ink:#161714;
-  --graphite:#5A5D57;   /* secondary text; 5:1+ on paper */
-  --rule:#C4C5BC;
-  --ribbon:#8B2B22;
+  --paper:#F5F2E9;
+  --platen:#EBE6DC;
+  --ink:#141414;
+  --graphite:#4B4B4B;   /* secondary text; 5:1+ on paper */
+  --rule:#CBC6BC;
+  --ribbon:#1A44C2;
   --display:"Martian Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
   --type:"IBM Plex Mono", ui-monospace, "Courier New", monospace;
   --body:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -34,12 +33,12 @@
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     color-scheme:dark;
-    --paper:#121310; --platen:#1A1B18; --ink:#E6E6E0; --graphite:#9A9D95; --rule:#2E302B; --ribbon:#DB7465;
+    --paper:#141414; --platen:#EBE6DC; --ink:#F5F2E9; --graphite:#4B4B4B; --rule:#CBC6BC; --ribbon:#1A44C2;
   }
 }
 :root[data-theme="dark"]{
   color-scheme:dark;
-  --paper:#121310; --platen:#1A1B18; --ink:#E6E6E0; --graphite:#9A9D95; --rule:#2E302B; --ribbon:#DB7465;
+  --paper:#141414; --platen:#EBE6DC; --ink:#F5F2E9; --graphite:#4B4B4B; --rule:#CBC6BC; --ribbon:#1A44C2;
 }
 
 *{box-sizing:border-box}
@@ -281,7 +280,7 @@ section,article{border-top:1px solid var(--rule)}
 .theory-note{color:var(--graphite);font-size:14px;margin-top:14px;max-width:72ch}
 .dims{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:36px}
 .dim{background:var(--platen);padding:20px 20px 22px}
-.dim h3{font-family:var(--type);font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase}
+.dim h4{font-family:var(--type);font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase}
 .dim p{font-size:14.5px;color:var(--graphite);margin-top:6px}
 .theory-anchors{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
 .theory-anchors a{font:11.5px var(--type);padding:8px 10px;border:1px solid var(--rule)}
@@ -432,7 +431,7 @@ footer{padding-block:80px 88px;border-top:1px solid var(--rule)}
 .hero-intro-copy h1{max-width:17ch;margin-top:0}
 .hero-intro-copy .lede{max-width:64ch}
 .hero-doodle{justify-self:end;align-self:center;max-width:195px;width:100%;margin:0;transform:rotate(2deg)}
-.hero-doodle img{display:block;width:100%;height:auto;border:1px solid var(--rule);box-shadow:8px 8px 0 var(--platen);background:#ddd8ab}
+.hero-doodle img{display:block;width:100%;height:auto;border:1px solid var(--rule);box-shadow:8px 8px 0 var(--platen);background:#FFD21F}
 .hero-doodle figcaption{font:500 10px/1.6 var(--type);letter-spacing:.055em;margin-top:15px;text-align:center;color:var(--graphite)}
 .portrait-note.portrait-single{float:right;position:relative;width:min(42%,270px);margin:0 0 24px 34px}
 .portrait-single img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border:1px solid var(--rule);background:var(--platen)}
@@ -455,28 +454,28 @@ footer{padding-block:80px 88px;border-top:1px solid var(--rule)}
 :root,
 :root[data-theme="dark"]{
   color-scheme:light;
-  --paper:#F5F2EA;
-  --platen:#EBE7DC;
-  --ink:#21302A;
-  --graphite:#65706B;
-  --rule:#D6D0C2;
-  --ribbon:#527466;
+  --paper:#F5F2E9;
+  --platen:#EBE6DC;
+  --ink:#141414;
+  --graphite:#4B4B4B;
+  --rule:#CBC6BC;
+  --ribbon:#1A44C2;
 }
 @media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){color-scheme:light;--paper:#F5F2EA;--platen:#EBE7DC;--ink:#21302A;--graphite:#65706B;--rule:#D6D0C2;--ribbon:#527466}
+  :root:not([data-theme="light"]){color-scheme:light;--paper:#F5F2E9;--platen:#EBE6DC;--ink:#141414;--graphite:#4B4B4B;--rule:#CBC6BC;--ribbon:#1A44C2}
 }
 body{background:var(--paper);color:var(--ink)}
 nav{background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(10px)}
 .hero{padding-block:58px 66px}
 .hero-head{justify-content:flex-end}
-.platen{border:1px solid var(--rule);border-radius:16px;background:#ECE9E0;max-width:none;margin-top:14px;box-shadow:0 14px 38px rgba(33,48,42,.05)}
-.platen:before{width:5px;background:linear-gradient(to bottom,#8D5E50 0 50%,#527466 50%)}
-.res .say{color:#8D5E50}
+.platen{border:1px solid var(--rule);border-radius:16px;background:#EBE6DC;max-width:none;margin-top:14px;box-shadow:0 14px 38px rgba(33,48,42,.05)}
+.platen:before{width:5px;background:linear-gradient(to bottom,#1A44C2 0 50%,#1A44C2 50%)}
+.res .say{color:#1A44C2}
 .type-note{margin-bottom:26px}
 .hero-intro-layout{grid-template-columns:minmax(0,1fr) minmax(190px,250px);gap:clamp(32px,6vw,72px);align-items:center;margin-top:0}
 .hero-doodle{max-width:250px;transform:none;display:grid;gap:12px}
 .hero-doodle .identity-kicker{font:500 11px/1.65 var(--type);letter-spacing:.12em;text-transform:uppercase;color:var(--ink);max-width:21ch}
-.hero-doodle img{border:0;border-radius:18px;box-shadow:12px 12px 0 #DFE5DE;background:#DED9AE}
+.hero-doodle img{border:0;border-radius:18px;box-shadow:12px 12px 0 #FFD21F;background:#FFD21F}
 .hero-doodle figcaption{text-align:left;margin-top:2px}
 .key{display:none}
 .hero-intro-copy h1{max-width:18ch}
@@ -496,18 +495,18 @@ nav{background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:b
 .case-copy h3{font:500 clamp(20px,2.5vw,30px)/1.18 var(--display);letter-spacing:-.03em;max-width:23ch}
 .case-copy p{font-size:15px;line-height:1.55;color:var(--graphite);margin-top:12px;max-width:54ch}
 .case-proof{display:block;font:500 13px/1.4 var(--type);letter-spacing:.04em;color:var(--ink);margin-top:22px}
-.case-card:nth-child(1){--card:#E1E9E2}
-.case-card:nth-child(2){--card:#ECE5DB}
-.case-card:nth-child(3){--card:#E3E9EC}
-.case-card:nth-child(4){--card:#EEE3DE}
-.case-card:nth-child(5){--card:#E9E5EE}
+.case-card:nth-child(1){--card:#EBE6DC}
+.case-card:nth-child(2){--card:#EBE6DC}
+.case-card:nth-child(3){--card:#EBE6DC}
+.case-card:nth-child(4){--card:#EBE6DC}
+.case-card:nth-child(5){--card:#EBE6DC}
 
 /* A separate, low-copy museum for public pages. */
-.museum{padding-block:82px;background:#ECE8DE}
+.museum{padding-block:82px;background:#EBE6DC}
 .museum-head{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:34px}
 .museum-note{font:500 11px/1.6 var(--type);letter-spacing:.1em;text-transform:uppercase;color:var(--graphite)}
 .gallery-wall{display:grid;grid-template-columns:1.03fr .97fr;gap:18px;align-items:start}
-.gallery-piece{margin:0;padding:12px;background:#F9F7F1;border:1px solid var(--rule);box-shadow:0 18px 30px rgba(33,48,42,.06)}
+.gallery-piece{margin:0;padding:12px;background:#F5F2E9;border:1px solid var(--rule);box-shadow:0 18px 30px rgba(33,48,42,.06)}
 .gallery-piece:nth-child(2){margin-top:54px}
 .gallery-piece img{display:block;width:100%;height:auto;filter:saturate(.82) contrast(.97)}
 .gallery-piece figcaption{display:flex;justify-content:space-between;gap:12px;padding:13px 3px 2px;font:500 11px/1.4 var(--type);letter-spacing:.08em;text-transform:uppercase}
@@ -520,14 +519,14 @@ nav{background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:b
 .gallery-room a:hover{border-color:var(--ink)}
 
 /* Calm the case-study storyboard; hierarchy comes from spacing, not warning colors. */
-.storyboard{padding:30px;border-radius:18px;background:#EAE7DE}
+.storyboard{padding:30px;border-radius:18px;background:#EBE6DC}
 .storyboard .storyboard-overline{border:0;padding:0;margin-bottom:20px;color:var(--graphite)}
 .storyboard .storyboard-header h3{font-family:var(--display);max-width:28ch}
 .storyboard .scene-list{gap:12px;background:transparent;border:0}
-.storyboard .scene{border:1px solid var(--rule);border-top:0!important;border-radius:14px;background:#F7F4EC;padding:22px}
-.storyboard .scene:nth-child(2){background:#E5EBE7}
-.storyboard .scene:nth-child(3){background:#E4E9EB}
-.storyboard .scene:nth-child(4){background:#ECE5DE}
+.storyboard .scene{border:1px solid var(--rule);border-top:0!important;border-radius:14px;background:#F5F2E9;padding:22px}
+.storyboard .scene:nth-child(2){background:#EBE6DC}
+.storyboard .scene:nth-child(3){background:#EBE6DC}
+.storyboard .scene:nth-child(4){background:#EBE6DC}
 .storyboard .scene-num{color:var(--ink);opacity:.72}
 .scene-act,.j-label{color:var(--graphite)}
 .scene .judgment{border-color:color-mix(in srgb,var(--rule) 75%,transparent)}
@@ -544,10 +543,95 @@ nav{background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:b
   .gallery-wall{grid-template-columns:1fr}.gallery-piece:nth-child(2){margin-top:0}.gallery-rooms{grid-template-columns:1fr 1fr}.museum-head{align-items:start;flex-direction:column;gap:8px}
   .storyboard{padding:18px}
 }
+
+
+/* October 29: cobalt, yellow, and clearer section wayfinding. */
+:root,:root[data-theme="dark"]{--paper:#F5F2E9;--platen:#EBE6DC;--ink:#141414;--ribbon:#1A44C2;--yellow:#FFD21F;--graphite:color-mix(in srgb,var(--ink) 75%,var(--paper));--rule:color-mix(in srgb,var(--ink) 22%,var(--paper))}
+html{scroll-padding-top:140px}
+.nav-links a{padding:8px 0;min-height:36px}
+.nav-links a[aria-current]{color:var(--ribbon);border-bottom:3px solid var(--ribbon)}
+.nav-links a:hover{color:var(--ribbon)}
+#work,#gallery,#about{border-top:3px solid var(--ink);padding-block:clamp(72px,9vw,112px)}
+#work>.wrap>.work-intro .label,#gallery .museum-head .label,#about>.section-heading>.label{color:var(--ribbon);display:inline-block;background:var(--yellow);padding:6px 10px;font-size:12px;letter-spacing:.12em;margin-bottom:10px}
+#work .sec-title,#gallery .sec-title,#about>.section-heading .sec-title{font-size:clamp(27px,4vw,42px);line-height:1.2;max-width:24ch}
+#work{margin-top:30px}
+.case-card:nth-child(n){--card:var(--platen)}
+.case-card:first-child{--card:var(--ribbon)}
+.case-card:first-child a,.case-card:first-child .case-no,.case-card:first-child .case-proof{color:var(--paper)}
+.case-card:first-child .case-copy p{color:var(--paper)}
+.case-card:first-child .case-no{color:var(--yellow)}
+.case-card a{border:1px solid var(--rule);box-shadow:none}
+.case-card a:after{color:var(--ribbon)}
+.case-card:first-child a:after{color:var(--yellow)}
+.case-no{color:var(--ribbon)}
+.case-proof{padding-left:10px;border-left:3px solid var(--yellow)}
+.case{border-top:1px solid var(--ink)}
+.case-head>.label{color:var(--ribbon)}
+.platen:before{background:linear-gradient(to bottom,var(--ribbon) 0 50%,var(--ink) 50%)}
+.hero-doodle img{box-shadow:10px 10px 0 var(--yellow);background:var(--platen)}
+#gallery{margin-top:72px;background:var(--platen)}
+.gallery-wall{grid-template-columns:1fr 1fr;align-items:stretch;gap:24px}
+.gallery-piece{background:var(--paper);padding:12px;border:1px solid var(--rule);box-shadow:none;border-radius:12px;overflow:hidden}
+.gallery-piece:nth-child(2){margin-top:0}
+.gallery-piece a{display:block;overflow:hidden;border-radius:5px;background:var(--platen)}
+.gallery-piece img{filter:none;aspect-ratio:1.456;object-fit:cover;object-position:top;transition:transform .2s}
+.gallery-piece a:hover img{transform:scale(1.015)}
+.gallery-piece figcaption{color:var(--ribbon);padding:16px 2px 4px}
+#about{margin-top:72px}
+.section-heading{margin-bottom:44px}
+.about-grid{display:block}
+.about-body{max-width:850px;margin-left:auto}
+.thrive{clear:both;margin-top:80px}
+.thrive-heading{display:grid;grid-template-columns:1.35fr 1fr;gap:40px;align-items:end;margin-bottom:32px}
+.thrive-heading .label{color:var(--ribbon);margin-bottom:16px}
+.thrive-heading h3{font:500 clamp(25px,3.4vw,36px)/1.3 var(--display);letter-spacing:-.025em}
+.thrive-heading>p{font-size:15px;line-height:1.65;color:var(--graphite)}
+.thrive mark{background:var(--ink);color:var(--yellow);padding:0 8px;box-decoration-break:clone}
+.thrive-grid{display:grid;grid-template-columns:140px minmax(0,1fr) minmax(0,1fr);gap:16px}
+.thrive-axis{border-top:2px solid var(--ink);padding-top:10px}
+.thrive-axis strong{font:500 12px/1.6 var(--type);letter-spacing:.1em;text-transform:uppercase;display:block}
+.thrive-axis p{font-size:13px;color:var(--graphite);line-height:1.45;margin-top:4px}
+.thrive-read{border:0;align-self:end;font:500 11px/1.6 var(--type);letter-spacing:.08em;color:var(--ribbon);text-transform:uppercase}
+.thrive-card{padding:26px;border:0;border-radius:12px;display:flex;flex-direction:column;min-width:0}
+.thrive-cobalt{background:var(--ribbon);color:var(--paper)}
+.thrive-yellow{background:var(--yellow);color:var(--ink)}
+.thrive-ink{background:var(--ink);color:var(--paper)}
+.thrive-kicker{font:500 10.5px/1.6 var(--type);letter-spacing:.09em;text-transform:uppercase}
+.thrive-cobalt .thrive-kicker,.thrive-ink .thrive-kicker,.thrive-ink h4{color:var(--yellow)}
+.thrive-card h4{font:500 clamp(25px,3vw,32px)/1.2 var(--display);margin:12px 0;letter-spacing:-.025em}
+.thrive-promise{font-size:16px;line-height:1.5;font-weight:500}
+.thrive-card ul{list-style:none;margin-top:20px;padding-top:16px;border-top:1px solid currentColor;display:grid;gap:10px}
+.thrive-card li{font-size:14px;line-height:1.5;padding-left:22px;position:relative}
+.thrive-card li:before{content:'→';position:absolute;left:0;color:var(--ribbon)}
+.thrive-cobalt li:before,.thrive-ink li:before{color:var(--yellow)}
+.thrive-example{margin-top:auto;padding-top:26px}
+.thrive-example>.thrive-kicker{border-top:1px dashed currentColor;padding-top:14px}
+.thrive-example>p:last-child{font-size:13px;line-height:1.6;margin-top:6px}
+.thrive-thread{display:grid;grid-template-columns:140px 1fr;gap:16px;border-top:2px solid var(--ink);padding-top:20px;margin-top:24px}
+.thrive-thread .label{color:var(--ribbon)}
+.thrive-thread>p:last-child{font:500 clamp(17px,2vw,21px)/1.6 var(--display);letter-spacing:-.02em}
+.about-thinking{margin-top:72px;padding-block:54px;background:var(--platen);border-block:1px solid var(--rule)}
+.about-thinking h2{font-size:clamp(22px,3vw,30px)}
+@media(max-width:800px){
+ .nav-in{align-items:flex-start;gap:10px;flex-direction:column;padding-block:12px}.nav-links{gap:8px 20px}.nav-links a{font-size:10px;letter-spacing:.06em}
+ .thrive-heading{grid-template-columns:1fr;gap:20px}.thrive-grid{grid-template-columns:110px minmax(0,1fr) minmax(0,1fr);gap:12px}.thrive-card{padding:20px}
+ .gallery-wall{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+ #work,#gallery,#about{padding-block:60px}#gallery,#about{margin-top:48px}
+ .thrive{margin-top:56px}.thrive-grid{grid-template-columns:1fr;gap:16px}.thrive-axis{display:none}.thrive-card{padding:24px}.thrive-thread{grid-template-columns:1fr;gap:12px}
+ .about-body{max-width:100%}.museum-note{font-size:10px}.gallery-piece figcaption{font-size:10px}.section-heading{margin-bottom:30px}
+}
+@media(prefers-reduced-motion:reduce){.gallery-piece img,.case-card a{transition:none}}
+@media print{nav[aria-label="Main"]{display:none}.thrive-card{break-inside:avoid;print-color-adjust:exact}.thrive-grid{grid-template-columns:100px 1fr 1fr}}
+
+.about-jumps{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:24px}.about-jumps a{font:500 11px/1.5 var(--type);letter-spacing:.04em;color:var(--ribbon);border-bottom:1px solid currentColor;padding-bottom:4px}.about-thinking h3.sec-title{font-size:clamp(22px,3vw,30px)}
+
+@media(max-width:800px){.nav-links{flex-wrap:wrap;justify-content:flex-start;gap:2px 14px;width:100%}.nav-links a{white-space:nowrap;letter-spacing:.02em;font-size:10px;min-height:32px}}
 </style>
 <meta content="https://judeandrade013.github.io/" property="og:url"/><meta content="https://judeandrade013.github.io/og-card.jpg" property="og:image"/><link href="https://judeandrade013.github.io/" rel="canonical"/><link href="favicon.svg" rel="icon" type="image/svg+xml"/></head>
 <body>
-<nav aria-label="Main"><div class="wrap nav-in"><a class="mark" href="#top">Jude Andrade</a><div class="nav-links"><a href="#work">Work</a><a href="#gallery">Gallery</a><a href="#theory">Thinking</a><a href="#about">About</a><a href="resume.pdf?v=20261027-final" rel="noopener" target="_blank">Résumé ↗</a><a href="#contact">Contact</a></div></div></nav>
+<nav aria-label="Main"><div class="wrap nav-in"><a class="mark" href="#top">Jude Andrade</a><div class="nav-links"><a href="#work">Case studies</a><a href="#gallery">Gallery</a><a href="#about">About</a><a href="resume.pdf?v=20261027-final" rel="noopener" target="_blank">Résumé ↗</a><a href="#contact">Contact</a></div></div></nav>
 <header class="hero wrap" id="top">
 <div class="hero-head"><button class="hero-control" id="replay" type="button">Replay the exchange ↻</button></div>
 <p class="sr-only">Illustrative exchange. Resident: “The park keeps flooding. Who fixes it?” Institution: “Responsibility requires review.”</p>
@@ -558,7 +642,7 @@ nav{background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:b
 <p class="key label"><span><i class="swatch" style="background:var(--ribbon)"></i>Red ribbon: a human need</span><span><i class="swatch" style="background:var(--ink)"></i>Black ribbon: an institutional response</span></p>
 </header>
 <section aria-labelledby="h-work" class="sec" id="work"><div class="wrap">
-<div class="work-intro"><div><p class="label">Case studies</p><h2 class="sec-title" id="h-work">Start with the question that pulls you in.</h2></div><p class="mode-tip">Each case opens with the problem, the turn, the decision, and what changed. The deeper evidence is there when you want it.</p></div>
+<div class="work-intro"><div><p class="label">01 / Case studies</p><h2 class="sec-title" id="h-work">Start with the question that pulls you in.</h2></div><p class="mode-tip">Each case opens with the problem, the turn, the decision, and what changed. The deeper evidence is there when you want it.</p></div>
 <ul class="case-grid">
 <li class="case-card"><a href="#public-services"><span class="case-no">01</span><span class="case-copy"><h3>The form wasn’t the whole service.</h3><p>I followed a resident request beyond the PDF and into the staff workflow that had to finish it.</p><span class="case-proof">7 resources configured and tested</span></span></a></li>
 <li class="case-card"><a href="#cab-rules"><span class="case-no">02</span><span class="case-copy"><h3>Who actually controlled the ride?</h3><p>The driver was visible. The network organizing the trip was not.</p><span class="case-proof">Chapter 239, reframed around control</span></span></a></li>
@@ -566,20 +650,6 @@ nav{background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:b
 <li class="case-card"><a href="#fees"><span class="case-no">04</span><span class="case-copy"><h3>Yesterday’s fees. Today’s administrative work.</h3><p>I connected what the Village charged to what delivering the service actually required.</p><span class="case-proof">Revised schedule adopted</span></span></a></li>
 <li class="case-card"><a href="#koala"><span class="case-no">05</span><span class="case-copy"><h3>Why owners abandoned their listings.</h3><p>A small product-flow study with a measurable result.</p><span class="case-proof">33% → 46% first-page success</span></span></a></li>
 </ul>
-</div></section>
-
-<section aria-labelledby="gallery-title" class="museum" id="gallery"><div class="wrap">
-<div class="museum-head"><div><p class="label">Field gallery</p><h2 class="sec-title" id="gallery-title">Live pages</h2></div><p class="museum-note">Two public artifacts · captured Oct 26, 2026</p></div>
-<div class="gallery-wall">
-<figure class="gallery-piece"><img alt="Facilities and Stage Requests page" decoding="async" height="511" loading="lazy" src="booking-request-flow.webp" width="1050"/><figcaption><span>Facilities + requests</span><span>01</span></figcaption></figure>
-<figure class="gallery-piece"><img alt="Village Forms Index" decoding="async" height="549" loading="lazy" src="forms-index.webp" width="1050"/><figcaption><span>Forms index</span><span>02</span></figcaption></figure>
-</div>
-<div class="gallery-rooms" aria-label="More public pages">
-<article class="gallery-room"><h3>Homepage</h3><nav aria-label="Homepage versions"><a href="https://web.archive.org/web/20250916194049/https://www.villagespringvalley.org/" rel="noopener noreferrer" target="_blank">Then ↗</a><a href="https://www.villagespringvalley.org/" rel="noopener noreferrer" target="_blank">Now ↗</a></nav></article>
-<article class="gallery-room"><h3>Village Clerk</h3><nav aria-label="Village Clerk versions"><a href="https://web.archive.org/web/20250213194626/https://www.villagespringvalley.org/departments/clerk" rel="noopener noreferrer" target="_blank">Then ↗</a><a href="https://www.villagespringvalley.org/departments/clerk" rel="noopener noreferrer" target="_blank">Now ↗</a></nav></article>
-<article class="gallery-room"><h3>Assessor</h3><nav aria-label="Assessor versions"><a href="https://web.archive.org/web/20251028113147mp_/https://www.villagespringvalley.org/departments/AssessorsOffice" rel="noopener noreferrer" target="_blank">Then ↗</a><a href="https://www.villagespringvalley.org/departments/AssessorsOffice" rel="noopener noreferrer" target="_blank">Now ↗</a></nav></article>
-<article class="gallery-room"><h3>Community</h3><nav aria-label="Community Development versions"><a href="https://web.archive.org/web/20260312140905/https://www.villagespringvalley.org/departments/CommunityDevelopment" rel="noopener noreferrer" target="_blank">Then ↗</a><a href="https://www.villagespringvalley.org/departments/CommunityDevelopment" rel="noopener noreferrer" target="_blank">Now ↗</a></nav></article>
-</div>
 </div></section>
 <!-- 01 -->
 <article aria-labelledby="h-public-services" class="case" id="public-services">
@@ -630,15 +700,15 @@ nav{background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:b
 <p class="proof-below flow-key"><span><i class="swatch" style="background:var(--ribbon)"></i>Resident acts</span><span><i class="swatch" style="background:var(--ink)"></i>Village staff acts</span></p>
 <figcaption class="proof-below">“Before” is the in-person process as it worked. “Now” is from the live booking page. “Designed next” is from my October 2026 user-flow blueprint, scheduled to deploy in early November 2026. As of Oct 26, 2026, payment integration and the no-account flow are not live.</figcaption>
 </figure>
-<section aria-labelledby="shots-1" class="shots" hidden>
+<section aria-labelledby="shots-1" class="shots" hidden="">
 <div class="proof-heading"><h3 id="shots-1">Exhibit / The live pages</h3><span class="label">Captured Oct 26, 2026</span></div>
 <div class="shot-grid">
-<figure class="shot"><img alt="The Village’s Facilities and Stage Requests page. It states the four-step flow, says a request is not approved until confirmed by the Village, links to three facility applications, and begins with an account login step." decoding="async" height="511" loading="lazy" src="booking-request-flow.webp" width="1050"/><figcaption><strong>Request, not booking.</strong> The page says plainly that a request isn’t approved until the Village confirms it, then walks through four steps.</figcaption></figure>
-<figure class="shot"><img alt="The Village Forms Index, grouped by department, with the Village Clerk’s applications listed first, including the Kurtz Center, Memorial Park, and Stage Rental applications." decoding="async" height="549" loading="lazy" src="forms-index.webp" width="1050"/><figcaption><strong>One index, ownership intact.</strong> Forms are gathered in a single place and still grouped under the department that owns them.</figcaption></figure>
+<figure class="shot"><img alt="The Village’s Facilities and Stage Requests page. It states the four-step flow, says a request is not approved until confirmed by the Village, links to three facility applications, and begins with an account login step." decoding="async" height="511" loading="lazy" src="booking-current-20261029.webp" width="1050"/><figcaption><strong>Request, not booking.</strong> The page says plainly that a request isn’t approved until the Village confirms it, then walks through four steps.</figcaption></figure>
+<figure class="shot"><img alt="The Village Forms Index, grouped by department, with the Village Clerk’s applications listed first, including the Kurtz Center, Memorial Park, and Stage Rental applications." decoding="async" height="549" loading="lazy" src="forms-current-20261029.webp" width="1050"/><figcaption><strong>One index, ownership intact.</strong> Forms are gathered in a single place and still grouped under the department that owns them.</figcaption></figure>
 </div>
 <p class="shots-note">Both are public pages. The public page lists three facility applications. The booking portal itself requires an account, so the seven-resource configuration and the test requests aren’t visible here.</p>
 </section>
-<section aria-labelledby="site-evolution-title" class="site-evolution" hidden>
+<section aria-labelledby="site-evolution-title" class="site-evolution" hidden="">
 <div class="storyboard-header"><h3 id="site-evolution-title">The public website as evidence</h3><span class="label">Dated records · Live pages</span></div>
 <p class="mode-tip">A public trail across the Village's website. The archived versions are point-in-time reference pages; the current links let you inspect the live task pathways and content structure. These four areas illustrate the broader service-design scope.</p>
 <div class="evolution-grid"><div class="evolution-card"><span class="evolution-id">01 / Resident entry point</span><h4>Homepage</h4><p>Task-based routes to report problems, find forms, make payments, and locate Village services.</p>
@@ -982,28 +1052,37 @@ nav{background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:b
 <p class="koala-foot">Earlier work, deliberately kept brief. Methods: exploratory interviews, a belief/behavior matrix, affinity mapping, user-flow analysis, and comparative market analysis. Figures come from the original KOALA case study; the test design isn’t documented here.</p>
 </div>
 </article>
-<section aria-labelledby="h-theory" class="theory sec" id="theory"><div class="wrap">
+<section aria-labelledby="gallery-title" class="museum" id="gallery"><div class="wrap">
+<div class="museum-head"><div><p class="label">02 / Gallery</p><h2 class="sec-title" id="gallery-title">The work, out in the world.</h2></div><p class="museum-note">Public website captures · October 29, 2026</p></div>
+<div class="gallery-wall">
+<figure class="gallery-piece"><a href="https://www.villagespringvalley.org/village-forms-index-" rel="noopener noreferrer" target="_blank"><img alt="Current Village Forms Index with department shortcuts and document cards" decoding="async" height="926" loading="lazy" src="forms-current-20261029.webp" width="1348"/></a><figcaption><span>Forms index ↗</span><span>01</span></figcaption></figure><figure class="gallery-piece"><a href="https://www.villagespringvalley.org/booking" rel="noopener noreferrer" target="_blank"><img alt="Current Facilities and Stage Requests page with request steps and approval guidance" decoding="async" height="926" loading="lazy" src="booking-current-20261029.webp" width="1348"/></a><figcaption><span>Facilities + requests ↗</span><span>02</span></figcaption></figure>
+</div>
+<div aria-label="More public pages" class="gallery-rooms">
+<article class="gallery-room"><h3>Homepage</h3><nav aria-label="Homepage versions"><a href="https://web.archive.org/web/20250916194049/https://www.villagespringvalley.org/" rel="noopener noreferrer" target="_blank">Then ↗</a><a href="https://www.villagespringvalley.org/" rel="noopener noreferrer" target="_blank">Now ↗</a></nav></article>
+<article class="gallery-room"><h3>Village Clerk</h3><nav aria-label="Village Clerk versions"><a href="https://web.archive.org/web/20250213194626/https://www.villagespringvalley.org/departments/clerk" rel="noopener noreferrer" target="_blank">Then ↗</a><a href="https://www.villagespringvalley.org/departments/clerk" rel="noopener noreferrer" target="_blank">Now ↗</a></nav></article>
+<article class="gallery-room"><h3>Assessor</h3><nav aria-label="Assessor versions"><a href="https://web.archive.org/web/20251028113147mp_/https://www.villagespringvalley.org/departments/AssessorsOffice" rel="noopener noreferrer" target="_blank">Then ↗</a><a href="https://www.villagespringvalley.org/departments/AssessorsOffice" rel="noopener noreferrer" target="_blank">Now ↗</a></nav></article>
+<article class="gallery-room"><h3>Community</h3><nav aria-label="Community Development versions"><a href="https://web.archive.org/web/20260312140905/https://www.villagespringvalley.org/departments/CommunityDevelopment" rel="noopener noreferrer" target="_blank">Then ↗</a><a href="https://www.villagespringvalley.org/departments/CommunityDevelopment" rel="noopener noreferrer" target="_blank">Now ↗</a></nav></article>
+</div>
+</div></section><section aria-labelledby="h-about" class="sec" id="about"><div class="wrap section-heading"><p class="label">03 / About</p><h2 class="sec-title" id="h-about">A winding path. A consistent thread.</h2><p class="about-jumps"><a href="#about-story">My story ↓</a><a href="#where-i-thrive">Where I thrive ↓</a><a href="#theory">My working framework ↓</a></p></div><div class="wrap about-grid" id="about-story">
+<div class="about-body"><figure class="portrait-note portrait-single"><img alt="Photograph of Jude smiling in a dark knit sweater over a white collared shirt" decoding="async" height="1100" loading="lazy" src="about-jude-2026.jpg" width="1100"/><figcaption>Jude, off the clock (mostly).</figcaption></figure><p>My career path has been anything but straight. I’ve designed interior plantscapes for corporate clients, grown medical cannabis for a dispensary, worked in hospitality, and organized flowers for weddings. The titles have nothing in common, but the work does.</p><p>In corporate interior design, clients often knew a design felt wrong but couldn’t say why, so I learned to read their reactions and work out what they meant. In hospitality, I learned how to talk to people who were hungry, tired, and out of patience, and still leave them feeling taken care of. In every job I had to understand the limits (light, budget, time, regulation), be honest about what was possible, and make the experience feel a little more human than it had to be.</p><p>Now I do that for the Village of Spring Valley, where I went to high school and once lived. Civil service wasn’t the plan, but I wanted to help a community I have a stake in. Many residents here work multiple jobs and don’t have time to sit through meetings or find out what help exists, so I try to make the village easier to use and easier to trust.</p><h3 class="about-mini-head">My approach</h3><p>Listen first, including to what people can’t quite say. Name the constraints early, and don’t promise what I can’t deliver. The small details are what people actually run into, so I sweat them.</p><h3 class="about-mini-head">Beyond work</h3><p>NYT puzzles, wrestling my oversized dog, anything on wheels or a board, and a good trail.</p></div>
+</div><div aria-labelledby="thrive-title" class="wrap thrive" id="where-i-thrive"><div class="thrive-heading"><div><p class="label">Where I thrive / Four moves</p><h3 id="thrive-title">Four moves I make when a system is <mark>stuck.</mark></h3></div><p>Every project runs through the same four moves. Columns show who I'm working with, people or systems. Rows show what I'm doing, investigating the problem or designing a path forward.</p></div><div class="thrive-grid"><div class="thrive-axis thrive-read">Read 01 → 04</div><div class="thrive-axis thrive-people"><strong>People</strong><p>Residents, staff, anyone the service touches</p></div><div class="thrive-axis thrive-systems"><strong>Systems</strong><p>Policy, software, budget, process</p></div><div class="thrive-axis thrive-investigate"><strong>Investigate</strong><p>Find where it's stuck</p></div><div class="thrive-card thrive-cobalt"><p class="thrive-kicker">01 / People × Investigate</p><h4>Listen.</h4><p class="thrive-promise">Hear what people mean, not only what they say.</p><ul><li>Read the reaction behind the complaint</li><li>Notice the question a form never asks</li><li>Turn one resident's story into a pattern staff can see</li></ul><div class="thrive-example"><p class="thrive-kicker">Shows up in</p><p>Corporate interior design, where clients felt a design was wrong but couldn't say why.</p></div></div><div class="thrive-card thrive-yellow"><p class="thrive-kicker">02 / Systems × Investigate</p><h4>Diagnose.</h4><p class="thrive-promise">Find the exact point where a request breaks.</p><ul><li>Trace one request across teams, policy, software, and budget</li><li>Tell a bad form from a bad process from a missing authority</li><li>Name the constraint before proposing the fix</li></ul><div class="thrive-example"><p class="thrive-kicker">Shows up in</p><p>The Translation Gap, my developing framework for nine places a public service can lose someone.</p></div></div><div class="thrive-axis thrive-design"><strong>Design a path forward</strong><p>Build the way out</p></div><div class="thrive-card thrive-yellow"><p class="thrive-kicker">03 / People × Design</p><h4>Translate.</h4><p class="thrive-promise">Make it make sense to someone with no time to spare.</p><ul><li>Turn rules and jargon into plain language</li><li>Design for residents who work multiple jobs and can't sit through meetings</li><li>Sweat the small details people actually run into</li></ul><div class="thrive-example"><p class="thrive-kicker">Shows up in</p><p>Hospitality, where hungry, tired people still had to leave feeling taken care of.</p></div></div><div class="thrive-card thrive-ink"><p class="thrive-kicker">04 / Systems × Design</p><h4>Deliver.</h4><p class="thrive-promise">Turn findings into decisions that can move.</p><ul><li>Write the plan: clear next steps and who owns them</li><li>Work independently across software, policy, and budgets</li><li>Say what's possible, and never promise what isn't</li></ul><div class="thrive-example"><p class="thrive-kicker">Shows up in</p><p>Every earlier career, where light, budget, time, or regulation always set the limit.</p></div></div></div><div class="thrive-thread"><p class="label">The thread</p><p>Understand the limits. Be honest about what's possible. Make it feel a little more human than it had to be.</p></div></div><div aria-labelledby="h-theory" class="about-thinking" id="theory"><div class="wrap">
 <p class="label">Working framework / The Translation Gap</p>
-<h2 class="sec-title" id="h-theory">Nine places a public service can lose someone.</h2>
+<h3 class="sec-title" id="h-theory">Nine places a public service can lose someone.</h3>
 <p class="lede">The need a resident expresses and the response a public institution delivers are not always the same thing. I use these nine dimensions to ask <em>where</em> the translation breaks down, rather than assuming the problem is a bad form or an unhelpful employee.</p>
 <p class="theory-note">This is my developing diagnostic framework, not a validated measurement instrument. It guides questions to test with staff, residents, and service data.</p>
 <div class="dims">
-<div class="dim"><h3>Resident effort</h3><p>How many calls, trips, documents, and retries are needed?</p></div>
-<div class="dim"><h3>Fragmentation</h3><p>How many teams must coordinate for one request?</p></div>
-<div class="dim"><h3>Discoverability</h3><p>Can a person find the right service without knowing its department?</p></div>
-<div class="dim"><h3>Resolution rate</h3><p>Does a need get resolved, or only acknowledged?</p></div>
-<div class="dim"><h3>Socioeconomic burden</h3><p>Who pays more in time, money, and uncertainty?</p></div>
-<div class="dim"><h3>Government capacity</h3><p>Do staff have the authority, tools, and budget to act?</p></div>
-<div class="dim"><h3>Trust</h3><p>Will the person expect a credible answer and follow-through?</p></div>
-<div class="dim"><h3>Political voice</h3><p>Whose needs reach decision-makers, and whose do not?</p></div>
-<div class="dim"><h3>Downstream cost</h3><p>What does an unresolved problem cost later?</p></div>
+<div class="dim"><h4>Resident effort</h4><p>How many calls, trips, documents, and retries are needed?</p></div>
+<div class="dim"><h4>Fragmentation</h4><p>How many teams must coordinate for one request?</p></div>
+<div class="dim"><h4>Discoverability</h4><p>Can a person find the right service without knowing its department?</p></div>
+<div class="dim"><h4>Resolution rate</h4><p>Does a need get resolved, or only acknowledged?</p></div>
+<div class="dim"><h4>Socioeconomic burden</h4><p>Who pays more in time, money, and uncertainty?</p></div>
+<div class="dim"><h4>Government capacity</h4><p>Do staff have the authority, tools, and budget to act?</p></div>
+<div class="dim"><h4>Trust</h4><p>Will the person expect a credible answer and follow-through?</p></div>
+<div class="dim"><h4>Political voice</h4><p>Whose needs reach decision-makers, and whose do not?</p></div>
+<div class="dim"><h4>Downstream cost</h4><p>What does an unresolved problem cost later?</p></div>
 </div>
 <div class="theory-anchors"><a href="#public-services">Discoverability → Forms</a><a href="#cab-rules">Accountability → Taxi</a><a href="#memorial-park">Authority → Flooding</a><a href="#fees">Downstream cost → Fees</a></div>
-</div></section>
-<section aria-labelledby="h-about" class="sec" id="about"><div class="wrap about-grid">
-<h2 class="label" id="h-about">About</h2>
-<div class="about-body"><figure class="portrait-note portrait-single"><img alt="Photograph of Jude smiling in a dark knit sweater over a white collared shirt" decoding="async" height="1100" loading="lazy" src="about-jude-2026.jpg" width="1100"/><figcaption>Jude, off the clock (mostly).</figcaption></figure><p>My career path has been anything but straight. I’ve designed interior plantscapes for corporate clients, grown medical cannabis for a dispensary, worked in hospitality, and organized flowers for weddings. The titles have nothing in common, but the work does.</p><p>In corporate interior design, clients often knew a design felt wrong but couldn’t say why, so I learned to read their reactions and work out what they meant. In hospitality, I learned how to talk to people who were hungry, tired, and out of patience, and still leave them feeling taken care of. In every job I had to understand the limits (light, budget, time, regulation), be honest about what was possible, and make the experience feel a little more human than it had to be.</p><p>Now I do that for the Village of Spring Valley, where I went to high school and once lived. Civil service wasn’t the plan, but I wanted to help a community I have a stake in. Many residents here work multiple jobs and don’t have time to sit through meetings or find out what help exists, so I try to make the village easier to use and easier to trust.</p><h3 class="about-mini-head">My approach</h3><p>Listen first, including to what people can’t quite say. Name the constraints early, and don’t promise what I can’t deliver. The small details are what people actually run into, so I sweat them.</p><h3 class="about-mini-head">Beyond work</h3><p>NYT puzzles, wrestling my oversized dog, anything on wheels or a board, and a good trail.</p></div>
-</div></section>
+</div></div></section>
 <footer id="contact"><div class="wrap">
 <p class="label">Contact</p>
 <h2 class="sec-title">Have a complicated system?</h2>
@@ -1054,5 +1133,13 @@ nav{background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:b
  });
 })();
 </script>
-</body>
+<script>
+(function(){
+ const links=[...document.querySelectorAll('nav[aria-label="Main"] .nav-links a[href^="#"]')];
+ const regions=[document.getElementById('work'),...document.querySelectorAll('article.case'),document.getElementById('gallery'),document.getElementById('about'),document.getElementById('contact')];
+ let queued=false;
+ function update(){queued=false;let id='';for(const el of regions){if(el.getBoundingClientRect().top<=160)id=el.classList.contains('case')?'work':el.id;}for(const a of links){if(a.hash==='#'+id)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');}}
+ window.addEventListener('scroll',()=>{if(!queued){queued=true;requestAnimationFrame(update);}},{passive:true});window.addEventListener('resize',update);update();
+})();
+</script></body>
 </html>
