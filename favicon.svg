@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13" shape-rendering="crispEdges">
-  <style>:root{--paper:#F5F2EA;--ink:#141414}</style>
-  <rect width="13" height="13" fill="var(--paper)"/>
-  <g fill="var(--ink)">
+  <rect width="13" height="13" fill="#1A44C2"/>
+  <g fill="#FFD21F">
     <!-- J -->
     <rect x="3" y="3" width="3" height="1"/>
     <rect x="4" y="4" width="1" height="5"/>
