@@ -628,17 +628,63 @@ html{scroll-padding-top:140px}
 .about-jumps{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:24px}.about-jumps a{font:500 11px/1.5 var(--type);letter-spacing:.04em;color:var(--ribbon);border-bottom:1px solid currentColor;padding-bottom:4px}.about-thinking h3.sec-title{font-size:clamp(22px,3vw,30px)}
 
 @media(max-width:800px){.nav-links{flex-wrap:wrap;justify-content:flex-start;gap:2px 14px;width:100%}.nav-links a{white-space:nowrap;letter-spacing:.02em;font-size:10px;min-height:32px}}
+
+
+/* Case-study color: cobalt for framing, yellow for the move, ink for the result. */
+.case-card:nth-child(1){--card:var(--ribbon)}
+.case-card:nth-child(2),.case-card:nth-child(4){--card:var(--yellow)}
+.case-card:nth-child(3){--card:var(--platen)}
+.case-card:nth-child(5){--card:var(--ink)}
+.case-card:nth-child(5) a,.case-card:nth-child(5) .case-copy p,.case-card:nth-child(5) .case-proof{color:var(--paper)}
+.case-card:nth-child(5) .case-no,.case-card:nth-child(5) a:after{color:var(--yellow)}
+.case-card:nth-child(2) .case-proof,.case-card:nth-child(4) .case-proof{border-left-color:var(--ribbon)}
+.case .case-head{background:var(--ribbon);color:var(--paper);padding:16px 20px;border-radius:8px;gap:12px}
+.case .case-head>.label{color:var(--yellow)}
+.case .case-head .case-back{color:var(--paper);border-color:var(--paper);line-height:1.5}
+.case h2{margin-top:28px}
+.case .facts{border-top:3px solid var(--ribbon)}
+.case .facts dt{color:var(--ribbon)}
+.case .outcome{background:var(--yellow);border:0;border-radius:12px;padding:24px;color:var(--ink)}
+.case .outcome .label,.case .outcome p{color:var(--ink)}
+.storyboard{background:var(--platen)}
+.storyboard .scene:nth-child(1){background:var(--paper)}
+.storyboard .scene:nth-child(2){background:var(--ribbon);color:var(--paper);border-color:var(--ribbon)}
+.storyboard .scene:nth-child(3){background:var(--yellow);color:var(--ink);border-color:var(--yellow)}
+.storyboard .scene:nth-child(4){background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.storyboard .scene:nth-child(2) .scene-act,.storyboard .scene:nth-child(2) .j-label,.storyboard .scene:nth-child(2) .scene-num,.storyboard .scene:nth-child(4) .scene-act,.storyboard .scene:nth-child(4) .j-label,.storyboard .scene:nth-child(4) .scene-num{color:var(--yellow);opacity:1}
+.storyboard .scene:nth-child(2) .judgment,.storyboard .scene:nth-child(4) .judgment{color:var(--paper);border-color:color-mix(in srgb,var(--paper) 45%,transparent)}
+.storyboard .scene:nth-child(3) .scene-act,.storyboard .scene:nth-child(3) .j-label,.storyboard .scene:nth-child(3) .scene-num{color:var(--ribbon);opacity:1}
+.storyboard .scene:nth-child(3) .judgment{color:var(--ink)}
+.storyboard .scene:nth-child(2) .scene-num,.storyboard .scene:nth-child(4) .scene-num{border-color:var(--yellow)}
+.storyboard .scene:nth-child(2):before,.storyboard .scene:nth-child(4):before{background:var(--yellow)}
+.storyboard .scene:nth-child(3):before{background:var(--ribbon)}
+.proof-module,.flow{border-top:4px solid var(--ribbon);border-radius:10px}
+.proof-heading h3,.flow-head h4{color:var(--ribbon)}
+.proof-strip .proof-step:last-child{background:var(--yellow);border-color:var(--yellow)}
+.fee-table thead th{background:var(--ribbon);color:var(--paper);border-color:var(--paper)}
+.fee-table tbody tr:nth-child(even){background:var(--platen)}
+.chain>li.control{background:var(--yellow)}
+.chain>li.records{background:var(--ribbon);color:var(--paper);border-color:var(--ribbon)}
+.chain>li.records .tag{color:var(--yellow)}
+.flow-steps>li.resident{background:var(--yellow)}
+.bars{border-top:4px solid var(--ribbon);border-radius:10px}
+.bar{background:var(--ink)}.bar.now{background:var(--ribbon)}
+.koala-three>div:nth-child(2){background:var(--yellow)}
+.koala-three>div:nth-child(3){background:var(--ribbon);color:var(--paper)}
+.koala-three>div:nth-child(3)>.label{color:var(--yellow)}
+.case .decision-details>summary{border-left:4px solid var(--ribbon)}
+@media(max-width:580px){.case .case-head{flex-wrap:wrap;padding:14px 16px}.case .case-head>.label{font-size:10px}.case .outcome{padding:20px}}
 </style>
 <meta content="https://judeandrade013.github.io/" property="og:url"/><meta content="https://judeandrade013.github.io/og-card.jpg" property="og:image"/><link href="https://judeandrade013.github.io/" rel="canonical"/><link href="favicon.svg" rel="icon" type="image/svg+xml"/></head>
 <body>
-<nav aria-label="Main"><div class="wrap nav-in"><a class="mark" href="#top">Jude Andrade</a><div class="nav-links"><a href="#work">Case studies</a><a href="#gallery">Gallery</a><a href="#about">About</a><a href="resume.pdf?v=20261027-final" rel="noopener" target="_blank">Résumé ↗</a><a href="#contact">Contact</a></div></div></nav>
+<nav aria-label="Main"><div class="wrap nav-in"><a class="mark" href="#top">Jude Andrade</a><div class="nav-links"><a href="#work">Case studies</a><a href="#gallery">Gallery</a><a href="#about">About</a><a href="resume.pdf?v=20261029" rel="noopener" target="_blank">Résumé ↗</a><a href="#contact">Contact</a></div></div></nav>
 <header class="hero wrap" id="top">
 <div class="hero-head"><button class="hero-control" id="replay" type="button">Replay the exchange ↻</button></div>
 <p class="sr-only">Illustrative exchange. Resident: “The park keeps flooding. Who fixes it?” Institution: “Responsibility requires review.”</p>
 <div aria-hidden="true" class="platen"><div class="line res"><span class="who">Resident</span><span class="say"><span class="txt" id="t-res">The park keeps flooding. Who fixes it?</span></span></div><div class="line inst"><span class="who">Institution</span><span class="say"><span class="txt" id="t-inst">Responsibility requires review.</span><span class="caret" id="caret"></span></span></div></div>
 <p class="type-note">Illustrative exchanges based on project situations, not verbatim resident quotes. <span id="type-step">01 / 04</span></p>
 <div class="hero-intro-layout"><div class="hero-intro-copy"><h1>I work in the gap between those two sentences.</h1><p class="lede">I investigate why systems get stuck, then design a path forward. Working independently inside local government, I followed evidence across residents, staff, policy, software, and budgets, and turned it into decisions that could move.</p><p class="independent-line">Independent project lead · Open to service design, research, civic technology, and strategy roles</p></div><figure class="hero-doodle"><p class="identity-kicker">Service design.<br/>Research.<br/>Working across systems.</p><img alt="Illustration of Jude wearing a yellow knit hat and holding a tea bag over a pink mug" decoding="async" fetchpriority="high" height="540" loading="eager" src="illustration.webp" width="540"/><figcaption>A little bit of me, in ink.</figcaption></figure></div>
-<p class="hero-cta"><a href="#work">See the work ↓</a><a href="resume.pdf?v=20261027-final" rel="noopener" target="_blank">Résumé ↗</a><a href="#contact">Get in touch</a></p>
+<p class="hero-cta"><a href="#work">See the work ↓</a><a href="resume.pdf?v=20261029" rel="noopener" target="_blank">Résumé ↗</a><a href="#contact">Get in touch</a></p>
 <p class="key label"><span><i class="swatch" style="background:var(--ribbon)"></i>Red ribbon: a human need</span><span><i class="swatch" style="background:var(--ink)"></i>Black ribbon: an institutional response</span></p>
 </header>
 <section aria-labelledby="h-work" class="sec" id="work"><div class="wrap">
@@ -1087,7 +1133,7 @@ html{scroll-padding-top:140px}
 <p class="label">Contact</p>
 <h2 class="sec-title">Have a complicated system?</h2>
 <div class="contact"><span class="email" id="email">judeandrade013@gmail.com</span><button class="btn" id="copy" type="button">Copy email</button></div>
-<p class="footer-actions"><a href="resume.pdf?v=20261027-final" rel="noopener" target="_blank">View résumé (PDF) ↗</a> <a href="https://www.linkedin.com/in/jude13/" rel="noopener" target="_blank">LinkedIn ↗</a> <a href="mailto:judeandrade013@gmail.com">Email ↗</a></p>
+<p class="footer-actions"><a href="resume.pdf?v=20261029" rel="noopener" target="_blank">View résumé (PDF) ↗</a> <a href="https://www.linkedin.com/in/jude13/" rel="noopener" target="_blank">LinkedIn ↗</a> <a href="mailto:judeandrade013@gmail.com">Email ↗</a></p>
 <p class="footer-edit">Selected work in service design, UX research, and public-sector strategy.</p>
 <p class="label colophon">Made with HTML, CSS, 2 tension headaches, and unreasonable amounts of caffeine. · 2026</p>
 </div></footer>
