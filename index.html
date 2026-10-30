@@ -264,6 +264,9 @@ section,article{}
 .koala-three h3{font:500 16px/1.4 var(--display);margin:12px 0 8px}
 .koala-three p{font-size:14.5px;line-height:1.55}
 .koala-foot{font-size:13px;margin-top:24px;max-width:78ch}
+.koala-three .how{margin-top:14px;padding-top:12px;border-top:1px solid var(--rule);font-size:13px;line-height:1.55}
+.koala-three .how b{display:block;font:500 10.5px/1.4 var(--type);letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.koala-three .todo{margin-top:12px;border:1px dashed var(--cobalt);color:var(--cobalt);font:500 11px/1.5 var(--type);padding:8px 10px}
 
 
 .theory{}
@@ -880,27 +883,7 @@ footer{border-top:1px solid var(--ink)}
 <details class="archive-more"><summary>More historical reference pages (Building, meetings, taxes, Section 8, Mayor’s Office) +</summary><div class="source-list"><a href="https://web.archive.org/web/20251011002945mp_/https://www.villagespringvalley.org/departments/Building" rel="noopener noreferrer" target="_blank">Building · Oct 11, 2025 ↗</a><a href="https://web.archive.org/web/20251210152204mp_/https://www.villagespringvalley.org/meetingdashboard" rel="noopener noreferrer" target="_blank">Meetings · Dec 10, 2025 ↗</a><a href="https://web.archive.org/web/20251030113732mp_/https://www.villagespringvalley.org/Treasury/taxpaymentandinfo" rel="noopener noreferrer" target="_blank">Tax information · Oct 30, 2025 ↗</a><a href="https://web.archive.org/web/20251030113059mp_/https://www.villagespringvalley.org/departments/Section8" rel="noopener noreferrer" target="_blank">Section 8 · Oct 30, 2025 ↗</a><a href="https://web.archive.org/web/20250213180913/https://www.villagespringvalley.org/departments/MayorsOffice" rel="noopener noreferrer" target="_blank">Mayor’s Office · Feb 13, 2025 ↗</a></div></details>
 <p class="evolution-disclosure">Some dated snapshots are intermediate project states rather than pre-project baselines. Comparison links document site evolution; they do not by themselves prove authorship, increased task completion, or a completed end-to-end payment system.</p>
 </section>
-<section aria-labelledby="sb-1" class="storyboard">
-<div class="storyboard-overline"><span>CASE STUDY / 01</span><span>THE PROBLEM  →  THE TURN  →  THE RESPONSE  →  WHAT CHANGED</span></div><div class="storyboard-header"><h3 id="sb-1">The form was never the whole service.</h3></div><p class="storyboard-intro">From a paper form to a service with an actual next step.</p>
-<div class="scene-list">
-<div class="scene" data-stage="1"><div class="scene-top"><span class="scene-num">01</span><span class="scene-act">THE FRICTION</span></div>
-<h4>A simple rental required a trip to Village Hall.</h4>
-<p>To reserve a Village space, residents had to collect and return a paper form, then navigate availability, approval and payment separately. Finding the right PDF didn’t finish anything.</p>
-<p class="judgment"><span class="j-label my-move">MY MOVE</span>Follow the request all the way to a decision.</p></div>
-<div class="scene" data-stage="2"><div class="scene-top"><span class="scene-num">02</span><span class="scene-act">THE BACKSTAGE</span></div>
-<h4>I followed the form behind the counter.</h4>
-<p>I mapped how the Clerk checked dates, rules, insurance and fees. The missing piece wasn’t a prettier form; it was a legible handoff between residents and staff.</p>
-<p class="judgment"><span class="j-label my-move">MY MOVE</span>Design for the people processing the request, too.</p></div>
-<div class="scene" data-stage="3"><div class="scene-top"><span class="scene-num">03</span><span class="scene-act">THE DESIGN CALL</span></div>
-<h4>A request cannot pretend to be a reservation.</h4>
-<p>I configured seven resources in EvoGov and separated requested, approved, confirmed and cancelled states. Then I tested the calendar against actual status changes.</p>
-<p class="judgment"><span class="j-label my-move">MY MOVE</span>Use reliable platform behavior, even when it limits the ideal experience.</p></div>
-<div class="scene scene-final" data-stage="4"><div class="scene-top"><span class="scene-num">04</span><span class="scene-act">THE RESULT</span></div>
-<h4>A public starting point—and a workflow I could prove.</h4>
-<p>The Forms Index is published. Controlled requests demonstrated that confirmation reserves time and cancellation releases it. Payment integration and account-free access remain next steps.</p>
-<p class="judgment"><span class="j-label my-move">MY MOVE</span>Show the part that works. Be clear about what comes next.</p></div>
-</div>
-</section>
+<div class="koala-three"><div><span class="label">01 / The symptom</span><h3>A simple rental took a trip to Village Hall.</h3><p>Residents had to pick up and return a paper form, then work out availability, approval, and payment separately. Finding the form didn’t finish anything.</p><p class="todo">ADD: a number that shows it (calls, trips, or how long a request took).</p></div><div><span class="label">02 / The finding</span><h3>The missing piece was the handoff, not the form.</h3><p>Behind the counter, the Clerk checked dates, rules, insurance, and fees by hand. A prettier form wouldn’t fix a handoff nobody could see.</p><p class="how"><b>How I found it</b>I sat with the Clerk’s office, interviewed staff, and reviewed past requests.</p><p class="todo">ADD: about how many past requests did you review?</p></div><div><span class="label">03 / The response</span><h3>A request can’t pretend to be a reservation.</h3><p>I configured seven resources in EvoGov and separated requested, approved, confirmed, and cancelled states. Testing so far shows confirming reserves the slot and cancelling releases it. Testing and refinement continue; online payment and no-account access aren’t live yet.</p></div></div>
 <div class="split">
 <h3 class="label">What I owned</h3>
 <div><p>I organized forms into a central index, reviewed task navigation and homepage hierarchy, and translated paper facility rules into a native request workflow. I mapped the resident and Clerk steps, including a future approval-before-payment model, then tested calendar states and holidays and documented what still needs staff or vendor support.</p></div>
@@ -958,27 +941,7 @@ footer{border-top:1px solid var(--ink)}
 <p class="chain-link">The design logic: operator ↔ vehicle ↔ driver ↔ trip. Follow control upstream instead of stopping with a driver.</p>
 <figcaption class="proof-below">My visualization of the responsibility chain developed during the Chapter 239 reform; the Board adopted resulting local laws.</figcaption>
 </figure><p class="case-live-link"><a href="https://www.nyc.gov/site/tlc/businesses/for-hire-vehicle-bases.page" rel="noopener" target="_blank">Context: how NYC regulates dispatch bases ↗</a></p>
-<section aria-labelledby="sb-2" class="storyboard">
-<div class="storyboard-overline"><span>CASE STUDY / 02</span><span>THE PROBLEM  →  THE TURN  →  THE RESPONSE  →  WHAT CHANGED</span></div><div class="storyboard-header"><h3 id="sb-2">The law was looking at the wrong operator.</h3></div><p class="storyboard-intro">I didn’t start with a new restriction. I started by asking why the existing law couldn’t see the real operator.</p>
-<div class="scene-list">
-<div class="scene" data-stage="1"><div class="scene-top"><span class="scene-num">01</span><span class="scene-act">THE CONFLICT</span></div>
-<h4>The street was crowded. The easiest target was the driver.</h4>
-<p>Spring Valley needed safer streets and a response to unlicensed rides. But a blanket crackdown could punish licensed, paycheck-to-paycheck drivers while larger, pyramid-like dispatch networks stayed out of sight.</p>
-<p class="judgment"><span class="j-label my-move">MY MOVE</span>Do not make someone’s livelihood collateral damage.</p></div>
-<div class="scene" data-stage="2"><div class="scene-top"><span class="scene-num">02</span><span class="scene-act">THE CONNECTION</span></div>
-<h4>NYC’s Uber/Lyft problem made something click.</h4>
-<p>The Uber/Lyft debate in New York City pointed me to the distinction between the person driving and the system assigning rides. I looked at Chapter 239 and saw the vulnerability was in how an operator was defined.</p>
-<p class="judgment"><span class="j-label my-move">MY MOVE</span>Question the legal category before inventing another penalty.</p></div>
-<div class="scene" data-stage="3"><div class="scene-top"><span class="scene-num">03</span><span class="scene-act">THE REFRAME</span></div>
-<h4>I rewrote the definition of who controls a trip.</h4>
-<p>I drafted affiliation and accountability rules tied to dispatch, shared payments, fleet access and operational control—not vehicle branding alone. I built in proportionality for small operators and scrutiny for coordinated networks.</p>
-<p class="judgment"><span class="j-label my-move">MY MOVE</span>Put the burden on the party with power to change the behavior.</p></div>
-<div class="scene scene-final" data-stage="4"><div class="scene-top"><span class="scene-num">04</span><span class="scene-act">THE DECISION</span></div>
-<h4>A new accountability framework, without treating every driver alike.</h4>
-<p>The Village Board adopted the resulting vehicle-for-hire local laws. My case study shows the reasoning behind the revisions; any effects on congestion and enforcement still need measurement.</p>
-<p class="judgment"><span class="j-label my-move">MY MOVE</span>Protect legitimate livelihoods while making larger networks visible.</p></div>
-</div>
-</section>
+<div class="koala-three"><div><span class="label">01 / The symptom</span><h3>The street was crowded, and the easy target was the driver.</h3><p>The Village had issued 800 licenses to drive the year before, and unlicensed rides were a problem. A blanket crackdown would have hit licensed, paycheck-to-paycheck drivers while larger dispatch networks stayed out of sight.</p><p class="todo">CONFIRM: “over 80 in a month” — 80 what (complaints? unlicensed-ride reports?)</p></div><div><span class="label">02 / The finding</span><h3>The law couldn’t see who actually controlled the ride.</h3><p>The existing rules looked at the driver and the vehicle. Control sat with whoever dispatched, shared the payments, and managed fleet access. NYC’s Uber/Lyft debate pointed me to that distinction.</p><p class="how"><b>How I found it</b>I met with all the cab companies, went through licensing records with the Clerk, and compared Chapter 239 against NYC and municipalities like Spring Valley.</p></div><div><span class="label">03 / The response</span><h3>Write the rules around control, not branding.</h3><p>I drafted accountability rules tied to dispatch, shared payments, fleet access, and operational control, with proportionality for small operators and scrutiny for coordinated networks. The Board adopted the local laws. Effects on congestion and enforcement aren’t measured yet.</p></div></div>
 <div class="split">
 <h3 class="label">What I owned</h3>
 <div><p>I reviewed the existing code and drafted revisions for fleet and transportation-network definitions, affiliation, trip records, audits, and licensing. I worked through the difference between a driver’s legal status and the operational control a larger network can exercise, and tested the drafts against smaller operators’ circumstances.</p></div>
@@ -1034,27 +997,7 @@ footer{border-top:1px solid var(--ink)}
 <figure class="shot"><img alt="A gray sedan stands in floodwater at Memorial Park, with a Drug-Free Zone sign, a black drum, and park fencing and signs behind it. The license plate is blurred." decoding="async" height="788" loading="lazy" src="memorial-park-flood-2.webp" width="1400"/><figcaption>The same lot from another angle. The park’s fence, signs, and play area sit just behind the water. Photo: Village of Spring Valley.</figcaption></figure>
 </div>
 </section>
-<section aria-labelledby="sb-3" class="storyboard">
-<div class="storyboard-overline"><span>CASE STUDY / 03</span><span>THE PROBLEM  →  THE TURN  →  THE RESPONSE  →  WHAT CHANGED</span></div><div class="storyboard-header"><h3 id="sb-3">The answer was already in the evidence.</h3></div><p class="storyboard-intro">The breakthrough was not a new engineering diagnosis. It was finding a way to use the work already paid for.</p>
-<div class="scene-list">
-<div class="scene" data-stage="1"><div class="scene-top"><span class="scene-num">01</span><span class="scene-act">THE STAKES</span></div>
-<h4>The park flooded. The Village was already in deficit.</h4>
-<p>The community needed flood mitigation, but paying for another major study before even seeking funding was a serious obstacle. Different agencies held pieces of the land, records and authority.</p>
-<p class="judgment"><span class="j-label my-move">MY MOVE</span>Before spending public money, find out what already exists.</p></div>
-<div class="scene" data-stage="2"><div class="scene-top"><span class="scene-num">02</span><span class="scene-act">THE FIND</span></div>
-<h4>Someone had already done the research.</h4>
-<p>I traced prior engineering reports, FOIL requests and grant criteria. The question became whether an existing regional study could satisfy the State—not whether the Village could afford a fresh diagnosis.</p>
-<p class="judgment"><span class="j-label my-move">MY MOVE</span>Test the assumption that new funding requires a new study.</p></div>
-<div class="scene" data-stage="3"><div class="scene-top"><span class="scene-num">03</span><span class="scene-act">THE MOVE</span></div>
-<h4>I asked DEC for the answer in writing.</h4>
-<p>I narrowed the proposed scope to eligible weir-related work. DEC confirmed the existing Hackensack Resilient NY study could qualify, and I pursued County support for the site-control requirement.</p>
-<p class="judgment"><span class="j-label my-move">MY MOVE</span>Separate what is mandatory for eligibility from what strengthens an application.</p></div>
-<div class="scene scene-final" data-stage="4"><div class="scene-top"><span class="scene-num">04</span><span class="scene-act">THE OPENING</span></div>
-<h4>We could apply without commissioning another qualifying study.</h4>
-<p>The application gained a viable study pathway and a County support letter—real progress for a financially constrained Village. A grant award or completed flood repairs are separate future outcomes.</p>
-<p class="judgment"><span class="j-label my-move">MY MOVE</span>Clear the gate before promising a finished project.</p></div>
-</div>
-</section>
+<div class="koala-three"><div><span class="label">01 / The symptom</span><h3>The park flooded, and the Village was already in deficit.</h3><p>Paying for a new qualifying study before even applying for funding was a serious obstacle. Different agencies held different pieces of the land, the records, and the authority.</p></div><div><span class="label">02 / The finding</span><h3>Someone had already done the research.</h3><p>The existing records showed what’s at risk, how often it floods, and who it affects. The question became whether an existing regional study could satisfy the State, not whether the Village could afford a new one.</p><p class="how"><b>How I found it</b>I filed two FOIL requests, one to Rockland County and one to the County Drainage Agency, and reviewed a redacted portion of the hazard mitigation plan and a Colliers study.</p></div><div><span class="label">03 / The response</span><h3>Narrow the scope, then get the answer in writing.</h3><p>I narrowed the proposed scope to eligible weir-related work and asked DEC in writing. DEC confirmed the existing Hackensack Resilient NY study could qualify, and I pursued County support for the site-control requirement. That is a funding pathway, not an award or a repaired park.</p></div></div>
 <div class="split">
 <h3 class="label">What I owned</h3>
 <div><p>I traced earlier research through FOIL requests and agency inquiries, sought written DEC guidance, and recommended weir and appurtenant-structure removal with related restoration as the grant scope. I also coordinated the engineering inputs and pursued County support for site control.</p></div>
@@ -1126,27 +1069,7 @@ footer{border-top:1px solid var(--ink)}
 </div>
 <figcaption class="proof-below">Selected changes from my 2026 reform. Escrow funds outside reviews; it is not municipal fee revenue.</figcaption>
 </figure>
-<section aria-labelledby="sb-4" class="storyboard">
-<div class="storyboard-overline"><span>CASE STUDY / 04</span><span>THE PROBLEM  →  THE TURN  →  THE RESPONSE  →  WHAT CHANGED</span></div><div class="storyboard-header"><h3 id="sb-4">The real cost was hiding behind old fees.</h3></div><p class="storyboard-intro">The assignment sounded like raising fees. The actual problem was understanding the cost of doing the work.</p>
-<div class="scene-list">
-<div class="scene" data-stage="1"><div class="scene-top"><span class="scene-num">01</span><span class="scene-act">THE MISMATCH</span></div>
-<h4>$375 on paper. Much more work behind the counter.</h4>
-<p>A legacy fee could cover a complex land-use request that pulled in inspectors, planners, attorneys and repeated staff time. The posted price didn’t reflect the service being delivered.</p>
-<p class="judgment"><span class="j-label my-move">MY MOVE</span>Stop treating the fee schedule as a simple price list.</p></div>
-<div class="scene" data-stage="2"><div class="scene-top"><span class="scene-num">02</span><span class="scene-act">THE INVESTIGATION</span></div>
-<h4>I asked departments what the work really required.</h4>
-<p>I traced permits from submission through technical review, follow-up and reinspection. Small and complex applications were creating very different workloads under blunt old categories.</p>
-<p class="judgment"><span class="j-label my-move">MY MOVE</span>Map the work before proposing the numbers.</p></div>
-<div class="scene" data-stage="3"><div class="scene-top"><span class="scene-num">03</span><span class="scene-act">THE DESIGN</span></div>
-<h4>A fee for Village work. An escrow for outside experts.</h4>
-<p>I built complexity-based tiers and distinct, replenishable professional-review escrow arrangements. That protected the distinction between earned fee revenue and money held for consultant costs.</p>
-<p class="judgment"><span class="j-label my-move">MY MOVE</span>Make the model fair, legible and workable for staff.</p></div>
-<div class="scene scene-final" data-stage="4"><div class="scene-top"><span class="scene-num">04</span><span class="scene-act">THE VOTE</span></div>
-<h4>The Village Board adopted my proposed fee schedule.</h4>
-<p>This moved beyond a report: the revised structure was adopted. Revenue forecasts remain forecasts until actual collections are measured.</p>
-<p class="judgment"><span class="j-label my-move">MY MOVE</span>An adopted decision is an outcome. A projection is not a receipt.</p></div>
-</div>
-</section>
+<div class="koala-three"><div><span class="label">01 / The symptom</span><h3>$375 on paper. Much more work behind the counter.</h3><p>A legacy fee could cover a complex land-use request that pulled in inspectors, planners, attorneys, and repeated staff time. The posted price didn’t reflect the service being delivered.</p></div><div><span class="label">02 / The finding</span><h3>Small and complex applications were priced alike but took very different work.</h3><p>A major site plan took at least a week of staff time. A minor one took roughly three days. Blunt old categories hid that difference.</p><p class="how"><b>How I found it</b>I asked three departments what the work required and how long it took, and traced about 45 permit applications from submission through review and follow-up.</p></div><div><span class="label">03 / The response</span><h3>A fee for Village work. An escrow for outside experts.</h3><p>I built complexity-based tiers and separate, replenishable escrows for professional review. The Board adopted the schedule. The revenue scenarios ($98,250 broader, $40,000 narrower) rest on limited activity numbers: estimates, not collections.</p></div></div>
 <div class="split">
 <h3 class="label">What I owned</h3>
 <div><p>I reviewed the prior schedule, gathered operational context across departments, proposed tiers by application size and complexity, distinguished municipal fees from replenishable consultant escrows, and modeled revenue scenarios to support Board decisions.</p></div>
@@ -1203,10 +1126,10 @@ footer{border-top:1px solid var(--ink)}
 </figure>
 <div class="koala-three">
 <div><span class="label">01 / The symptom</span><h3>People left on page one.</h3><p>KOALA saw 75% of users leave within the first page of the listing process, and had done little research on why.</p></div>
-<div><span class="label">02 / The finding</span><h3>The flow demanded paperwork users didn’t have.</h3><p>It wouldn’t let you proceed without a reservation number, which deeded and floating-week owners rarely use. You couldn’t save progress, going back restarted the listing, and nothing said up front what details you’d need.</p></div>
+<div><span class="label">02 / The finding</span><h3>The flow demanded paperwork users didn’t have.</h3><p>It wouldn’t let you proceed without a reservation number, which deeded and floating-week owners rarely use. You couldn’t save progress, going back restarted the listing, and nothing said up front what details you’d need.</p><p class="how"><b>How I found it</b>40+ exploratory interviews with timeshare owners and others, then a belief/behavior matrix, affinity mapping, user-flow analysis, and comparative market analysis.</p></div>
 <div><span class="label">03 / The response</span><h3>Make progress recoverable.</h3><p>Save progress, make some fields optional, and say up front what’s needed. Conversion on that page rose from 33% to 46%.</p></div>
 </div>
-<p class="koala-foot">Earlier work, deliberately kept brief. Methods: exploratory interviews, a belief/behavior matrix, affinity mapping, user-flow analysis, and comparative market analysis. Figures come from the original KOALA case study; the test design isn’t documented here.</p>
+<p class="koala-foot">Earlier work, deliberately kept brief. Figures come from the original KOALA case study; the test design isn’t documented here.</p>
 </div>
 </article>
 <section aria-labelledby="gallery-title" class="museum" id="gallery"><div class="wrap">
