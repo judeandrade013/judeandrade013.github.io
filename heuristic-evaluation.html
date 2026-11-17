@@ -61,7 +61,7 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;op
 </header>
 <form id="unlock" autocomplete="off">
 <label for="pw">Password</label>
-<div class="row"><input id="pw" name="pw" type="password" required autocomplete="current-password" aria-describedby="status"/><button id="go" type="submit">View</button></div>
+<div class="row"><input id="pw" name="pw" type="password" required autocomplete="current-password" autocapitalize="none" autocorrect="off" spellcheck="false" aria-describedby="status"/><button id="go" type="submit">View</button></div>
 <p id="status" role="status" aria-live="polite"></p>
 <p class="ask">Don’t have the password? <a href="mailto:judeandrade013@gmail.com?subject=Heuristic%20evaluation%20access">Email me</a> and I’ll send it.</p>
 </form>
@@ -111,8 +111,9 @@ form.addEventListener('submit',async function(e){
   e.preventDefault(); if(!window.crypto||!crypto.subtle){setStatus('This browser can’t open protected files. Try a current version of Chrome, Safari, Firefox, or Edge.',true);return;}
   go.disabled=true;setStatus('Unlocking…');
   try{
-    var bytes=await fetchAndDecrypt('heuristic-evaluation.bin?v=1',pw.value);
-    pass=pw.value;render(JSON.parse(new TextDecoder().decode(bytes)));
+    var typed=pw.value.trim().toLowerCase();
+    var bytes=await fetchAndDecrypt('heuristic-evaluation.bin?v=1',typed);
+    pass=typed;setStatus('');render(JSON.parse(new TextDecoder().decode(bytes)));
   }catch(err){
     setStatus(err&&err.message==='fetch'?'The file didn’t load. Check your connection and try again.':'That password didn’t work.',true);pw.select();
   }finally{go.disabled=false;}
