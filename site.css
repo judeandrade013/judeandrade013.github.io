@@ -984,3 +984,63 @@ footer#contact .btn:hover{border-color:#F3F0EA}
 .hero-cta a,.footer-actions a,.about-jumps a{font:500 14px/1.6 var(--body);letter-spacing:0;text-transform:none}
 .storyboard-overline,.storyboard-overline span,.ms-jumps a,.ms-tag,.ms-table th,.fee-table th,.story-table th,.ms-src,.museum-note,.gallery-piece figcaption,.facts dt{font-family:var(--body);font-weight:500;letter-spacing:0;text-transform:none}
 .ms-jumps a{font-size:13px}
+
+/* ==== v5: ffern terracotta + green, more sand, more texture, no blue ==== */
+:root{--paper:#FAF8F3;--platen:#F1EBE1;--sand:#EFE7DA;--ink:#222A3B;--muted:#6E6F68;
+ --terracotta:#B35F32;--terracotta-text:#98512B;--peach:#F2C9AE;--green:#3F7D2F;--green-text:#2C681D;--green-soft:#D9E6CF;
+ --cobalt:var(--terracotta-text);--yellow:var(--sand);--accent:var(--terracotta)}
+body{background-color:var(--paper)}
+body:before{opacity:.26}
+.sec,#about{background:transparent}
+a,a:visited{color:var(--terracotta-text);text-decoration-color:color-mix(in srgb,var(--terracotta) 45%,transparent)}
+.nav-links a,.mark,.case-card a,.case-pager a{color:var(--ink)}
+.nav-links a[aria-current]{border-bottom:1.5px solid var(--terracotta)}
+.case-back{color:var(--terracotta-text)}
+.hero-cta a{color:var(--terracotta-text)}
+.hero-eyebrow{color:var(--terracotta-text)}
+.hero-intro-copy h1{font-size:clamp(40px,5.4vw,68px);line-height:1.05;max-width:none}
+/* project rows: sand-washed hover, green status dot, terracotta link */
+.case-card a{transition:background-color .2s ease}
+.case-card a:hover{background:color-mix(in srgb,var(--sand) 55%,transparent)}
+.case-card a:after{color:var(--terracotta-text)}
+.case-proof{position:relative;padding-left:16px}
+.case-proof:before{content:"";position:absolute;left:0;top:.55em;width:7px;height:7px;border-radius:50%;background:var(--green)}
+.case-card .case-no{color:var(--terracotta)}
+/* panels and tags in ffern sand */
+.proof-module,.bars,.outcome,.fee-wrap,.ms-two>div,.shots{background:var(--sand)}
+.methods span,.proof-badge,.flow-badge{background:var(--sand);color:var(--ink)}
+.facts{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.facts dt{color:var(--terracotta-text)}
+.bar.now{background:var(--green)!important}
+.flow-steps>li.resident,.flow-key .resident-key{border-top-color:var(--terracotta)}
+.flow-steps>li{border-top-color:var(--green)}
+.artifact-link .label{color:var(--green-text)}
+/* about */
+.beliefs{background:var(--sand);border-radius:12px;padding-block:40px;margin-block:48px}
+.beliefs-inner{max-width:68ch}
+.beliefs h3{font:400 clamp(24px,2.6vw,32px)/1.2 var(--display);margin-block:6px 14px}
+.beliefs p{font-size:17px;margin-top:12px}
+.belief-line{display:none}
+.gap-framework{padding-block:24px 72px}
+.gap-framework h3{font:400 clamp(24px,2.6vw,32px)/1.2 var(--display);margin-block:6px 12px}
+.gap-framework>p{max-width:68ch;font-size:17px}
+.gap-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0 40px;margin-top:28px;border-top:1px solid var(--rule)}
+.gap-list div{padding:16px 0;border-bottom:1px solid var(--rule)}
+.gap-list dt{font:500 15px/1.4 var(--body);color:var(--ink)}
+.gap-list dt:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--terracotta);margin-right:10px;vertical-align:.12em}
+.gap-list dd{margin:4px 0 0 17px;font-size:15px;color:var(--muted)}
+.gap-links{margin-top:22px;font-size:15px;max-width:72ch}
+/* footer: ffern sand panel instead of navy */
+footer#contact,.page-footer{background:var(--sand);color:var(--ink)}
+footer#contact .sec-title,footer#contact .email{color:var(--ink)}
+footer#contact a,.page-footer a{color:var(--terracotta-text)}
+footer#contact .label,footer#contact .footer-edit,footer#contact .colophon{color:var(--muted)}
+footer#contact .btn{color:var(--ink);border-color:color-mix(in srgb,var(--ink) 40%,var(--sand))}
+footer#contact .btn:after{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--peach);margin-left:10px;vertical-align:.1em}
+.story-link{margin-top:28px;font-weight:500}
+.story-link a{color:var(--terracotta-text)}
+.case-page .story h3{color:var(--ink)}
+.case-pager .label{color:var(--terracotta-text)}
+.beliefs-inner{display:block;margin:0;padding:0 clamp(20px,4vw,48px);max-width:none;grid-template-columns:none}
+.beliefs-inner>*{max-width:68ch}
+.proof-kicker,.proof-heading .label{text-transform:none;letter-spacing:0;font-family:var(--body)}
