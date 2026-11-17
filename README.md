@@ -1,4 +1,4 @@
-# Jude Andrade — Design Strategist & Researcher
+# Jude Andrade — Design Researcher
 
 Portfolio of research on how people make their way through products and public services.
 
@@ -16,4 +16,4 @@ The civic projects were independently driven in-house, with input from municipal
 
 ## About the site
 
-Hand-built static HTML, CSS and JavaScript. The homepage is `index.html`; assets and résumé live alongside it. Hosted on GitHub Pages.
+Hand-built static HTML, CSS and JavaScript. The homepage is `index.html`; each case study is its own page in `work/`; shared styles are in `site.css`. Hosted on GitHub Pages.
