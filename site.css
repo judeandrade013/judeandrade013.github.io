@@ -1090,3 +1090,10 @@ footer#contact .btn:after{background:var(--forest)}
 @media (max-width:760px){.hero-intro-layout{grid-template-columns:1fr}.hero-doodle{order:-1;padding:36px 24px 20px}.hero-doodle img{width:min(70%,220px)}}
 body:before{content:"";position:fixed;top:0;left:0;right:auto;bottom:auto;width:100vw;height:100vh;height:100dvh;pointer-events:none;z-index:100}
 body:before{opacity:.7}.hero-doodle{align-self:start;margin-top:8px}
+/* v8: no dark green. Beliefs on soft sage, ink text */
+.beliefs{background-color:#DDE5CF;color:var(--ink);background-image:repeating-radial-gradient(circle at 105% 50%,transparent 0 60px,rgba(255,252,237,.6) 60px 61.5px)}
+.beliefs .label{color:var(--deep-terracotta)}
+.beliefs h3,.beliefs p{color:var(--ink)}
+.hero-doodle img{outline-color:var(--ink)}
+.hero-doodle figcaption{color:var(--ink)}
+footer#contact .btn:after{background:var(--terracotta)}
