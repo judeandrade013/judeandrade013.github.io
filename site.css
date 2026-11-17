@@ -1044,3 +1044,49 @@ footer#contact .btn:after{content:"";display:inline-block;width:7px;height:7px;b
 .beliefs-inner{display:block;margin:0;padding:0 clamp(20px,4vw,48px);max-width:none;grid-template-columns:none}
 .beliefs-inner>*{max-width:68ch}
 .proof-kicker,.proof-heading .label{text-transform:none;letter-spacing:0;font-family:var(--body)}
+
+/* ==== v6: Circle-style texture and color blocks, in the ffern palette ==== */
+:root{--sage:#DDE5CF;--peach:#F4CFB6;--butter:#EFE3C2;--clay:#EAD3BF;--forest:#1F3A2E;--cream:#FFFCED;--deep-terracotta:#7A3F20}
+body:before{opacity:.85;mix-blend-mode:multiply;background-image:url("paper.svg");background-size:360px 360px}
+/* hero: text on paper, illustration on a sage block with concentric rings */
+.hero-intro-layout{align-items:stretch;grid-template-columns:minmax(0,1.25fr) minmax(260px,.9fr);gap:clamp(28px,5vw,64px)}
+.hero-doodle{position:relative;margin:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:56px 40px 28px;border-radius:4px;overflow:hidden;
+ background-color:var(--sage);
+ background-image:repeating-radial-gradient(circle at 50% 58%,transparent 0 46px,rgba(255,252,237,.75) 46px 47.5px)}
+.hero-doodle img{position:relative;width:min(100%,260px);height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:999px 999px 0 0;outline:1px solid var(--forest);outline-offset:8px}
+.hero-doodle figcaption{position:relative;margin-top:22px;font:500 13px/1.4 var(--body);color:var(--forest);letter-spacing:0;text-transform:none}
+/* about portrait in an arch with an offset outline */
+.portrait-note{position:relative}
+.portrait-note img{aspect-ratio:4/5;border-radius:999px 999px 0 0}
+.portrait-note:before{content:"";position:absolute;top:-10px;left:10px;right:-10px;aspect-ratio:4/5;border:1px solid var(--terracotta);border-radius:999px 999px 0 0;pointer-events:none}
+/* beliefs: deep green block */
+.beliefs{background:var(--forest);color:var(--cream);border-radius:4px}
+.beliefs .label{color:var(--peach)}
+.beliefs h3,.beliefs p{color:var(--cream)}
+.beliefs{background-image:repeating-radial-gradient(circle at 105% 50%,transparent 0 60px,rgba(255,252,237,.08) 60px 61px)}
+/* Translation Gap: peach dots */
+.gap-list dt:before{background:var(--terracotta)}
+/* contact: peach block */
+footer#contact{background:var(--peach)}
+footer#contact a{color:var(--deep-terracotta)}
+footer#contact .label,footer#contact .footer-edit,footer#contact .colophon{color:#5A4A3C}
+footer#contact .btn:after{background:var(--forest)}
+.page-footer{background:var(--peach)}
+.page-footer a{color:var(--deep-terracotta)}
+/* case pages: each case gets its own color band at the top */
+.case-page .case{padding-top:0}
+.case-band{background:var(--band,var(--sand));box-shadow:0 0 0 100vmax var(--band,var(--sand));clip-path:inset(0 -100vmax);padding:48px 0 4px;margin-bottom:28px;
+ background-image:repeating-radial-gradient(circle at 96% 10%,transparent 0 54px,rgba(255,252,237,.55) 54px 55px)}
+.case-band .label,.case-band .facts dt,.case-band .case-back,.case-band a{color:var(--deep-terracotta)}
+.case-band .facts{border-color:color-mix(in srgb,var(--ink) 18%,transparent)}
+.case-band .dek{color:var(--ink)}
+/* project list: a colored swatch per case, matching each case page */
+.case-card .case-no{display:grid;place-items:center;width:44px;height:44px;border-radius:999px 999px 0 0;color:var(--ink);font:400 14px/1 var(--mono)}
+.case-card:nth-child(1) .case-no{background:#F6D9C4}
+.case-card:nth-child(2) .case-no{background:#DDE5CF}
+.case-card:nth-child(3) .case-no{background:#EFE3C2}
+.case-card:nth-child(4) .case-no{background:#D3E0D6}
+.case-card:nth-child(5) .case-no{background:#EAD3BF}
+@media (max-width:760px){.hero-intro-layout{grid-template-columns:1fr}.hero-doodle{order:-1;padding:36px 24px 20px}.hero-doodle img{width:min(70%,220px)}}
+body:before{content:"";position:fixed;top:0;left:0;right:auto;bottom:auto;width:100vw;height:100vh;height:100dvh;pointer-events:none;z-index:100}
+body:before{opacity:.7}.hero-doodle{align-self:start;margin-top:8px}
