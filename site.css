@@ -925,3 +925,62 @@ footer{border-top:1px solid var(--rule)}
 .ms-chain li{border-color:var(--rule)}
 .flow-steps>li{border-radius:4px;border-top:2px solid color-mix(in srgb,var(--ink) 55%,var(--paper))}
 .flow-steps>li.resident{border-top-color:var(--cobalt)}
+
+/* ==== ffern palette + type, Aesop simplicity (Nov 2026, v4) ==== */
+:root{--paper:#FAF9F6;--platen:#F3F0EA;--card:#FFFFFF;--ink:#222A3B;--muted:#6E6F68;--cobalt:#222A3B;--yellow:#EFE7DA;--green:#11192B;--accent:#B35F32;
+ --rule:color-mix(in srgb,var(--ink) 12%,var(--paper));
+ --display:"Newsreader",Georgia,"Times New Roman",serif;--serif:"Newsreader",Georgia,"Times New Roman",serif;
+ --type:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;--body:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+ --mono:"DM Mono",ui-monospace,Menlo,monospace}
+body{font-family:var(--body);font-size:16.5px;line-height:1.65;letter-spacing:.005em}
+body:before{opacity:.1}
+a,button,summary,a:visited{color:var(--ink)}
+a{text-decoration-color:color-mix(in srgb,var(--ink) 35%,transparent);text-underline-offset:3px}
+/* sentence-case labels, like ffern and Aesop */
+.label,.case-kicker{font-family:var(--body);font-weight:500;font-size:13px;letter-spacing:0;text-transform:none;color:var(--muted)}
+.nav-links{gap:28px}
+.nav-links a{font-family:var(--body);font-weight:500;font-size:14px;letter-spacing:0;text-transform:none;color:var(--ink)}
+.mark{font-family:var(--display);font-size:22px;font-weight:400;letter-spacing:-.01em;text-transform:none}
+.case-back{font-family:var(--body);font-size:14px;letter-spacing:0;text-transform:none}
+h1,h2,h3,.sec-title,.case h2,.case-page .case h1,.hero-intro-copy h1{font-weight:400;letter-spacing:-.01em}
+.hero-cta a,.footer-actions a,.case-back,.about-jumps a,.gallery-room a{border-bottom:0;text-decoration:underline}
+/* Aesop-style buttons: rectangular outline */
+.btn,.hero-control{background:transparent;color:var(--ink);border:1px solid color-mix(in srgb,var(--ink) 40%,var(--paper));border-radius:0;padding:13px 24px;font:500 14px/1 var(--body);letter-spacing:0;text-transform:none}
+.btn:hover,.hero-control:hover:not(:disabled){background:transparent;color:var(--ink);border-color:var(--ink);text-decoration:none}
+/* project list as quiet rows, not cards */
+.case-grid{display:block;margin-top:28px;border-top:1px solid var(--rule)}
+.case-card,.case-card:first-child{display:block;grid-column:auto}
+.case-card a{display:grid;grid-template-columns:64px minmax(0,1fr);gap:8px 24px;align-items:start;padding:36px 0;min-height:0;height:auto;background:none;border:0;border-bottom:1px solid var(--rule);border-radius:0;box-shadow:none;overflow:visible}
+.case-card a:hover{transform:none;border-color:var(--rule)}
+.case-card a:hover h3{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
+.case-card .case-no{background:none;width:auto;height:auto;display:block;font:400 15px/1.9 var(--mono);color:var(--muted)}
+.case-copy{padding-bottom:0}
+.case-copy h3{font:400 clamp(22px,2.5vw,30px)/1.2 var(--display);max-width:32ch;margin-top:4px}
+.case-copy p{max-width:64ch;margin-top:10px;font-size:16px}
+.case-proof{display:block;margin-top:12px;font:400 13px/1.6 var(--body);color:var(--muted)}
+.case-card a:after{content:"Read case study \2192";position:static;grid-column:2;justify-self:start;margin-top:6px;padding:0;border:0;background:none;font:500 14px/1.4 var(--body);letter-spacing:0;text-transform:none;color:var(--ink)}
+/* ffern-style soft panels */
+.proof-module,.bars,.outcome,.fee-wrap{background:var(--platen);border:0;border-radius:12px}
+.ms-two>div{border:0;background:var(--platen);border-radius:12px}
+.ms-two>div.dim{border:1px dashed color-mix(in srgb,var(--ink) 25%,var(--paper));background:transparent}
+.flow-steps>li{border-radius:8px}
+.flow-steps>li.resident,.flow-key .resident-key{border-top-color:var(--accent)}
+/* ffern-style mono tags */
+.methods span,.ms-chip,.proof-badge,.flow-badge{font:400 11px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;background:#ECE9E2;color:var(--ink);border:0;border-radius:4px;padding:7px 9px}
+.ms-chip.next{background:transparent;border:1px solid color-mix(in srgb,var(--ink) 30%,var(--paper))}
+.ms-chip.dec{background:var(--yellow)}
+.thrive-grid .thrive-cobalt{background:var(--green);color:var(--paper)}
+.thrive-grid .thrive-yellow{background:var(--yellow);color:var(--ink)}
+/* ffern-style dark footer */
+footer#contact,.page-footer{background:var(--green);color:#EDEAE3;border-top:0}
+footer#contact .label,footer#contact .footer-edit,footer#contact .colophon{color:#A9ACB4}
+footer#contact a,footer#contact .email,.page-footer a{color:#F3F0EA}
+footer#contact .sec-title{color:#F3F0EA}
+footer#contact .btn{color:#F3F0EA;border-color:rgba(243,240,234,.45)}
+footer#contact .btn:hover{border-color:#F3F0EA}
+.page-footer p{font:500 14px/1.6 var(--body);letter-spacing:0}
+.case-pager .label{font-size:13px}
+.pager-title{font-weight:400}
+.hero-cta a,.footer-actions a,.about-jumps a{font:500 14px/1.6 var(--body);letter-spacing:0;text-transform:none}
+.storyboard-overline,.storyboard-overline span,.ms-jumps a,.ms-tag,.ms-table th,.fee-table th,.story-table th,.ms-src,.museum-note,.gallery-piece figcaption,.facts dt{font-family:var(--body);font-weight:500;letter-spacing:0;text-transform:none}
+.ms-jumps a{font-size:13px}
