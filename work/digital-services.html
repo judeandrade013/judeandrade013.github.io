@@ -15,7 +15,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,400&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
-<link href="../site.css?v=8" rel="stylesheet"/>
+<link href="../site.css?v=9" rel="stylesheet"/>
 </head>
 <body class="case-page">
 <a class="skip" href="#main">Skip to content</a>
@@ -34,16 +34,16 @@
 <div><dt class="label">Not yet</dt><dd>Online payment (awaiting approval); usage data</dd></div>
 </dl></div>
 <div class="story">
-<h3>Where residents got stuck</h3>
+<h2>Where residents got stuck</h2>
 <p>Spring Valley’s website was organized the way the government is organized, by department. Forms, payment links, and instructions sat on different department pages, so a resident had to know which office handled something before they could start. Even then, a form didn’t always tell you how to finish the task.</p>
 <p>Facility rentals were the clearest example, because there was no online option at all. A resident went to Village Hall, picked up a paper application, filled it out, came back with everything, and paid at the Clerk’s office. From my review of how requests actually ran, that usually meant two or three trips, sometimes four, plus about two phone calls per request.</p>
-<h3>Following the request behind the counter</h3>
+<h2>Following the request behind the counter</h2>
 <p>I sat with the Clerk’s office, interviewed staff, and went through the major permit requests to see what happened after an application came in. The resident’s side was simple: pick a place and a time, and find out what happens next. The Clerk’s side was a checklist done by hand. Before anything could be confirmed, someone had to check the date, the facility’s rules, the applicant’s insurance, and the fee. An online version had to work for that person too.</p>
 <p>In parallel, I audited the site’s forms and navigation and gathered the forms into a single Forms Index, still grouped under the department that owns each one. I also reworked the homepage so the common tasks (reporting a problem, finding a form, making a payment) were easier to reach.</p>
-<h3>Working inside the platform</h3>
+<h2>Working inside the platform</h2>
 <p>The version I wanted was simple: pick the place, request the time, and see exactly what happens next. EvoGov, the Village’s content management system, had limits I couldn’t design around. Its booking portal requires residents to log in. Its staff permissions couldn’t be narrowed enough for some of the people who needed to see requests. It couldn’t enforce every rule from the paper forms, and it didn’t support the seasonal sunset cutoffs we asked for.</p>
 <p>I could have pushed for a custom tool. I used the native features instead, because staff could operate them and I could test them properly, and I documented the limitations.</p>
-<h3>A request, not a reservation</h3>
+<h2>A request, not a reservation</h2>
 <p>I set up seven facilities and resources for online requests: the Louis Kurtz Center, the Darden Center, the Memorial Park soccer field and basketball courts, Kennedy Park, Gould Park, and the portable stage. Each request moves through four states (requested, approved, confirmed, cancelled), and the public page says plainly that a request isn’t approved until the Village confirms it. I didn’t want the page to imply a reservation the Clerk hadn’t agreed to.</p>
 <p>I tested the setup with controlled requests, taking records from new to confirmed to cancelled and checking that the public calendar reserved and then released the slot, including around holidays. The application forms also went online as PDFs, which saves residents at least the first trip.</p>
 </div>
@@ -52,42 +52,42 @@
 <div class="flow-row">
 <div class="flow-head"><h4>Before: in person only</h4><span class="note">No online request existed. Typically two to three visits to Village Hall, sometimes four.</span></div>
 <ol aria-label="Before: in-person process" class="flow-steps">
-<li class="resident">Go to Village Hall</li>
-<li class="resident">Pick up a paper application</li>
-<li class="resident">Fill it out</li>
-<li class="resident">Come back with everything</li>
-<li class="resident">Pay at the Clerk’s office</li>
+<li class="resident"><span class="who">Resident</span>Go to Village Hall</li>
+<li class="resident"><span class="who">Resident</span>Pick up a paper application</li>
+<li class="resident"><span class="who">Resident</span>Fill it out</li>
+<li class="resident"><span class="who">Resident</span>Come back with everything</li>
+<li class="resident"><span class="who">Resident</span>Pay at the Clerk’s office</li>
 </ol>
 </div>
 <div class="flow-row">
 <div class="flow-head"><h4>Now: online request</h4><span class="note">Live as of Oct 2026. The page states a request isn’t approved until confirmed.</span></div>
 <ol aria-label="Now: online request process" class="flow-steps">
-<li class="resident">Log in or create an account</li>
-<li class="resident">Choose facility, date and time, and event details</li>
-<li class="resident">Submit request</li>
-<li class="clerk">Clerk reviews and confirms</li>
-<li class="clerk">Clerk sends payment and insurance instructions</li>
+<li class="resident"><span class="who">Resident</span>Log in or create an account</li>
+<li class="resident"><span class="who">Resident</span>Choose facility, date and time, and event details</li>
+<li class="resident"><span class="who">Resident</span>Submit request</li>
+<li class="clerk"><span class="who">Village staff</span>Clerk reviews and confirms</li>
+<li class="clerk"><span class="who">Village staff</span>Clerk sends payment and insurance instructions</li>
 </ol>
 </div>
 <div class="flow-row next">
 <div class="flow-head"><h4>Designed next</h4><span class="flow-badge">Blueprint · awaiting approval</span></div>
 <ol aria-label="Designed next: approval before payment" class="flow-steps">
-<li class="resident">Submit request, no account needed</li>
-<li class="clerk">Clerk approves</li>
-<li class="resident">Pay online after approval</li>
-<li class="clerk">One reference number tracks it to completion</li>
+<li class="resident"><span class="who">Resident</span>Submit request, no account needed</li>
+<li class="clerk"><span class="who">Village staff</span>Clerk approves</li>
+<li class="resident"><span class="who">Resident</span>Pay online after approval</li>
+<li class="clerk"><span class="who">Village staff</span>One reference number tracks it to completion</li>
 </ol>
 </div>
 <p class="proof-below flow-key"><span><i class="swatch resident-key"></i>Resident acts</span><span><i class="swatch staff-key"></i>Village staff acts</span></p>
 <figcaption class="proof-below">“Before” is the in-person process as it worked. “Now” is from the live booking page. “Designed next” is from my October 2026 user-flow blueprint, which is awaiting approval. As of November 2026, payment integration and the no-account flow are not live.</figcaption>
 </figure>
 <div class="story">
-<h3>What’s live and what isn’t</h3>
+<h2>What’s live and what isn’t</h2>
 <p>The Forms Index and online requests for all seven resources are live. Online payment, requests without an account, and finer-grained staff permissions are not. I’ve designed the next version: a resident submits without creating an account, the Clerk approves, the resident pays online after approval, and one reference number follows the request to the end. That design is waiting on approval, and the payment integration hasn’t been verified.</p>
 <p>There’s no usage or completion data yet, so I can’t say how many residents have used the new process or how many trips it has saved. What the project did show me is that the page residents see is only part of the job. A simpler experience for residents holds up only if staff can receive the request, see where it stands, and carry it through.</p>
 </div>
 <p class="story-link"><a href="https://www.villagespringvalley.org/booking" rel="noopener noreferrer" target="_blank">See the public booking page ↗</a></p>
-<div class="methods" aria-label="Methods"><span>Staff interviews</span><span>Content audit</span><span>Information architecture</span><span>Service blueprint</span><span>CMS configuration</span><span>State testing</span></div>
+<div class="methods" role="group" aria-label="Methods"><span>Staff interviews</span><span>Content audit</span><span>Information architecture</span><span>Service blueprint</span><span>CMS configuration</span><span>State testing</span></div>
 </div>
 </article>
 <section aria-labelledby="gallery-title" class="museum case-gallery" id="gallery"><div class="wrap">
@@ -95,7 +95,7 @@
 <div class="gallery-wall">
 <figure class="gallery-piece"><a href="https://www.villagespringvalley.org/village-forms-index-" rel="noopener noreferrer" target="_blank"><img alt="Current Village Forms Index with department shortcuts and document cards" decoding="async" height="926" loading="lazy" src="../forms-current-20261029.webp" width="1348"/></a><figcaption><span>Forms index ↗</span><span>01</span></figcaption></figure><figure class="gallery-piece"><a href="https://www.villagespringvalley.org/booking" rel="noopener noreferrer" target="_blank"><img alt="Current Facilities and Stage Requests page with request steps and approval guidance" decoding="async" height="926" loading="lazy" src="../booking-current-20261029.webp" width="1348"/></a><figcaption><span>Facilities + requests ↗</span><span>02</span></figcaption></figure>
 </div>
-<div aria-label="More public pages" class="gallery-rooms">
+<div role="group" aria-label="More public pages" class="gallery-rooms">
 <article class="gallery-room"><h3>Homepage</h3><nav aria-label="Homepage versions"><a href="https://web.archive.org/web/20250916194049/https://www.villagespringvalley.org/" rel="noopener noreferrer" target="_blank">Then ↗</a><a href="https://www.villagespringvalley.org/" rel="noopener noreferrer" target="_blank">Now ↗</a></nav></article>
 <article class="gallery-room"><h3>Village Clerk</h3><nav aria-label="Village Clerk versions"><a href="https://web.archive.org/web/20250213194626/https://www.villagespringvalley.org/departments/clerk" rel="noopener noreferrer" target="_blank">Then ↗</a><a href="https://www.villagespringvalley.org/departments/clerk" rel="noopener noreferrer" target="_blank">Now ↗</a></nav></article>
 <article class="gallery-room"><h3>Assessor</h3><nav aria-label="Assessor versions"><a href="https://web.archive.org/web/20251028113147mp_/https://www.villagespringvalley.org/departments/AssessorsOffice" rel="noopener noreferrer" target="_blank">Then ↗</a><a href="https://www.villagespringvalley.org/departments/AssessorsOffice" rel="noopener noreferrer" target="_blank">Now ↗</a></nav></article>
