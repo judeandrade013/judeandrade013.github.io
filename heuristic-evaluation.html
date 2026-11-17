@@ -48,6 +48,7 @@ details.slide-text summary{cursor:pointer;font-family:var(--type);font-size:12px
 footer{border-top:1px solid var(--ink);padding-block:40px 56px}
 .label,.back{font-family:var(--body);text-transform:none;letter-spacing:0;font-size:13px;color:#6E6F68}.back{font-size:14px;color:var(--ink)}label{font-family:var(--body);letter-spacing:0;font-weight:500}form{border:0;border-radius:12px;background:var(--platen)}input{border-radius:4px;border-color:color-mix(in srgb,var(--ink) 35%,var(--paper))}button{border-radius:0;background:transparent;color:var(--ink);border:1px solid var(--ink);text-transform:none;letter-spacing:0;font-size:14px}.slide img{border-radius:8px}footer{border-top:0;background:#EFE7DA}footer a{color:#98512B}a{color:#98512B}
 body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.26;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .42 0 0 0 0 .39 0 0 0 0 .35 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.pw-wrap{position:relative;flex:1 1 220px;display:flex}.pw-wrap input{flex:1;padding-right:72px}.pw-toggle{position:absolute;right:6px;top:50%;transform:translateY(-50%);min-height:32px;padding:4px 10px;border:0;background:transparent;color:#7A3F20;font:500 13px/1 var(--body);text-transform:none;letter-spacing:0;text-decoration:underline;text-underline-offset:3px;cursor:pointer}.pw-toggle:hover{background:transparent}
 </style>
 </head>
 <body>
@@ -61,7 +62,7 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;op
 </header>
 <form id="unlock" autocomplete="off">
 <label for="pw">Password</label>
-<div class="row"><input id="pw" name="pw" type="password" required autocomplete="current-password" autocapitalize="none" autocorrect="off" spellcheck="false" aria-describedby="status"/><button id="go" type="submit">Unlock the evaluation</button></div>
+<div class="row"><span class="pw-wrap"><input id="pw" name="pw" type="password" required autocomplete="current-password" autocapitalize="none" autocorrect="off" spellcheck="false" aria-describedby="status"/><button class="pw-toggle" id="pw-toggle" type="button" aria-controls="pw" aria-pressed="false" aria-label="Show password">Show</button></span><button id="go" type="submit">Unlock the evaluation</button></div>
 <p id="status" role="status" aria-live="polite"></p>
 <p class="ask">Don’t have the password? <a href="mailto:judeandrade013@gmail.com?subject=Heuristic%20evaluation%20access">Email me</a> and I’ll send it.</p>
 </form>
@@ -106,6 +107,7 @@ function render(data){
   form.hidden=true;var deck=document.getElementById('deck');deck.hidden=false;
   var h=document.querySelector('header h1');h.setAttribute('tabindex','-1');h.focus();
 }
+document.getElementById('pw-toggle').addEventListener('click',function(){var shown=pw.type==='text';pw.type=shown?'password':'text';this.textContent=shown?'Show':'Hide';this.setAttribute('aria-pressed',String(!shown));this.setAttribute('aria-label',shown?'Show password':'Hide password');pw.focus();});
 var pass='';
 form.addEventListener('submit',async function(e){
   e.preventDefault(); if(!window.crypto||!crypto.subtle){setStatus('This browser can’t open protected files. Try a current version of Chrome, Safari, Firefox, or Edge.',true);return;}
