@@ -112,7 +112,7 @@ form.addEventListener('submit',async function(e){
   go.disabled=true;setStatus('Unlocking…');
   try{
     var typed=pw.value.trim().toLowerCase();
-    var bytes=await fetchAndDecrypt('heuristic-evaluation.bin?v=1',typed);
+    var bytes=await fetchAndDecrypt('heuristic-evaluation.bin?v=2',typed);
     pass=typed;setStatus('');render(JSON.parse(new TextDecoder().decode(bytes)));
   }catch(err){
     setStatus(err&&err.message==='fetch'?'The file didn’t load. Check your connection and try again.':'That password didn’t work.',true);pw.select();
@@ -121,7 +121,7 @@ form.addEventListener('submit',async function(e){
 document.getElementById('dl').addEventListener('click',async function(){
   var b=this;b.disabled=true;b.textContent='Preparing PDF…';
   try{
-    var bytes=await fetchAndDecrypt('heuristic-evaluation-pdf.bin?v=1',pass);
+    var bytes=await fetchAndDecrypt('heuristic-evaluation-pdf.bin?v=2',pass);
     var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([bytes],{type:'application/pdf'}));a.download='Jude_Andrade_KOALA_Heuristic_Evaluation.pdf';document.body.appendChild(a);a.click();a.remove();
     b.textContent='Download the original PDF (11.7 MB)';
   }catch(e){b.textContent='Download failed. Try again.';}
