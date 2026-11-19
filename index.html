@@ -4,8 +4,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
-<meta content="#FAF8F3" media="(prefers-color-scheme: light)" name="theme-color"/>
-<meta content="#FAF8F3" media="(prefers-color-scheme: dark)" name="theme-color"/>
+<meta content="#FAF8F3" name="theme-color"/>
+<script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem("theme")}catch(e){}if(t!=="light"&&t!=="dark")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.setAttribute("data-theme",t);})();</script>
 <title>Jude Andrade — Design Researcher</title>
 <meta content="Jude Andrade studies how people make their way through products and public services. Case studies: taxi regulation, product research at KOALA, municipal digital services, flood-mitigation funding, and fee reform." name="description"/>
 <meta content="website" property="og:type"/>
@@ -15,7 +15,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,400&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
-<link href="site.css?v=10" rel="stylesheet"/>
+<link href="site.css?v=11" rel="stylesheet"/>
 <script>
 (function(){var h=location.hash;if(!h)return;var m={"#cab-rules":"taxi","#koala":"koala","#public-services":"digital-services","#gallery":"digital-services","#memorial-park":"memorial-park","#fees":"fees"},p={"ko-":"koala","fp-":"digital-services","ms-":"memorial-park","fe-":"fees","tx-":"taxi","taxi-":"taxi"};var t=m[h];if(!t){for(var k in p){if(h.indexOf("#"+k)===0){t=p[k];break;}}}if(t)location.replace("work/"+t+".html"+(t==="taxi"||t==="koala"?"":h));})();
 </script>
@@ -27,15 +27,14 @@
 <meta content="https://judeandrade013.github.io/og-card.jpg?v=20261117" name="twitter:image"/><link href="https://judeandrade013.github.io/" rel="canonical"/><link href="favicon.svg?v=20261029" rel="icon" type="image/svg+xml"/></head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<nav aria-label="Main"><div class="wrap nav-in"><a class="mark" href="#top">Jude Andrade</a><div class="nav-links"><a href="#work">Work</a><a href="#about">About</a><a href="resume.pdf?v=20261117c" rel="noopener" target="_blank">Résumé ↗</a><a href="#contact">Contact</a></div></div></nav>
+<nav aria-label="Main"><div class="wrap nav-in"><a class="mark" href="#top">Jude Andrade</a><div class="nav-links"><a href="#work">Work</a><a href="#about">About</a><a href="resume.html">Résumé</a><a href="#contact">Contact</a><button class="theme-toggle" type="button" aria-pressed="false" aria-label="Dark theme" title="Dark theme"><svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button></div></div></nav>
 <main id="main">
 <header class="hero wrap" id="top">
 <div class="hero-intro-layout"><div class="hero-intro-copy"><p class="label hero-eyebrow">Design Researcher · Behavioral Insights &amp; Service Innovation</p><h1>Hi, I’m Jude.</h1><p class="lede">I’m a design researcher. I study how people make their way through products and public services, and what gets in their way.</p>
 <p class="lede">For the past year I’ve been the only researcher in the Mayor’s Office of the Village of Spring Valley, New York, a municipality of about 33,000 people. The work has ranged from facility booking and problem reporting to taxi regulation, flood funding, and the village fee schedule. From 2020 to 2022 I was the first dedicated UX researcher at KOALA, a timeshare marketplace, where I set up the company’s research practice. I’ve also done independent research for travel and hospitality clients, including Lonely Planet.</p><p class="lede">Before research, I designed interior plantscapes, worked in hospitality, and did wedding florals. I also have a degree in psychology. Many of my projects started with a reasonable assumption that turned out to be incomplete, such as the idea that unlicensed taxis were mainly an enforcement problem, or that a flood grant would require paying for a new engineering study. Finding out what’s actually going on is the part of the job I like best.</p></div><figure class="hero-doodle"><img alt="Illustration of Jude wearing a yellow knit hat and holding a tea bag over a pink mug" decoding="async" fetchpriority="high" height="540" loading="eager" src="illustration.webp" width="540"/><figcaption>A little bit of me, in ink.</figcaption></figure></div>
-<p class="hero-cta"><a href="#work">Selected work ↓</a><a href="resume.pdf?v=20261117c" rel="noopener" target="_blank">Résumé (PDF) ↗</a><a href="mailto:judeandrade013@gmail.com">Email</a></p>
 </header>
 <section aria-labelledby="h-work" class="sec" id="work"><div class="wrap">
-<div class="work-intro"><div><h2 class="sec-title" id="h-work">Selected work, 2020–2026</h2></div></div>
+<h2 class="sec-title" id="h-work">Selected work, 2020–2026</h2>
 <ul class="case-grid">
 <li class="case-card"><a href="work/taxi.html"><span class="case-no">01</span><span class="case-copy"><span class="label case-kicker">Taxi and for-hire transportation</span><h3>Spring Valley’s taxi law could see the driver, but not the business behind the ride</h3><p>Complaints about unlicensed cabs pointed toward tougher enforcement. Talking with every local cab company and reading the village code suggested the law’s definitions were the weak point, and that new penalties would mostly land on small, licensed drivers.</p><span class="case-proof">Led the research and drafted the definitions · Local laws adopted by the Village Board · Enforcement effects not yet measured</span></span></a></li>
 <li class="case-card"><a href="work/koala.html"><span class="case-no">02</span><span class="case-copy"><span class="label case-kicker">KOALA, product research</span><h3>Why timeshare owners gave up on the first page of a listing</h3><p>The listing flow asked for a reservation number many owners never receive, and it lost their progress if they went back a step. Interviews with owners showed where the flow broke down. Letting owners save progress and making some fields optional raised the success rate on that page.</p><span class="case-proof">First dedicated UX researcher, 2020–2022 · First-page success rate 33% → 46%</span></span></a></li>
@@ -55,7 +54,7 @@
 <p class="label">Contact</p>
 <h2 class="sec-title">Get in touch</h2>
 <div class="contact"><span class="email" id="email">judeandrade013@gmail.com</span><button class="btn" id="copy" type="button">Copy email</button></div>
-<p class="footer-actions"><a href="resume.pdf?v=20261117c" rel="noopener" target="_blank">View résumé (PDF) ↗</a> <a href="https://www.linkedin.com/in/jude13/" rel="noopener" target="_blank">LinkedIn ↗</a> <a href="mailto:judeandrade013@gmail.com">Email ↗</a></p>
+<p class="footer-actions"><a href="resume.html">Résumé</a> <a href="resume.pdf?v=20261117c" download="Jude_Andrade_Resume.pdf">Résumé PDF ↓</a> <a href="https://www.linkedin.com/in/jude13/" rel="noopener" target="_blank">LinkedIn ↗</a> <a href="mailto:judeandrade013@gmail.com">Email ↗</a></p>
 <p class="footer-edit">I’m looking for my next role in design research and strategy. Email is the quickest way to reach me.</p>
 <p class="label colophon">Made with HTML, CSS, 2 tension headaches, and unreasonable amounts of caffeine. · 2026</p>
 </div></footer>
@@ -75,5 +74,6 @@
 })();
 </script>
 <script data-goatcounter="https://judeandrade013.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script src="theme.js" defer></script>
 </body>
 </html>

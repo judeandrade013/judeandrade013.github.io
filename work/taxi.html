@@ -4,6 +4,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
 <meta content="#FAF8F3" name="theme-color"/>
+<script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem("theme")}catch(e){}if(t!=="light"&&t!=="dark")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.setAttribute("data-theme",t);})();</script>
 <title>The taxi law could see the driver, but not the business behind the ride · Jude Andrade</title>
 <meta content="In 2026, Spring Valley received more than 80 complaints about unlicensed “pirate” cabs in a single month. The obvious response was stricter enforcement. I spent the project trying to understand who actually organized the rides, and I ended up proposing changes to how the law defines and regulates an operator." name="description"/>
 <meta content="article" property="og:type"/>
@@ -19,15 +20,15 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,400&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
-<link href="../site.css?v=10" rel="stylesheet"/>
+<link href="../site.css?v=11" rel="stylesheet"/>
 </head>
 <body class="case-page">
 <a class="skip" href="#main">Skip to content</a>
-<nav aria-label="Main"><div class="wrap nav-in"><a class="mark" href="../index.html">Jude Andrade</a><div class="nav-links"><a aria-current="page" href="../index.html#work">Work</a><a href="../index.html#about">About</a><a href="../resume.pdf?v=20261117c" rel="noopener" target="_blank">Résumé ↗</a><a href="../index.html#contact">Contact</a></div></div></nav>
+<nav aria-label="Main"><div class="wrap nav-in"><a class="mark" href="../index.html">Jude Andrade</a><div class="nav-links"><a aria-current="page" href="../index.html#work">Work</a><a href="../index.html#about">About</a><a href="../resume.html">Résumé</a><a href="../index.html#contact">Contact</a><button class="theme-toggle" type="button" aria-pressed="false" aria-label="Dark theme" title="Dark theme"><svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button></div></div></nav>
 <main id="main">
-<article aria-labelledby="h-cab-rules" class="case story-case" id="cab-rules" style="--band:#F6D9C4">
+<article aria-labelledby="h-cab-rules" class="case story-case" id="cab-rules" style="--band:var(--band-1)">
 <div class="wrap">
-<div class="case-band"><div class="case-head"><p class="label">01 / Taxi and for-hire transportation</p><a class="case-back" href="../index.html#work">↑ All work</a></div>
+<div class="case-band"><div class="case-head"><p class="label">01 / Taxi and for-hire transportation</p></div>
 <h1 id="h-cab-rules">The taxi law could see the driver, but not the business behind the ride</h1>
 <p class="case-tags">Policy design · Regulatory research · Stakeholder research · Operational accountability</p>
 <p class="dek">In 2026, Spring Valley received more than 80 complaints about unlicensed “pirate” cabs in a single month. The obvious response was stricter enforcement. I spent the project trying to understand who actually organized the rides, and I ended up proposing changes to how the law defines and regulates an operator.</p>
@@ -36,13 +37,15 @@
 <div><dt class="label">Methods</dt><dd>Conversations with local cab companies, licensing-record review with the Village Clerk, comparison with NYC and other municipalities</dd></div>
 <div><dt class="label">Outcome</dt><dd>The Village Board adopted vehicle-for-hire legislative reforms in 2026</dd></div>
 <div><dt class="label">Not yet known</dt><dd>Effects on unlicensed operations, compliance, and congestion</dd></div>
-</dl></div>
+</dl>
+<nav class="case-index" aria-label="Sections in this case study"><ol><li><a href="#s-context"><span class="part-no">01</span> Context</a></li><li><a href="#s-proposal"><span class="part-no">02</span> Proposal</a></li><li><a href="#s-tradeoffs"><span class="part-no">03</span> Tradeoffs</a></li><li><a href="#s-outcome"><span class="part-no">04</span> Outcome</a></li></ol></nav></div>
 <div class="story">
-<h2>Where I started</h2>
+<h2 class="part" id="s-context"><span class="part-no">01</span> Context</h2>
+<h3>Where I started</h3>
 <p>Spring Valley was getting complaints about unlicensed taxis, congestion, and passenger safety, and my first instinct was to treat it as an enforcement problem: how could the Village find the people operating illegally and penalize them?</p>
 <p>Talking with the local taxi companies changed that. Licensed drivers were already paying to work in the Village, which had issued about 800 licenses to drive the year before. Some were independent owner-operators supporting their families, and others drove for larger dispatch or fleet operations. Heavier penalties would mostly add cost for drivers who were already following the rules, and they wouldn’t reach the businesses organizing rides behind the scenes.</p>
 <p>The more I looked, the clearer it became that the law didn’t really distinguish between the person driving a car and the business deciding how that car was used.</p>
-<h2>Who controls a trip?</h2>
+<h3>Who controls a trip?</h3>
 <p>I met with the local taxi companies, went through licensing records with the Village Clerk, and read Chapter 239 alongside the rules in <a href="https://www.nyc.gov/site/tlc/businesses/for-hire-vehicle-bases.page" rel="noopener" target="_blank">New York City</a> and a few other municipalities. New York City turned out to be the most useful comparison, because its long fight over regulating Uber and Lyft came down to the same split between the driver and the system that assigns, routes, and charges for the ride.</p>
 <p>So I stopped looking only at who owned which vehicle and started asking how a trip actually worked. Who assigned the rides? Who decided which cars could go out? Who collected the money? What happened when a driver stopped working with a company? And could an operator avoid licensing altogether by running trips through some other entity? Those questions moved my attention away from individual violations and toward how the local industry was organized.</p>
 </div>
@@ -76,10 +79,11 @@
 <figcaption>My summary of how the drafts changed what the law could see. It describes the logic of the proposal, not the final codified text.</figcaption>
 </figure>
 <div class="story">
-<h2>A new category in the code</h2>
+<h2 class="part" id="s-proposal"><span class="part-no">02</span> Proposal</h2>
+<h3>A new category in the code</h3>
 <p>The existing code was built around drivers, vehicles, and owners. I proposed adding a Transportation Network Provider (TNP) classification to cover anyone arranging or coordinating trips, whether through a call center, radio dispatch, an app, or some other system. The definition turned on what an organization did. A business could be responsible for rides even if it didn’t own the vehicles or employ the drivers.</p>
 <p>I also drafted provisions requiring TNPs and multi-vehicle operators to hold Village licenses if they coordinated trips in the Village, wherever their offices happened to be. Enforcement aimed at drivers would never have reached them.</p>
-<h2>When a driver leaves a company</h2>
+<h3>When a driver leaves a company</h3>
 <p>Defining the operator raised a follow-up question: what should happen when a driver or vehicle stops working with a licensed company? My draft disaffiliation and debranding provisions required the company to notify the Village, shut off the driver’s dispatch access, remove its markings from the vehicle, and provide proof that the vehicle was no longer operating under its name. I also drafted enforcement provisions covering licensing violations and vehicle impoundment.</p>
 <p>The thinking behind all of this was that an operator’s responsibilities shouldn’t end once the license is issued. They continue for as long as the company runs rides, including the day someone leaves.</p>
 </div>
@@ -89,7 +93,8 @@
 <figcaption>From my draft provisions. The final adopted law may differ.</figcaption>
 </figure>
 <div class="story">
-<h2>Keeping it workable for small operators</h2>
+<h2 class="part" id="s-tradeoffs"><span class="part-no">03</span> Tradeoffs</h2>
+<h3>Keeping it workable for small operators</h3>
 <p>Throughout the drafting I was weighing public safety and enforceability against what compliance would cost. A single owner-operator and a company coordinating many vehicles don’t make the same demands on the Village, and treating them identically would load costs onto the small businesses without making enforcement any more effective.</p>
 <p>I looked at ways to separate operator categories, tie responsibilities to whoever actually controlled the work, and stop larger operations from dodging requirements by spreading ownership or dispatch across several entities. Privacy, due process, and the cost of keeping trip records mattered too, since every new requirement also lands on the smallest businesses. These were the main choices:</p>
 <div class="story-table" role="region" aria-label="Drafting choices" tabindex="0"><table>
@@ -100,18 +105,20 @@
 <tr><td>Uniform fees, or tiered?</td><td>Fees that scale with the size of the operation, to protect smaller compliant businesses.</td></tr>
 <tr><td>Judge affiliation by branding, or by evidence of control?</td><td>By conduct and coordination. Some drafts explicitly avoid presumptions based on how vehicles look.</td></tr>
 </tbody></table></div>
-<h2>What was adopted, and what isn’t known yet</h2>
+<h2 class="part" id="s-outcome"><span class="part-no">04</span> Outcome</h2>
+<h3>What was adopted, and what isn’t known yet</h3>
 <p>The Village Board adopted vehicle-for-hire reforms in 2026. My part was the research, the regulatory definitions, the proposed accountability rules, and enforcement language that went into that legislative process. Some of what I drafted may have changed before adoption, so the provisions described here shouldn’t all be read as the final law.</p>
 <p>Nobody has measured yet whether the reforms reduce unlicensed operation, improve compliance, or ease congestion.</p>
-<h2>What I took from it</h2>
+<h3>What I took from it</h3>
 <p>I started out asking how to enforce the existing rules better and ended up asking whether those rules described the industry well enough to enforce at all. Once I stopped treating the driver at the curb as the whole problem, the work became about the relationships behind each ride, and the definitions followed from there.</p>
 </div>
-<div class="methods" role="group" aria-label="Methods"><span>Operator interviews</span><span>Licensing-record review</span><span>Comparative code analysis</span><span>Definition drafting</span><span>Enforcement design</span><span>Tradeoff analysis</span></div>
+<p class="methods"><span class="label">Methods</span> <span>Operator interviews</span><span>Licensing-record review</span><span>Comparative code analysis</span><span>Definition drafting</span><span>Enforcement design</span><span>Tradeoff analysis</span></p>
 </div>
 </article>
 </main>
 <nav aria-label="More case studies" class="case-pager wrap"><span></span><a class="next" href="koala.html"><span class="label">Next · KOALA, product research →</span><span class="pager-title">Why timeshare owners gave up on the first page of a listing</span></a></nav>
-<footer class="page-footer"><div class="wrap"><p><a href="mailto:judeandrade013@gmail.com">judeandrade013@gmail.com</a><a href="../resume.pdf?v=20261117c" rel="noopener" target="_blank">Résumé (PDF) ↗</a><a href="https://www.linkedin.com/in/jude13/" rel="noopener" target="_blank">LinkedIn ↗</a></p></div></footer>
+<footer class="page-footer"><div class="wrap"><p><a href="mailto:judeandrade013@gmail.com">judeandrade013@gmail.com</a><a href="../resume.html">Résumé</a><a href="../resume.pdf?v=20261117c" download="Jude_Andrade_Resume.pdf">Résumé PDF ↓</a><a href="https://www.linkedin.com/in/jude13/" rel="noopener" target="_blank">LinkedIn ↗</a></p></div></footer>
 <script data-goatcounter="https://judeandrade013.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script src="../theme.js" defer></script>
 </body>
 </html>

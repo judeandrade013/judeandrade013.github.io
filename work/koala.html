@@ -4,6 +4,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
 <meta content="#FAF8F3" name="theme-color"/>
+<script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem("theme")}catch(e){}if(t!=="light"&&t!=="dark")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.setAttribute("data-theme",t);})();</script>
 <title>Why timeshare owners gave up on the first page of a listing · Jude Andrade</title>
 <meta content="KOALA, an early-stage timeshare marketplace, was losing 75% of users within the first page of its listing process, and it had done little research on why. Our small team had two months to find out, and to fix the page people were leaving from." name="description"/>
 <meta content="article" property="og:type"/>
@@ -19,15 +20,15 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,400&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
-<link href="../site.css?v=10" rel="stylesheet"/>
+<link href="../site.css?v=11" rel="stylesheet"/>
 </head>
 <body class="case-page">
 <a class="skip" href="#main">Skip to content</a>
-<nav aria-label="Main"><div class="wrap nav-in"><a class="mark" href="../index.html">Jude Andrade</a><div class="nav-links"><a aria-current="page" href="../index.html#work">Work</a><a href="../index.html#about">About</a><a href="../resume.pdf?v=20261117c" rel="noopener" target="_blank">Résumé ↗</a><a href="../index.html#contact">Contact</a></div></div></nav>
+<nav aria-label="Main"><div class="wrap nav-in"><a class="mark" href="../index.html">Jude Andrade</a><div class="nav-links"><a aria-current="page" href="../index.html#work">Work</a><a href="../index.html#about">About</a><a href="../resume.html">Résumé</a><a href="../index.html#contact">Contact</a><button class="theme-toggle" type="button" aria-pressed="false" aria-label="Dark theme" title="Dark theme"><svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button></div></div></nav>
 <main id="main">
-<article aria-labelledby="h-koala" class="case story-case koala-case" style="--band:#DDE5CF" id="koala">
+<article aria-labelledby="h-koala" class="case story-case koala-case" style="--band:var(--band-2)" id="koala">
 <div class="wrap">
-<div class="case-band"><div class="case-head"><p class="label">02 / Product research · KOALA</p><a class="case-back" href="../index.html#work">↑ All work</a></div>
+<div class="case-band"><div class="case-head"><p class="label">02 / Product research · KOALA</p></div>
 <h1 id="h-koala">Why timeshare owners gave up on the first page of a listing</h1>
 <p class="dek">I joined KOALA, an early-stage timeshare marketplace, as its first dedicated UX researcher. The company was losing 75% of users within the first page of its listing process and had done little research on why. One of my first projects was a two-month study to find out, and to fix the page people were leaving from.</p>
 <dl class="facts">
@@ -35,16 +36,19 @@
 <div><dt class="label">Team</dt><dd>Two UX designers and me</dd></div>
 <div><dt class="label">When</dt><dd>Nov–Dec 2020 (this study)</dd></div>
 <div><dt class="label">Outcome</dt><dd>First-page success rate rose from 33% to 46%</dd></div>
-<div><dt class="label">Research artifact</dt><dd><a href="../heuristic-evaluation.html">Heuristic review of go-koala.com</a> (password protected)</dd></div>
-</dl></div>
+</dl>
+<nav class="case-index" aria-label="Sections in this case study"><ol><li><a href="#s-context"><span class="part-no">01</span> Context</a></li><li><a href="#s-finding"><span class="part-no">02</span> Finding</a></li><li><a href="#s-change"><span class="part-no">03</span> Change and result</a></li><li><a href="#s-wider-role"><span class="part-no">04</span> Wider role</a></li></ol></nav></div>
 <div class="story">
-<h2>A marketplace with no research behind it</h2>
+<h2 class="part" id="s-context"><span class="part-no">01</span> Context</h2>
+<h3>A marketplace with no research behind it</h3>
 <p>The company had seen three out of four people leave within the first page of the listing process. The company was young, and little to no research had been done on the people using the site. The business goal was simple to state: understand why users left the listing incomplete, and bring that 75% drop-off down.</p>
-<h2>Asking owners first</h2>
+<h3>Asking owners first</h3>
 <p>We started with people rather than the page. I ran more than 40 exploratory interviews with timeshare owners and others, then synthesized what we heard with a belief/behavior matrix and affinity mapping, alongside a user-flow analysis and a comparative market analysis.</p>
-<h2>The page asked for something owners didn’t have</h2>
+<h2 class="part" id="s-finding"><span class="part-no">02</span> Finding</h2>
+<h3>The page asked for something owners didn’t have</h3>
 <p>The first page wouldn’t let anyone continue without a reservation number, and many owners, especially those with deeded or floating weeks, rarely have one. The page also couldn’t save progress, going back a step restarted the listing, and nothing told people up front what details they would need. An owner without that number had no way forward and nothing to come back to.</p>
-<h2>Making progress recoverable</h2>
+<h2 class="part" id="s-change"><span class="part-no">03</span> Change and result</h2>
+<h3>Making progress recoverable</h3>
 <p>I recommended three changes and prototyped them: let owners save their progress, make some fields optional, and say at the start what information a listing requires. After the save-progress and optional-field changes, the success rate on the first listing page rose from 33% to 46%, an increase of 13 percentage points.</p>
 </div>
 <figure aria-labelledby="bars-h" class="bars story-exhibit">
@@ -54,18 +58,20 @@
 <figcaption>Scale runs 0–100%. Figures from KOALA’s original case study; the test design isn’t documented here.</figcaption>
 </figure>
 <div class="story">
-<h2>The wider role</h2>
+<h2 class="part" id="s-wider-role"><span class="part-no">04</span> Wider role</h2>
+<h3>The wider role</h3>
 <p>This study was one of the first things I did at KOALA. Over the following year and a half, I set up the company’s research practice and a shared Miro insights repository, so product, design, and leadership could trace decisions back to customer evidence. I ran more than 90 research activities in all, spanning interviews, remote usability studies on UserTesting and Lookback, and A/B tests, and facilitated cross-functional ideation across more than eight projects.</p>
-<h2>A second pass through psychology</h2>
+<h3>A second pass through psychology</h3>
 <p>I also put together a quick heuristic review of go-koala.com, organized around ten principles from Susan Weinschenk’s work on how people use screens, from memory and attention to mental models. It looks at readability on destination pages and at the booking form’s layout, labels, and error handling. It is a review rather than a usability test, and it says so. KOALA acted on some of its recommendations.</p>
 <p class="artifact-link"><span class="label">Research artifact</span> <a href="../heuristic-evaluation.html">Read the heuristic review</a> <span class="artifact-lock">(password protected)</span></p>
 </div>
-<div class="methods" role="group" aria-label="Methods"><span>Exploratory interviews</span><span>Belief/behavior matrix</span><span>Affinity mapping</span><span>Flow analysis</span><span>Market analysis</span><span>Prototyping</span><span>Heuristic review</span></div>
+<p class="methods"><span class="label">Methods</span> <span>Exploratory interviews</span><span>Belief/behavior matrix</span><span>Affinity mapping</span><span>Flow analysis</span><span>Market analysis</span><span>Prototyping</span><span>Heuristic review</span></p>
 </div>
 </article>
 </main>
 <nav aria-label="More case studies" class="case-pager wrap"><a class="prev" href="taxi.html"><span class="label">← Previous · Taxi and for-hire transportation</span><span class="pager-title">The taxi law could see the driver, but not the business behind the ride</span></a><a class="next" href="digital-services.html"><span class="label">Next · Municipal website and facility requests →</span><span class="pager-title">What happens after a resident submits a form?</span></a></nav>
-<footer class="page-footer"><div class="wrap"><p><a href="mailto:judeandrade013@gmail.com">judeandrade013@gmail.com</a><a href="../resume.pdf?v=20261117c" rel="noopener" target="_blank">Résumé (PDF) ↗</a><a href="https://www.linkedin.com/in/jude13/" rel="noopener" target="_blank">LinkedIn ↗</a></p></div></footer>
+<footer class="page-footer"><div class="wrap"><p><a href="mailto:judeandrade013@gmail.com">judeandrade013@gmail.com</a><a href="../resume.html">Résumé</a><a href="../resume.pdf?v=20261117c" download="Jude_Andrade_Resume.pdf">Résumé PDF ↓</a><a href="https://www.linkedin.com/in/jude13/" rel="noopener" target="_blank">LinkedIn ↗</a></p></div></footer>
 <script data-goatcounter="https://judeandrade013.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script src="../theme.js" defer></script>
 </body>
 </html>
