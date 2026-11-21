@@ -157,6 +157,10 @@ nav[aria-label="Main"]{position:sticky;top:env(safe-area-inset-top,0px);z-index:
 .about-body>p+p{margin-top:16px}
 .about-mini-head{font-size:16px;line-height:1.45;margin:32px 0 6px}
 .about-body>.about-mini-head+p{margin-top:0}
+.more-link{margin-top:20px}
+.more-link a{font:500 15px/1.5 var(--body);text-decoration:none}
+.more-link a:hover{text-decoration:underline}
+.about-page{border-top:0}
 .portrait-note{position:relative;width:min(100%,260px);margin:40px 10px 0 0}
 .portrait-note img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border:1px solid var(--rule);border-radius:999px 999px 0 0}
 .portrait-note:before{content:"";position:absolute;top:-10px;left:10px;right:-10px;aspect-ratio:4/5;border:1px solid var(--terracotta);border-radius:999px 999px 0 0;pointer-events:none}

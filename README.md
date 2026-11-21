@@ -16,4 +16,4 @@ The civic projects were independently driven in-house, with input from municipal
 
 ## About the site
 
-Hand-built static HTML, CSS and JavaScript. The homepage is `index.html`; each case study is its own page in `work/`; the résumé is `resume.html` (with `resume.pdf` as the download). Shared styles are in `site.css`, where all colours are tokens with one light and one dark set. `theme.js` runs the light/dark toggle; a short inline script in each page's `<head>` applies the saved or system theme before first paint. Hosted on GitHub Pages.
+Hand-built static HTML, CSS and JavaScript. The homepage is `index.html`; each case study is its own page in `work/`; the About page is `about.html`; the résumé is `resume.html` (with `resume.pdf` as the download). Shared styles are in `site.css`, where all colours are tokens with one light and one dark set. `theme.js` runs the light/dark toggle; a short inline script in each page's `<head>` applies the saved or system theme before first paint. Hosted on GitHub Pages.
