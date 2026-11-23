@@ -20,7 +20,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,400&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
-<link href="../site.css?v=14" rel="stylesheet"/>
+<link href="../site.css?v=17" rel="stylesheet"/>
 </head>
 <body class="case-page">
 <a class="skip" href="#main">Skip to content</a>
@@ -56,7 +56,7 @@
 <p>So I stopped looking only at who owned which vehicle and started asking how a trip actually worked. Who assigned the rides? Who decided which cars could go out? Who collected the money? What happened when a driver stopped working with a company? And could an operator avoid licensing altogether by running trips through some other entity? Those questions moved my attention away from individual violations and toward how the local industry was organized.</p>
 <figure class="exhibit story-exhibit" aria-labelledby="ex1-title">
 <div class="exhibit-head"><p class="label">Exhibit 01</p><h3 id="ex1-title">The regulatory blind spot</h3></div>
-<div class="ex-scroll" role="region" aria-label="Exhibit 01 diagram, scrolls sideways on small screens" tabindex="0"><svg viewBox="0 0 680 330" role="img" aria-labelledby="ex1-svg-t ex1-svg-d" class="exhibit-svg">
+<div class="ex-scroll" role="region" aria-label="Exhibit 01 diagram" tabindex="0"><svg viewBox="0 0 680 330" role="img" aria-labelledby="ex1-svg-t ex1-svg-d" class="exhibit-svg">
 <title id="ex1-svg-t">Traditional enforcement view compared with the proposed regulatory view</title>
 <desc id="ex1-svg-d">In the traditional view, enforcement sees the driver and vehicle at the curb, while dispatch and fleet operators are less visible. In the proposed view, the driver, the dispatcher or Transportation Network Provider, and the fleet owner are each defined, and all three connect to licensing, records, and accountability.</desc>
 <text x="24" y="30" class="ex-kicker">Traditional enforcement view</text>
@@ -81,6 +81,14 @@
 <rect x="150" y="292" width="380" height="32" rx="8" class="ex-green"/>
 <text x="340" y="313" text-anchor="middle" class="ex-strong ex-green-text">Licensing + records + accountability</text>
 </svg></div>
+<div class="ex-mobile">
+<p class="ex-m-head">Traditional enforcement view</p>
+<div class="ex-m-row"><span class="ex-m-box peach"><b>Driver + vehicle</b>Visible at the curb</span><span class="ex-m-box ghost"><b>Dispatch / fleet</b>Less visible to the law</span></div>
+<p class="ex-m-head">Proposed regulatory view</p>
+<div class="ex-m-row three"><span class="ex-m-box sage"><b>Driver</b></span><span class="ex-m-box sage"><b>Dispatch / TNP</b>Network provider</span><span class="ex-m-box sage"><b>Fleet / owner</b></span></div>
+<p class="ex-m-join">↓ all three tied to ↓</p>
+<p class="ex-m-box green"><b>Licensing + records + accountability</b></p>
+</div>
 <figcaption>My summary of how the drafts changed what the law could see. It describes the logic of the proposal, not the final codified text.</figcaption>
 </figure>
 </div>
@@ -91,11 +99,28 @@
 <h3>A new category in the code</h3>
 <p>The existing code was built around drivers, vehicles, and owners. I proposed adding a Transportation Network Provider (TNP) classification to cover anyone arranging or coordinating trips, whether through a call center, radio dispatch, an app, or some other system. The definition turned on what an organization did. A business could be responsible for rides even if it didn’t own the vehicles or employ the drivers.</p>
 <p>I also drafted provisions requiring TNPs and multi-vehicle operators to hold Village licenses if they coordinated trips in the Village, wherever their offices happened to be. Enforcement aimed at drivers would never have reached them.</p>
+<p>The harder question was affiliation: when is a driver working for someone else? Contracts and branding were easy to rearrange, so my draft judged it by conduct. A driver counts as affiliated if they pay for access to trips or vehicles, take assignments or answer to another company’s rules, depend on its dispatch or payment systems, share its insurance, or share billing, leasing, or maintenance arrangements. A business that controls five or more vehicles that way is a multi-vehicle operator, and related businesses can’t get around the limits by splitting up: their licenses are counted together, and no group may hold more than 10% of the Village’s active operating licenses.</p>
+<figure class="exhibit story-exhibit" aria-labelledby="ex-dmap-title">
+<div class="exhibit-head"><p class="label">Exhibit 02 · Draft</p><h3 id="ex-dmap-title">How my draft decides who is accountable</h3></div>
+<ol class="dmap">
+<li><div class="dmap-q"><small>Question 1</small>Does it take ride requests and dispatch, route, or coordinate trips in the Village, by phone, radio, app, or anything else?</div><div class="dmap-arrow" aria-hidden="true"><span>→</span></div><div class="dmap-a"><strong>Transportation Network Provider</strong><ul><li>Needs a Village license, wherever its office is</li><li>Keeps trip and dispatch records for three years, open to audit</li></ul></div></li>
+<li><div class="dmap-q"><small>Question 2</small>Does it own, lease, manage, or control five or more vehicles under common control?</div><div class="dmap-arrow" aria-hidden="true"><span>→</span></div><div class="dmap-a"><strong>Multi-vehicle operator</strong><ul><li>Files a sworn yearly list of affiliated drivers, vehicles, and owners</li><li>Licenses counted across related businesses; 10% cap</li></ul></div></li>
+<li><div class="dmap-q"><small>Question 3</small>Is a driver or vehicle under another business’s direction or control, judged by what actually happens?</div><div class="dmap-arrow" aria-hidden="true"><span>→</span></div><div class="dmap-a"><strong>Affiliated</strong><ul><li>The business answers for that vehicle until it files notice and proof of debranding (Exhibit 03)</li></ul></div></li>
+</ol>
+<p class="dmap-note">One business can meet more than one test and must meet every set of requirements that applies.</p>
+<details class="more"><summary>The five signs of affiliation in the draft</summary><div class="more-body">
+<p>A driver, vehicle, or licensee is affiliated if it is under another business’s direction or control, or materially depends on it, including where it:</p>
+<ol><li>pays fees, dues, lease payments, or anything else for access to trips, vehicles, or a dispatch network;</li><li>receives trip assignments, or is subject to acceptance rules, performance standards, discipline, or termination;</li><li>must use, or depends on, another business’s dispatch, routing, communication, or payment systems;</li><li>runs under common or pooled insurance;</li><li>shares billing, collections, vehicle access, leasing, financing, or maintenance.</li></ol>
+<p>The draft adds that affiliation is decided by actual conduct and relationships, not contract labels or disclaimers.</p>
+<p class="src">From my draft, §§ 239-3, 239-7 D, and 239-38.</p>
+</div></details>
+<figcaption>Based on the definitions in my draft of Chapter 239.</figcaption>
+</figure>
 <h3>When a driver leaves a company</h3>
 <p>Defining the operator raised a follow-up question: what should happen when a driver or vehicle stops working with a licensed company? My draft disaffiliation and debranding provisions required the company to notify the Village, shut off the driver’s dispatch access, remove its markings from the vehicle, and provide proof that the vehicle was no longer operating under its name. I also drafted enforcement provisions covering licensing violations and vehicle impoundment.</p>
 <p>The thinking behind all of this was that an operator’s responsibilities shouldn’t end once the license is issued. They continue for as long as the company runs rides, including the day someone leaves.</p>
 <figure class="exhibit story-exhibit" aria-labelledby="ex2-title">
-<div class="exhibit-head"><p class="label">Exhibit 02 · Draft</p><h3 id="ex2-title">What disaffiliation changes</h3></div>
+<div class="exhibit-head"><p class="label">Exhibit 03 · Draft</p><h3 id="ex2-title">What disaffiliation changes</h3></div>
 <ol class="ex-steps"><li><span class="ex-step-no" aria-hidden="true">01</span><span><strong>Affiliation ends</strong><span>A driver or vehicle leaves an operation</span></span></li><li><span class="ex-step-no" aria-hidden="true">02</span><span><strong>Village receives notice</strong><span>Written notice within 24 hours</span></span></li><li><span class="ex-step-no" aria-hidden="true">03</span><span><strong>Dispatch access deactivated</strong><span>Removed from assignment and payment systems</span></span></li><li><span class="ex-step-no" aria-hidden="true">04</span><span><strong>Vehicle debranded</strong><span>Markings removed within 48 hours</span></span></li></ol><p class="ex-end">Proof of debranding due within 72 hours</p>
 <figcaption>From my draft provisions. The final adopted law may differ.</figcaption>
 </figure>
@@ -117,6 +142,7 @@
 <div class="story">
 <h3>What was adopted, and what isn’t known yet</h3>
 <p>The Village Board adopted vehicle-for-hire reforms in 2026. My part was the research, the regulatory definitions, the proposed accountability rules, and enforcement language that went into that legislative process. Some of what I drafted may have changed before adoption, so the provisions described here shouldn’t all be read as the final law.</p>
+<p>The same categories carried into the revised fee schedule, which I also prepared. A dispatcher, base, fleet owner, or TNP license, which the old schedule didn’t list at all, is now $3,500 new and $2,000 to renew. The <a href="fees.html">fee case study</a> covers that work.</p>
 <p>Nobody has measured yet whether the reforms reduce unlicensed operation, improve compliance, or ease congestion.</p>
 <h3>What I took from it</h3>
 <p>I started out asking how to enforce the existing rules better and ended up asking whether those rules described the industry well enough to enforce at all. Once I stopped treating the driver at the curb as the whole problem, the work became about the relationships behind each ride, and the definitions followed from there.</p>
