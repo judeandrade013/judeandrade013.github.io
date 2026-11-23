@@ -2,7 +2,6 @@
    1 Theme (the inline script in <head> sets it before first paint)
    2 Header: shadow when scrolled, hides on scroll down, returns on scroll up
    3 Mobile menu dialog
-   4 Copy email
    5 Case studies: reading depth, section rail, mobile section bar          */
 (function () {
   'use strict';
@@ -13,14 +12,13 @@
   /* 1 ─ Theme */
   var media = window.matchMedia('(prefers-color-scheme: dark)');
   var meta = document.querySelector('meta[name="theme-color"]');
-  var COLORS = { light: '#F5F2EA', dark: '#141414' };
+  var COLORS = { light: '#FAF8F3', dark: '#16191F' };
   function saved() { var t = store('theme'); return t === 'light' || t === 'dark' ? t : null; }
   function applyTheme(theme) {
     root.setAttribute('data-theme', theme);
     if (meta) meta.setAttribute('content', COLORS[theme]);
     document.querySelectorAll('.theme-toggle').forEach(function (b) {
       b.setAttribute('aria-pressed', String(theme === 'dark'));
-      var l = b.querySelector('.tt-label'); if (l) l.textContent = theme === 'dark' ? 'Light mode' : 'Dark mode';
     });
   }
   applyTheme(saved() || (media.matches ? 'dark' : 'light'));
@@ -37,7 +35,7 @@
   window.addEventListener('afterprint', function () { if (beforePrint) root.setAttribute('data-theme', beforePrint); beforePrint = null; });
 
   /* 2 ─ Header */
-  var header = document.querySelector('.site-header');
+  var header = document.querySelector('nav[aria-label="Main"]');
   var lastY = window.scrollY, ticking = false;
   var menuOpen = false;
   function onScroll() {
@@ -63,21 +61,6 @@
     menu.addEventListener('close', function () { menuOpen = false; menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.focus(); });
     menu.querySelectorAll('[data-close], .menu-list a').forEach(function (el) { el.addEventListener('click', function () { menu.close(); }); });
   }
-
-  /* 4 ─ Copy email */
-  var toast = document.querySelector('.toast');
-  function say(msg) {
-    if (!toast) return;
-    toast.textContent = msg; toast.classList.add('is-on');
-    clearTimeout(say.t); say.t = setTimeout(function () { toast.classList.remove('is-on'); }, 2000);
-  }
-  document.querySelectorAll('[data-copy]').forEach(function (b) {
-    b.addEventListener('click', function () {
-      var text = b.getAttribute('data-copy');
-      if (navigator.clipboard) navigator.clipboard.writeText(text).then(function () { say('Email copied'); }, function () { say(text); });
-      else say(text);
-    });
-  });
 
   /* 5 ─ Case studies */
   var caseScroll = null;
@@ -144,6 +127,7 @@
   var current = -1;
   caseScroll = function () {
     var mark = window.innerHeight * 0.35, idx = 0;
+    if (!stages.length) return;
     stages.forEach(function (s, i) { if (s.getBoundingClientRect().top <= mark) idx = i; });
     var r = body.getBoundingClientRect();
     var p = Math.min(1, Math.max(0, (mark - r.top) / Math.max(1, r.height - mark)));
