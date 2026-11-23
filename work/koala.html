@@ -20,7 +20,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,400&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
-<link href="../site.css?v=15" rel="stylesheet"/>
+<link href="../site.css?v=16" rel="stylesheet"/>
 </head>
 <body class="case-page">
 <a class="skip" href="#main">Skip to content</a>
@@ -36,7 +36,7 @@
 <div><dt class="label">Team</dt><dd>Two UX designers and me</dd></div>
 <div><dt class="label">When</dt><dd>Nov–Dec 2020 (this study)</dd></div>
 <div><dt class="label">Methods</dt><dd>Exploratory interviews · Belief/behavior matrix · Affinity mapping · Flow analysis · Market analysis · Prototyping · Heuristic review</dd></div>
-<div><dt class="label">Outcome</dt><dd>First-page success rate rose from 33% to 46%</dd></div>
+<div><dt class="label">Outcome</dt><dd>First-page success rate rose from 33% to 45%</dd></div>
 </dl>
 <nav class="case-index" aria-label="Sections in this case study"><ol><li><a href="#s-context"><span class="part-no">01</span> Context</a></li><li><a href="#s-approach"><span class="part-no">02</span> Approach</a></li><li><a href="#s-decisions"><span class="part-no">03</span> Decisions</a></li><li><a href="#s-outcome"><span class="part-no">04</span> Outcome</a></li></ol></nav></div>
 <section class="chapter" aria-labelledby="s-context">
@@ -52,6 +52,20 @@
 <h3>Asking owners first</h3>
 <p>We started with people rather than the page. I ran more than 40 exploratory interviews with timeshare owners and others, then synthesized what we heard with a belief/behavior matrix and affinity mapping, alongside a user-flow analysis and a comparative market analysis.</p>
 <h3>The page asked for something owners didn’t have</h3>
+<p>The interviews kept coming back to one difference: how each person owned their timeshare. A deeded owner holds a set week at one resort. A points owner buys points that set their tier and books across the brand’s locations. A floating-week owner picks a week inside a season, often by racing to book the moment the calendar opens. Those differences decided what each person could type into the listing form.</p>
+<figure aria-labelledby="own-h" class="exhibit story-exhibit">
+<div class="exhibit-head"><p class="label">Exhibit 01</p><h3 id="own-h">Three kinds of owner, one required field</h3></div>
+<div class="ledger-wrap" role="region" aria-label="Exhibit 01 table" tabindex="0"><table class="own">
+<caption class="sr-only">How timeshare ownership types relate to the reservation number the old first listing page required</caption>
+<thead><tr><th scope="col">Ownership</th><th scope="col">How it works</th><th scope="col">Reservation number?</th></tr></thead>
+<tbody>
+<tr><th scope="row">Deeded</th><td data-label="How it works">A deed to a specific week at one resort</td><td class="flag" data-label="Reservation number?">Rarely used</td></tr>
+<tr><th scope="row">Points</th><td data-label="How it works">Points set the tier; book at any of the brand’s locations</td><td data-label="Reservation number?">Not singled out in my findings</td></tr>
+<tr><th scope="row">Floating</th><td data-label="How it works">Choose a week within a season when the calendar opens</td><td class="flag" data-label="Reservation number?">Rarely used</td></tr>
+</tbody></table></div>
+<div class="own-compare"><div class="was"><strong>Old first page</strong>A reservation number was required to continue. No saving; going back restarted the listing.</div><div class="now"><strong>Prototype start screen</strong>Lists what a listing needs before you begin, and accepts a reservation number <em>or</em> deed details, an existing reservation <em>or</em> a fixed week.</div></div>
+<figcaption>From my 2020 study notes and prototype. The ownership descriptions summarize what owners told us; they are not legal definitions.</figcaption>
+</figure>
 <p class="insight">The first page wouldn’t let anyone continue without a reservation number, and many owners, especially those with deeded or floating weeks, rarely have one. The page also couldn’t save progress, going back a step restarted the listing, and nothing told people up front what details they would need. An owner without that number had no way forward and nothing to come back to.</p>
 </div>
 </section>
@@ -59,12 +73,18 @@
 <h2 class="part" id="s-decisions"><span class="part-no">03</span> Decisions</h2>
 <div class="story">
 <h3>Making progress recoverable</h3>
-<p>I recommended three changes and prototyped them: let owners save their progress, make some fields optional, and say at the start what information a listing requires. After the save-progress and optional-field changes, the success rate on the first listing page rose from 33% to 46%, an increase of 13 percentage points.</p>
+<p>I recommended three changes and prototyped them: let owners save their progress, make some fields optional, and say at the start what information a listing requires. After the save-progress and optional-field changes, the success rate on the first listing page rose from 33% to 45%, an increase of 12 percentage points.</p>
+<figure aria-labelledby="screen-h" class="exhibit story-exhibit">
+<div class="exhibit-head"><p class="label">Exhibit 02 · Prototype, 2020</p><h3 id="screen-h">Telling owners what they need before they start</h3></div>
+<div class="artifact-fig"><img alt="Prototype listing start screen titled ‘List your timeshare rental in under 5 minutes’. It says: to create a rental listing, all you need is a resort and unit from one of these brands; an existing reservation or fixed week; a reservation number or deed details; and check-in and check-out dates. A Get Started button and an Exit button sit below." decoding="async" height="677" loading="lazy" src="../koala-listing-start.webp" width="487"/>
+<ol class="artifact-notes"><li>The requirements are listed before the form, so nobody discovers a missing detail three fields in.</li><li>“Reservation number <em>or</em> deed details” lets deeded owners continue without a number they don’t use.</li><li>“Existing reservation <em>or</em> fixed week” covers owners with a set week as well as those with a booked stay.</li></ol></div>
+<figcaption>Start screen from my prototype, cropped to the text (the stock photo above it is removed). Save-progress and optional fields were the changes measured in Exhibit 03.</figcaption>
+</figure>
 <figure aria-labelledby="bars-h" class="bars story-exhibit">
-<div class="exhibit-head"><p class="label">Exhibit 01</p><h3 id="bars-h">Success rate on the first listing page</h3></div>
+<div class="exhibit-head"><p class="label">Exhibit 03</p><h3 id="bars-h">Success rate on the first listing page</h3></div>
 <div class="bar-row"><span class="bar-label">Before</span><div class="bar-track"><div class="bar" style="width:33%"></div></div><span class="bar-val">33%</span></div>
-<div class="bar-row"><span class="bar-label">After</span><div class="bar-track"><div class="bar now" style="width:46%"></div></div><span class="bar-val">46%</span></div>
-<figcaption>Scale runs 0–100%. Figures from KOALA’s original case study; the test design isn’t documented here.</figcaption>
+<div class="bar-row"><span class="bar-label">After</span><div class="bar-track"><div class="bar now" style="width:45%"></div></div><span class="bar-val">45%</span></div>
+<figcaption>Scale runs 0–100%. Figures from my original 2020 case study; the test design isn’t documented there. This is the success rate on one page, a different measure from the 75% of users who left during the first page, so the two shouldn’t be read as one funnel.</figcaption>
 </figure>
 </div>
 </section>

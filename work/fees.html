@@ -20,7 +20,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,400&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
-<link href="../site.css?v=15" rel="stylesheet"/>
+<link href="../site.css?v=16" rel="stylesheet"/>
 </head>
 <body class="case-page">
 <a class="skip" href="#main">Skip to content</a>
@@ -56,7 +56,7 @@
 <p>The differences were large. Staff estimated a minor site plan at roughly three days of work and a major one at more than a week, yet the schedule didn’t consistently distinguish between applications that far apart. At that point the job was less about updating prices and more about rethinking how services were classified and charged in the first place.</p>
 <figure class="exhibit story-exhibit" aria-labelledby="ex3-title">
 <div class="exhibit-head"><p class="label">Exhibit 01</p><h3 id="ex3-title">From fee inventory to legislative decision</h3></div>
-<div class="ex-scroll" role="region" aria-label="Exhibit 01 diagram, scrolls sideways on small screens" tabindex="0"><svg viewBox="0 0 680 470" role="img" aria-labelledby="ex3-svg-t ex3-svg-d" class="exhibit-svg">
+<div class="ex-scroll" role="region" aria-label="Exhibit 01 diagram" tabindex="0"><svg viewBox="0 0 680 470" role="img" aria-labelledby="ex3-svg-t ex3-svg-d" class="exhibit-svg">
 <title id="ex3-svg-t">Research-to-decision workflow for the fee schedule</title>
 <desc id="ex3-svg-d">An inventory of 172 fee items narrowed to about 45 application-linked fees for a focused service-process review. That review drew on three sources: staff interviews about time and handoffs, a review of the existing code, and cost analysis of fees and escrow. Together they produced a revised fee structure, which the Village Board adopted.</desc>
 <rect x="190" y="12" width="300" height="70" rx="10" class="ex-sand"/>
@@ -83,6 +83,17 @@
 <rect x="165" y="416" width="350" height="44" rx="10" class="ex-green"/>
 <text x="340" y="444" text-anchor="middle" class="ex-strong ex-green-text">Village Board adoption</text>
 </svg></div>
+<div class="ex-mobile">
+<p class="ex-m-box sand"><b>172 fee items</b>Inventory of the existing schedule</p>
+<p class="ex-m-join">↓</p>
+<p class="ex-m-box sand"><b>~45 application-linked fees</b>Focused service-process review</p>
+<p class="ex-m-join">↓ three sources ↓</p>
+<div class="ex-m-row three"><span class="ex-m-box peach"><b>Staff interviews</b>Time and handoffs</span><span class="ex-m-box peach"><b>Code review</b>Existing rules (Ch. 118)</span><span class="ex-m-box peach"><b>Cost analysis</b>Fees and escrow</span></div>
+<p class="ex-m-join">↓</p>
+<p class="ex-m-box sage"><b>Revised fee structure</b></p>
+<p class="ex-m-join">↓</p>
+<p class="ex-m-box green"><b>Village Board adoption</b></p>
+</div>
 </figure>
 </div>
 </section>
@@ -110,23 +121,50 @@
 </figure>
 <h3>Running the numbers</h3>
 <p>I compared the old and proposed charges and modeled the revenue effect under different assumptions about application volume. Take a 28-unit multifamily development that needs a special permit, a zoning text amendment, and standard site-plan review. Under the earlier fees I compared, those charges came to about $5,150. Under the revised schedule they come to $12,400, which is $7,250 more, not counting escrow or other charges.</p>
-<p>Over a full year, a scenario with six multifamily special permits and ten smaller applications produced an illustrative increase of about $43,750 in those application fees. I also modeled two broader scopes: about $98,250 a year across every fee on the schedule, and about $40,000 for land-use fees alone. The scenarios cover different ground and overlap, so they can’t be added together, and all of them rely on activity numbers and averages that haven’t been checked against actual collections. I built them so the tradeoffs would be visible. None of them is money the Village has received.</p>
+<p>Over a full year, a scenario with six multifamily special permits and ten smaller applications produced an illustrative increase of about $43,750 in those application fees. I also modeled a broader scope: about $98,250 a year across every fee on the schedule. The two cover different ground and overlap, so they can’t be added together, and both rely on activity numbers and averages that haven’t been checked against actual collections. I built them so the tradeoffs would be visible. Neither is money the Village has received.</p>
+<details class="more"><summary>How the $43,750 scenario is calculated</summary><div class="more-body">
+<div class="ledger-wrap" role="region" aria-label="Annual scenario calculation" tabindex="0"><table class="ledger">
+<caption class="sr-only">Annual application-fee scenario, earlier and revised schedules</caption>
+<thead><tr><th scope="col">Applications per year</th><th scope="col" class="num">Earlier</th><th scope="col" class="num">Revised</th></tr></thead>
+<tbody>
+<tr><td data-label="Applications per year">6 multifamily special permits (25 units on average)</td><td class="num" data-label="Earlier">6 × $1,250 = $7,500</td><td class="num" data-label="Revised">6 × ($2,500 + 25 × $175) = $41,250</td></tr>
+<tr><td data-label="Applications per year">10 smaller site plans and variances (average fee)</td><td class="num" data-label="Earlier">10 × $500 = $5,000</td><td class="num" data-label="Revised">10 × $1,500 = $15,000</td></tr>
+</tbody>
+<tfoot><tr><th scope="row">Application fees</th><td class="num" data-label="Earlier">$12,500</td><td class="num" data-label="Revised">$56,250</td></tr></tfoot>
+</table></div>
+<p>Difference: $43,750 a year, before escrow. The volumes and the averages for smaller applications are my planning assumptions, not counts from Village records. An earlier draft of this model used $150 per unit and came to about $40,000; the adopted schedule uses $175.</p>
+</div></details>
 <figure class="exhibit story-exhibit" aria-labelledby="ex4-title">
 <div class="exhibit-head"><p class="label">Exhibit 03 · Illustrative</p><h3 id="ex4-title">The financial difference for one project</h3></div>
 <div class="ex-bars"><div class="ex-bar-row"><span class="ex-bar-label">Earlier</span><span class="ex-bar-track"><span class="ex-bar old" style="width:41.5%"></span></span><span class="ex-bar-val">$5,150</span></div><div class="ex-bar-row"><span class="ex-bar-label">Revised</span><span class="ex-bar-track"><span class="ex-bar new" style="width:100%"></span></span><span class="ex-bar-val">$12,400</span></div><p class="ex-diff"><strong>+$7,250 in selected application fees</strong><span>Excludes escrow and other charges</span></p></div>
+<details class="more"><summary>Show the line items</summary><div class="more-body">
+<div class="ledger-wrap" role="region" aria-label="28-unit project line items" tabindex="0"><table class="ledger">
+<caption class="sr-only">Fees for an illustrative 28-unit multifamily project under the earlier and revised schedules, with escrow listed separately</caption>
+<thead><tr><th scope="col">Application</th><th scope="col" class="num">Earlier fee</th><th scope="col" class="num">Revised fee</th><th scope="col" class="num aside">Escrow, held separately</th></tr></thead>
+<tbody>
+<tr><td data-label="Application">Special permit, multifamily</td><td class="num" data-label="Earlier fee">$1,250</td><td class="num" data-label="Revised fee">$2,500 + 28 × $175 = $7,400</td><td class="num aside" data-label="Escrow, held separately">$20,000</td></tr>
+<tr><td data-label="Application">Zoning text amendment</td><td class="num" data-label="Earlier fee">$375</td><td class="num" data-label="Revised fee">$2,500</td><td class="num aside" data-label="Escrow, held separately">$35,000</td></tr>
+<tr><td data-label="Application">Site plan, standard (11–30 units)</td><td class="num" data-label="Earlier fee">$375 + 28 × $112.50 = $3,525</td><td class="num" data-label="Revised fee">$2,500</td><td class="num aside" data-label="Escrow, held separately">$30,000</td></tr>
+</tbody>
+<tfoot><tr><th scope="row">Village fees</th><td class="num" data-label="Earlier fee">$5,150</td><td class="num" data-label="Revised fee">$12,400</td><td class="num aside" data-label="Escrow, held separately">Not totalled</td></tr></tfoot>
+</table></div>
+<p>Earlier fees leave out publication costs and the § 118-5 charges the old code added on, and I counted the old site-plan rate per dwelling unit. The revised totals leave out the $500 posting deposit, which is refundable. Escrow minimums are listed but not added up: they sit in separate Village Board and Planning Board accounts, and none of it is Village revenue.</p>
+<p class="src">Rates from the Chapter 118 fee law and the final amended fee schedule (May 2026).</p>
+</div></details>
 <figcaption>An illustrative 28-unit multifamily development requiring a special permit, a zoning text amendment, and standard site-plan review. These are modeled charges, not collected revenue.</figcaption>
 </figure>
 <figure class="exhibit story-exhibit" aria-labelledby="ex5-title">
-<div class="exhibit-head"><p class="label">Exhibit 04</p><h3 id="ex5-title">Two kinds of money, two different purposes</h3></div>
+<div class="exhibit-head"><p class="label">Exhibit 04</p><h3 id="ex5-title">Three kinds of money, three different purposes</h3></div>
 <div class="money-split">
 <div class="money-card"><p class="money-name">Application fee</p><p>Pays for the Village’s own administrative work and review.</p><p class="money-tag is-revenue">Village fee revenue</p></div>
-<div class="money-card"><p class="money-name">Professional-review escrow</p><p>Applicant funds held to pay for eligible outside review: engineering, planning, environmental review, and legal consultation.</p><p class="money-tag">Not fee revenue</p></div>
+<div class="money-card escrow"><p class="money-name">Professional-review escrow</p><p>Applicant funds held to pay for eligible outside review: engineering, planning, environmental review, and legal consultation.</p><p class="money-tag">Not fee revenue</p></div>
+<div class="money-card deposit"><p class="money-name">Deposit</p><p>Held for a specific cost, such as posting ($500) or re-notice and re-publication ($1,000), and returned if unused.</p><p class="money-tag">Returned if unused</p></div>
 </div>
-<figcaption>The distinction behind the fee model. Escrow balances can be replenished when more review is needed, and unused amounts remain subject to the applicable terms.</figcaption>
+<figcaption>The distinctions behind the fee model. Escrow balances can be replenished when more review is needed, and unused amounts remain subject to the applicable terms.</figcaption>
 </figure>
 <h3>Keeping fees and escrow apart</h3>
-<p>One of the most important parts of the redesign was separating application fees from escrow deposits. An application fee pays for the Village’s own administrative work. Escrow is money an applicant deposits to cover outside professional services on their project, such as engineering, planning, environmental review, or legal consultation. I set up escrow tiers by project complexity, with provisions for topping up the balance when more review is needed.</p>
-<p>The distinction matters for the math, too. A $20,000 escrow deposit isn’t $20,000 of Village revenue, and counting it that way would have made the projections look much better than they were.</p>
+<p>One of the most important parts of the redesign was separating application fees from escrow. An application fee pays for the Village’s own administrative work. Escrow is money an applicant deposits to cover outside professional services on their project, such as engineering, planning, environmental review, or legal consultation. I set up escrow tiers by project complexity, with provisions for topping up the balance when more review is needed.</p>
+<p>The distinction matters for the math, too. A $20,000 escrow balance isn’t $20,000 of Village revenue, and counting it that way would have made the projections look much better than they were. Deposits are a third thing again: they cover a specific cost and come back if they aren’t used. An early draft of my 28-unit example had counted the $500 posting deposit as a fee; the version here doesn’t.</p>
 </div>
 </section>
 <section class="chapter" aria-labelledby="s-outcome">
