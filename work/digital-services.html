@@ -4,6 +4,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
 <meta content="#FAF8F3" name="theme-color"/>
+<script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem("theme")}catch(e){}if(t!=="light"&&t!=="dark")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.setAttribute("data-theme",t);})();</script>
 <title>What happens after a resident submits a form? · Jude Andrade</title>
 <meta content="Until October 2026, the only way to reserve a Spring Valley park, community center, or the portable stage was a paper application picked up at Village Hall. I reorganized how residents find village forms, then set up and tested online requests for seven facilities inside the website platform the Village already had." name="description"/>
 <meta content="article" property="og:type"/>
@@ -19,40 +20,53 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,400&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
-<link href="../site.css?v=10" rel="stylesheet"/>
+<link href="../site.css?v=14" rel="stylesheet"/>
 </head>
 <body class="case-page">
 <a class="skip" href="#main">Skip to content</a>
-<nav aria-label="Main"><div class="wrap nav-in"><a class="mark" href="../index.html">Jude Andrade</a><div class="nav-links"><a aria-current="page" href="../index.html#work">Work</a><a href="../index.html#about">About</a><a href="../resume.pdf?v=20261117c" rel="noopener" target="_blank">Résumé ↗</a><a href="../index.html#contact">Contact</a></div></div></nav>
+<nav aria-label="Main"><div class="wrap nav-in"><a class="mark" href="../index.html">Jude Andrade</a><div class="nav-links"><a aria-current="page" href="../index.html#work">Work</a><a href="../about.html">About</a><a href="../resume.html">Résumé</a><a href="../index.html#contact">Contact</a><button class="theme-toggle" type="button" aria-pressed="false" aria-label="Dark theme" title="Dark theme"><svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button></div></div></nav>
 <main id="main">
-<article aria-labelledby="h-public-services" class="case story-case" style="--band:#EFE3C2" id="public-services">
+<article aria-labelledby="h-public-services" class="case story-case" style="--band:var(--band-3)" id="public-services">
 <div class="wrap">
-<div class="case-band"><div class="case-head"><p class="label">03 / Municipal website and facility requests</p><a class="case-back" href="../index.html#work">↑ All work</a></div>
+<div class="case-band"><div class="case-head"><p class="label">03 / Municipal website and facility requests</p></div>
 <h1 id="h-public-services">What happens after a resident submits a form?</h1>
 <p class="dek">Until October 2026, the only way to reserve a Spring Valley park, community center, or the portable stage was a paper application picked up at Village Hall. I reorganized how residents find village forms, then set up and tested online requests for seven facilities inside the website platform the Village already had.</p>
 <dl class="facts">
 <div><dt class="label">My role</dt><dd>Led the content audit, Forms Index, request flow, and the EvoGov setup and testing</dd></div>
 <div><dt class="label">Worked with</dt><dd>The Village Clerk and departments (requirements); the EvoGov vendor (platform limits)</dd></div>
 <div><dt class="label">When</dt><dd>2026</dd></div>
+<div><dt class="label">Methods</dt><dd>Staff interviews · Content audit · Information architecture · Service blueprint · CMS configuration · State testing</dd></div>
 <div><dt class="label">Outcome</dt><dd>Forms Index live; online requests live for seven facilities</dd></div>
 <div><dt class="label">Not yet</dt><dd>Online payment (awaiting approval); usage data</dd></div>
-</dl></div>
+</dl>
+<nav class="case-index" aria-label="Sections in this case study"><ol><li><a href="#s-context"><span class="part-no">01</span> Context</a></li><li><a href="#s-approach"><span class="part-no">02</span> Approach</a></li><li><a href="#s-decisions"><span class="part-no">03</span> Decisions</a></li><li><a href="#s-outcome"><span class="part-no">04</span> Outcome</a></li></ol></nav></div>
+<section class="chapter" aria-labelledby="s-context">
+<h2 class="part" id="s-context"><span class="part-no">01</span> Context</h2>
 <div class="story">
-<h2>Where residents got stuck</h2>
+<h3>Where residents got stuck</h3>
 <p>Spring Valley’s website was organized the way the government is organized, by department. Forms, payment links, and instructions sat on different department pages, so a resident had to know which office handled something before they could start. Even then, a form didn’t always tell you how to finish the task.</p>
 <p>Facility rentals were the clearest example, because there was no online option at all. A resident went to Village Hall, picked up a paper application, filled it out, came back with everything, and paid at the Clerk’s office. From my review of how requests actually ran, that usually meant two or three trips, sometimes four, plus about two phone calls per request.</p>
-<h2>Following the request behind the counter</h2>
-<p>I sat with the Clerk’s office, interviewed staff, and went through the major permit requests to see what happened after an application came in. The resident’s side was simple: pick a place and a time, and find out what happens next. The Clerk’s side was a checklist done by hand. Before anything could be confirmed, someone had to check the date, the facility’s rules, the applicant’s insurance, and the fee. An online version had to work for that person too.</p>
+</div>
+</section>
+<section class="chapter" aria-labelledby="s-approach">
+<h2 class="part" id="s-approach"><span class="part-no">02</span> Approach</h2>
+<div class="story">
+<h3>Following the request behind the counter</h3>
+<p class="insight">I sat with the Clerk’s office, interviewed staff, and went through the major permit requests to see what happened after an application came in. The resident’s side was simple: pick a place and a time, and find out what happens next. The Clerk’s side was a checklist done by hand. Before anything could be confirmed, someone had to check the date, the facility’s rules, the applicant’s insurance, and the fee. An online version had to work for that person too.</p>
 <p>In parallel, I audited the site’s forms and navigation and gathered the forms into a single Forms Index, still grouped under the department that owns each one. I also reworked the homepage so the common tasks (reporting a problem, finding a form, making a payment) were easier to reach.</p>
-<h2>Working inside the platform</h2>
+</div>
+</section>
+<section class="chapter" aria-labelledby="s-decisions">
+<h2 class="part" id="s-decisions"><span class="part-no">03</span> Decisions</h2>
+<div class="story">
+<h3>Working inside the platform</h3>
 <p>The version I wanted was simple: pick the place, request the time, and see exactly what happens next. EvoGov, the Village’s content management system, had limits I couldn’t design around. Its booking portal requires residents to log in. Its staff permissions couldn’t be narrowed enough for some of the people who needed to see requests. It couldn’t enforce every rule from the paper forms, and it didn’t support the seasonal sunset cutoffs we asked for.</p>
 <p>I could have pushed for a custom tool. I used the native features instead, because staff could operate them and I could test them properly, and I documented the limitations.</p>
-<h2>A request, not a reservation</h2>
+<h3>A request, not a reservation</h3>
 <p>I set up seven facilities and resources for online requests: the Louis Kurtz Center, the Darden Center, the Memorial Park soccer field and basketball courts, Kennedy Park, Gould Park, and the portable stage. Each request moves through four states (requested, approved, confirmed, cancelled), and the public page says plainly that a request isn’t approved until the Village confirms it. I didn’t want the page to imply a reservation the Clerk hadn’t agreed to.</p>
 <p>I tested the setup with controlled requests, taking records from new to confirmed to cancelled and checking that the public calendar reserved and then released the slot, including around holidays. The application forms also went online as PDFs, which saves residents at least the first trip.</p>
-</div>
 <figure aria-labelledby="flow-head-1" class="flow story-exhibit">
-<div class="proof-heading"><h3 id="flow-head-1">Exhibit / How a facility request moves</h3><span class="label">Before · Now · Designed next</span></div>
+<div class="exhibit-head"><p class="label">Exhibit 01</p><h3 id="flow-head-1">How a facility request moves</h3></div>
 <div class="flow-row">
 <div class="flow-head"><h4>Before: in person only</h4><span class="note">No online request existed. Typically two to three visits to Village Hall, sometimes four.</span></div>
 <ol aria-label="Before: in-person process" class="flow-steps">
@@ -85,29 +99,35 @@
 <p class="proof-below flow-key"><span><i class="swatch resident-key"></i>Resident acts</span><span><i class="swatch staff-key"></i>Village staff acts</span></p>
 <figcaption class="proof-below">“Before” is the in-person process as it worked. “Now” is from the live booking page. “Designed next” is from my October 2026 user-flow blueprint, which is awaiting approval. As of November 2026, payment integration and the no-account flow are not live.</figcaption>
 </figure>
+</div>
+</section>
+<section class="chapter" aria-labelledby="s-outcome">
+<h2 class="part" id="s-outcome"><span class="part-no">04</span> Outcome</h2>
 <div class="story">
-<h2>What’s live and what isn’t</h2>
+<h3>What’s live and what isn’t</h3>
 <p>The Forms Index and online requests for all seven resources are live. Online payment, requests without an account, and finer-grained staff permissions are not. I’ve designed the next version: a resident submits without creating an account, the Clerk approves, the resident pays online after approval, and one reference number follows the request to the end. That design is waiting on approval, and the payment integration hasn’t been verified.</p>
 <p>There’s no usage or completion data yet, so I can’t say how many residents have used the new process or how many trips it has saved. What the project did show me is that the page residents see is only part of the job. A simpler experience for residents holds up only if staff can receive the request, see where it stands, and carry it through.</p>
-</div>
 <p class="story-link"><a href="https://www.villagespringvalley.org/booking" rel="noopener noreferrer" target="_blank">See the public booking page ↗</a></p>
-<div class="methods" role="group" aria-label="Methods"><span>Staff interviews</span><span>Content audit</span><span>Information architecture</span><span>Service blueprint</span><span>CMS configuration</span><span>State testing</span></div>
-</div>
-</article>
-<section aria-labelledby="gallery-title" class="museum case-gallery" id="gallery"><div class="wrap">
-<div class="museum-head"><div><p class="label">Exhibit</p><h2 class="sec-title" id="gallery-title">The public website, then and now</h2></div><p class="museum-note">Public website captures · October 29, 2026</p></div>
+<section aria-labelledby="gallery-title" class="gallery story-exhibit" id="gallery">
+<div class="exhibit-head"><p class="label">Exhibit 02 · Public website captures · October 29, 2026</p><h3 id="gallery-title">The public website, then and now</h3></div>
 <div class="gallery-wall">
-<figure class="gallery-piece"><a href="https://www.villagespringvalley.org/village-forms-index-" rel="noopener noreferrer" target="_blank"><img alt="Current Village Forms Index with department shortcuts and document cards" decoding="async" height="926" loading="lazy" src="../forms-current-20261029.webp" width="1348"/></a><figcaption><span>Forms index ↗</span><span>01</span></figcaption></figure><figure class="gallery-piece"><a href="https://www.villagespringvalley.org/booking" rel="noopener noreferrer" target="_blank"><img alt="Current Facilities and Stage Requests page with request steps and approval guidance" decoding="async" height="926" loading="lazy" src="../booking-current-20261029.webp" width="1348"/></a><figcaption><span>Facilities + requests ↗</span><span>02</span></figcaption></figure>
+<figure class="gallery-piece"><a href="https://www.villagespringvalley.org/village-forms-index-" rel="noopener noreferrer" target="_blank"><img alt="Current Village Forms Index with department shortcuts and document cards" decoding="async" height="926" loading="lazy" src="../forms-current-20261029.webp" width="1348"/></a><figcaption>Forms index ↗</figcaption></figure><figure class="gallery-piece"><a href="https://www.villagespringvalley.org/booking" rel="noopener noreferrer" target="_blank"><img alt="Current Facilities and Stage Requests page with request steps and approval guidance" decoding="async" height="926" loading="lazy" src="../booking-current-20261029.webp" width="1348"/></a><figcaption>Facilities + requests ↗</figcaption></figure>
 </div>
 <div role="group" aria-label="More public pages" class="gallery-rooms">
-<article class="gallery-room"><h3>Homepage</h3><nav aria-label="Homepage versions"><a href="https://web.archive.org/web/20250916194049/https://www.villagespringvalley.org/" rel="noopener noreferrer" target="_blank">Then ↗</a><a href="https://www.villagespringvalley.org/" rel="noopener noreferrer" target="_blank">Now ↗</a></nav></article>
-<article class="gallery-room"><h3>Village Clerk</h3><nav aria-label="Village Clerk versions"><a href="https://web.archive.org/web/20250213194626/https://www.villagespringvalley.org/departments/clerk" rel="noopener noreferrer" target="_blank">Then ↗</a><a href="https://www.villagespringvalley.org/departments/clerk" rel="noopener noreferrer" target="_blank">Now ↗</a></nav></article>
-<article class="gallery-room"><h3>Assessor</h3><nav aria-label="Assessor versions"><a href="https://web.archive.org/web/20251028113147mp_/https://www.villagespringvalley.org/departments/AssessorsOffice" rel="noopener noreferrer" target="_blank">Then ↗</a><a href="https://www.villagespringvalley.org/departments/AssessorsOffice" rel="noopener noreferrer" target="_blank">Now ↗</a></nav></article>
-<article class="gallery-room"><h3>Community</h3><nav aria-label="Community Development versions"><a href="https://web.archive.org/web/20260312140905/https://www.villagespringvalley.org/departments/CommunityDevelopment" rel="noopener noreferrer" target="_blank">Then ↗</a><a href="https://www.villagespringvalley.org/departments/CommunityDevelopment" rel="noopener noreferrer" target="_blank">Now ↗</a></nav></article>
+<article class="gallery-room"><h4>Homepage</h4><nav aria-label="Homepage versions"><a href="https://web.archive.org/web/20250916194049/https://www.villagespringvalley.org/" rel="noopener noreferrer" target="_blank">Then ↗</a><a href="https://www.villagespringvalley.org/" rel="noopener noreferrer" target="_blank">Now ↗</a></nav></article>
+<article class="gallery-room"><h4>Village Clerk</h4><nav aria-label="Village Clerk versions"><a href="https://web.archive.org/web/20250213194626/https://www.villagespringvalley.org/departments/clerk" rel="noopener noreferrer" target="_blank">Then ↗</a><a href="https://www.villagespringvalley.org/departments/clerk" rel="noopener noreferrer" target="_blank">Now ↗</a></nav></article>
+<article class="gallery-room"><h4>Assessor</h4><nav aria-label="Assessor versions"><a href="https://web.archive.org/web/20251028113147mp_/https://www.villagespringvalley.org/departments/AssessorsOffice" rel="noopener noreferrer" target="_blank">Then ↗</a><a href="https://www.villagespringvalley.org/departments/AssessorsOffice" rel="noopener noreferrer" target="_blank">Now ↗</a></nav></article>
+<article class="gallery-room"><h4>Community</h4><nav aria-label="Community Development versions"><a href="https://web.archive.org/web/20260312140905/https://www.villagespringvalley.org/departments/CommunityDevelopment" rel="noopener noreferrer" target="_blank">Then ↗</a><a href="https://www.villagespringvalley.org/departments/CommunityDevelopment" rel="noopener noreferrer" target="_blank">Now ↗</a></nav></article>
 </div>
-</div></section></main>
-<nav aria-label="More case studies" class="case-pager wrap"><a class="prev" href="koala.html"><span class="label">← Previous · KOALA, product research</span><span class="pager-title">Why timeshare owners gave up on the first page of a listing</span></a><a class="next" href="memorial-park.html"><span class="label">Next · Memorial Park flooding →</span><span class="pager-title">What would it take to get state funding for Memorial Park’s flooding?</span></a></nav>
-<footer class="page-footer"><div class="wrap"><p><a href="mailto:judeandrade013@gmail.com">judeandrade013@gmail.com</a><a href="../resume.pdf?v=20261117c" rel="noopener" target="_blank">Résumé (PDF) ↗</a><a href="https://www.linkedin.com/in/jude13/" rel="noopener" target="_blank">LinkedIn ↗</a></p></div></footer>
+</section>
+</div>
+</section>
+</div>
+</article>
+</main>
+<nav aria-label="More case studies" class="case-pager wrap"><a class="prev" href="koala.html"><span class="label">← Previous</span><span class="pager-title">Why timeshare owners gave up on the first page of a listing</span></a><a class="next" href="memorial-park.html"><span class="label">Next →</span><span class="pager-title">What would it take to get state funding for Memorial Park’s flooding?</span></a></nav>
+<footer class="page-footer"><div class="wrap"><p><a href="mailto:judeandrade013@gmail.com">judeandrade013@gmail.com</a><a href="../resume.html">Résumé</a><a href="../resume.pdf?v=20261117c" download="Jude_Andrade_Resume.pdf">Résumé PDF ↓</a><a href="https://www.linkedin.com/in/jude13/" rel="noopener" target="_blank">LinkedIn ↗</a></p></div></footer>
 <script data-goatcounter="https://judeandrade013.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script src="../theme.js" defer></script>
 </body>
 </html>
